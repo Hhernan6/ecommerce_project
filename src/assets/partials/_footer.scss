@@ -1,0 +1,154 @@
+footer {
+    border-top: 2px solid rgb(214, 211, 211);
+    height: 400px;
+    background-color: rgb(236, 235, 235);
+    margin-top: 20px;
+    width: 100%;
+    .footer__logoContainer {
+        margin-top: 20px;
+        position: relative;
+        text-align: center;
+        &::before {
+            content: "";
+            width: 28%;
+             left: 12%;
+            top: 53%;
+            display: block;
+            
+            border-bottom: 3px solid  rgb(163, 159, 159);;
+         
+            position: absolute;
+        }
+        &::after {
+            content: "";
+            width: 28%;
+             right: 12%;
+            top: 53%;
+            display: block;
+            border-bottom: 3px solid rgb(172, 169, 169);;
+            position: absolute;
+        }
+        
+        
+      
+        width: 100%;
+        max-height: 100%;
+       
+        .footer__logoContainer__logo {
+        background-image: url('../images/drumicon.png');
+        height: 35px;
+        width: 35px;
+        display: inline-block;
+        background-size: cover;
+        
+        padding-top: 20px;
+            
+
+        }
+        > p {
+          display: inline-block;
+            color: rgb(16, 17, 17);
+            letter-spacing: 1.2px;
+            max-width: 190px;
+            font-size: 2.7rem;
+            font-family: 'Bangers', cursive;
+            max-height: 100%;
+            margin: 0 7px;
+            border-bottom: rgb(223, 7, 7) solid 4px;
+        }
+    }
+
+}
+.footer__navs {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.footer__navs__socialMedia {
+    width: 20%;
+    height: 200px;
+    display: flex;
+   
+    ul {display: flex;
+        padding: 0;
+        width: 160px;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 0 auto;
+        justify-content: space-between;
+        
+    
+    }
+    li {
+        width: 100%;
+    
+    }
+   
+}
+.footer__navs__socialMedia--facebook {
+    margin: 0;
+    background-image: url('../images/facebooklogo.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    display: block;
+
+    
+}
+.footer__navs__socialMedia--twitter {
+    margin: 0;
+    background-image: url('../images/twitterlogo.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    display: block;
+
+}
+
+.footer__navs__socialMedia--instagram {
+    margin: 0;
+    background-image: url('../images/instagramlogo.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    display: block;
+
+}
+.footer__navs__right {
+    ul {
+        padding: 0;
+        width: 200px;
+        li {
+            margin-top: 20px;
+        }
+    }
+    a {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-family: 'Share', cursive;
+        color: rgb(22, 22, 22);;
+        font-weight: 500;
+        letter-spacing: .80px;
+    }
+}
+.footer__navs__left {
+    ul {
+        padding: 0;
+        width: 200px;
+        li {
+            margin-top: 20px;
+            
+        }
+    }
+    a {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-family: 'Share', cursive;
+        color: rgb(22, 22, 22);;
+        font-weight: 500;
+        letter-spacing: .80px;
+    }
+}
+ 

@@ -1,0 +1,45 @@
+const products = {
+  "products": [
+    {  
+      "productId": 1, 
+      "title": "For Whom the Bell Tolls",
+      "author": "Ernest Hemingway",
+      "description": "The story of Robert Jordan, a young American in the International Brigades attached to an antifascist guerilla unit in the mountains of Spain, it tells of loyalty and courage, love and defeat, and the tragic death of an ideal. In his portrayal of Jordan's love for the beautiful Maria and his superb account of El Sordo's last stand, in his brilliant travesty of La Pasionaria and his unwillingness to believe in blind faith, Hemingway surpasses his achievement in The Sun Also Rises and A Farewell to Arms to create a work at once rare and beautiful, strong and brutal, compassionate, moving, and wise. \"If the function of a writer is to reveal reality,\" Maxwell Perkins wrote Hemingway after reading the manuscript, \"no one ever so completely performed it.\" Greater in power, broader in scope, and more intensely emotional than any of the author's previous works, it stands as one of the best war novels of all time.",
+      "price": 12.99,
+      "productType": "book",
+      "productCategory": "Fiction",
+      "productImages": [
+        { "imageId": 21, "url": "https://www.mysite.com/lib/img/products/1/image1.jpg", "caption": "First Edition", "primaryImage": true },
+        { "imageId": 23, "url": "https://www.mysite.com/lib/img/products/1/image2.jpg", "caption": "Blue cover", "primaryImage": false  }
+      ],
+      "availability": "In Stock"
+    },
+    {  
+      "productId": 2, 
+      "title": "The Princess Bride",
+      "author": "William Goldman",
+      "description": "Based on the novel by William Goldman, Buttercup is a beautiful princess who--after being separated by her true love Westley--is captured by and forced to marry a conspiring prince. As the wedding day approaches her true love, a vengeful Spaniard and a kind giant come to her rescue.",
+      "price": 11.99,
+      "productType": "dvd",
+      "productCategory": "Comedy",
+      "productImages": [
+        { "imageId": 34, "url": "https://www.mysite.com/lib/img/products/2/image1.jpg", "caption": "", "primaryImage": true },
+        { "imageId": 43, "url": "https://www.mysite.com/lib/img/products/2/image2.jpg", "caption": "Buttercup", "primaryImage": false  }
+      ],
+      "availability": "In Stock"
+    },    
+    {  
+      "productId": 3, 
+      "title": "Siddhartha",
+      "author": "Hermann Hesse",
+      "description": "The title of this novel is a combination of two Sanskrit words, “siddha,” which is defined as \"achieved\", and \"artha\" which is defined as \"meaning\" or \"wealth.\" The word serves as the name for the principal character, a man on a spiritual journey of self-discovery during the time of the first Buddha. Siddhartha is the son of a wealthy Brahmin family who decides to leave his home in the hopes of gaining spiritual illumination. Siddhartha is joined by his best friend Govinda. The two renounce their earthly possessions, engage in ritual fasting and intense meditation and ultimately seek out and speak with Gautama, the original Buddha. Here the two go their separate ways, Govinda joining the order of the Buddha, Siddhartha traveling on in search of spiritual enlightenment. In order to complete this novel Hesse immersed himself in the sacred teachings of both Hindu and Buddhist scriptures and lived a semi-reclusive life in order to achieve his own spiritual enlightenment. Considered one of Hesse’s most important works, Siddhartha remains to this day as one of his most popular. It is a work that deals with the quest that we all undertake in some way or another, to define our lives in an environment of conflicting dualities and ultimately find spiritual awareness. This edition is printed on premium acid-free paper.",
+      "price": 12.99,
+      "productType": "book",
+      "productCategory": "Fiction",
+      "productImages": [
+        { "imageId": 45, "url": "https://www.mysite.com/lib/img/products/3/image1.jpg", "caption": "Siddhartha", "primaryImage": true }
+      ],
+      "availability": "In Stock"
+    }
+  ]
+}

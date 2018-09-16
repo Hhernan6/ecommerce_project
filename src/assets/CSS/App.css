@@ -1,0 +1,791 @@
+.mainNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  background-color: #ecebeb;
+  border-bottom: 2px solid #9c9696;
+  z-index: 100; }
+  .mainNav ul {
+    display: flex;
+    padding: 0; }
+    .mainNav ul li {
+      margin-left: 50px; }
+      .mainNav ul li a {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        font-family: 'Share', cursive;
+        color: #161616;
+        font-weight: 500;
+        letter-spacing: .80px; }
+
+.mainNav__logoContainer {
+  display: flex;
+  margin: 3px 0 0 15px;
+  width: 170px;
+  max-height: 100%; }
+  .mainNav__logoContainer .mainNav__logo {
+    background-image: url("../images/drumicon.png");
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+    margin-top: 5px; }
+  .mainNav__logoContainer p {
+    color: #041a29;
+    letter-spacing: 1.2px;
+    max-width: 190px;
+    font-size: 2.7rem;
+    font-family: 'Bangers', cursive;
+    max-height: 100%;
+    margin: 0 7px;
+    border-bottom: #f20303 solid 4px; }
+
+.mainNav__side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 0 auto;
+  width: 260px; }
+  .mainNav__side .mainNav__search {
+    background-image: url("../images/searchicon.png");
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    margin-right: 10px; }
+  .mainNav__side button {
+    width: 95px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none; }
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0; }
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent; }
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%; }
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none; }
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline; }
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto; }
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block; }
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item; }
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none; }
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+main {
+  margin-top: 100px; }
+
+.hero {
+  height: 75vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .hero .hero__text {
+    background-color: rgba(231, 230, 230, 0.8);
+    height: 35%;
+    width: 600px;
+    padding: 13px;
+    text-align: center; }
+    .hero .hero__text h1 {
+      color: #252424;
+      font-size: 1.7rem;
+      font-family: 'RVMontserrat';
+      text-transform: uppercase; }
+    .hero .hero__text p {
+      color: #df0606;
+      font-size: 160%;
+      font-family: 'RVMontserrat';
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: .90px; }
+
+.cardsContainer {
+  height: 100%;
+  margin-top: 50px;
+  width: 100%;
+  margin: 0 auto; }
+  .cardsContainer h2 {
+    text-align: center;
+    font-size: 2.9rem;
+    font-family: 'Share', cursive; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 30px; }
+
+.cards__content {
+  width: 33%;
+  height: 650px;
+  border: 2px red solid; }
+  .cards__content .cards__content__rating {
+    display: flex;
+    width: 100%;
+    max-height: 50px;
+    align-items: center; }
+    .cards__content .cards__content__rating p {
+      max-width: 50%;
+      max-height: 100%;
+      display: inline-block;
+      font-size: 1.3rem;
+      font-family: 'Share', cursive;
+      padding: 10px; }
+    .cards__content .cards__content__rating span {
+      width: 120px;
+      height: 120px;
+      background-size: cover;
+      background-image: url("../images/ratingicon.png"); }
+  .cards__content img {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 50%; }
+  .cards__content > p {
+    border-bottom: 2px red solid;
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+    max-height: 50%;
+    min-width: 200px;
+    line-height: 1.5;
+    font-family: 'Share', cursive;
+    font-weight: normal; }
+
+.intro {
+  width: 95%;
+  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+  padding: 16px;
+  height: 500px;
+  margin: 50px auto;
+  background-color: white; }
+  .intro .intro__container {
+    width: 98%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between; }
+    .intro .intro__container img {
+      width: 48%;
+      height: 100%; }
+    .intro .intro__container p {
+      margin: 0;
+      font-size: 2rem;
+      font-family: 'Share', cursive;
+      height: 100%;
+      max-width: 50%;
+      line-height: 1.5;
+      border-bottom: solid 4px #ce1919; }
+
+.bigCard {
+  width: 95%;
+  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+  padding: 16px;
+  height: 300px;
+  margin: 50px auto;
+  background-color: white; }
+  .bigCard .bigCard__container {
+    width: 98%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between; }
+    .bigCard .bigCard__container img {
+      width: 38%;
+      height: 100%; }
+
+.bigCard__container__inner {
+  width: 60%;
+  border-bottom: solid 4px #ce1919; }
+  .bigCard__container__inner p {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Share', cursive;
+    height: 70%;
+    max-width: 100%;
+    line-height: 1.5; }
+  .bigCard__container__inner button {
+    height: 20%;
+    width: 30%;
+    border-radius: 20px;
+    font-family: 'Share', cursive;
+    font-size: 1.5rem;
+    outline: none;
+    text-transform: uppercase; }
+
+.availableProducts {
+  width: 100%;
+  height: 100%; }
+  .availableProducts h2 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Share', cursive; }
+  .availableProducts .availableProducts__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; }
+    .availableProducts .availableProducts__container figure {
+      width: 600px;
+      height: 100%;
+      border: solid 2px red;
+      margin: 0; }
+    .availableProducts .availableProducts__container img {
+      box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+      padding: 12px;
+      width: 100%;
+      height: 400px;
+      margin: 10px 0; }
+
+footer {
+  border-top: 2px solid #d6d3d3;
+  height: 400px;
+  background-color: #ecebeb;
+  margin-top: 20px;
+  width: 100%; }
+  footer .footer__logoContainer {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-height: 100%; }
+    footer .footer__logoContainer::before {
+      content: "";
+      width: 28%;
+      left: 12%;
+      top: 53%;
+      display: block;
+      border-bottom: 3px solid #a39f9f;
+      position: absolute; }
+    footer .footer__logoContainer::after {
+      content: "";
+      width: 28%;
+      right: 12%;
+      top: 53%;
+      display: block;
+      border-bottom: 3px solid #aca9a9;
+      position: absolute; }
+    footer .footer__logoContainer .footer__logoContainer__logo {
+      background-image: url("../images/drumicon.png");
+      height: 35px;
+      width: 35px;
+      display: inline-block;
+      background-size: cover;
+      padding-top: 20px; }
+    footer .footer__logoContainer > p {
+      display: inline-block;
+      color: #101111;
+      letter-spacing: 1.2px;
+      max-width: 190px;
+      font-size: 2.7rem;
+      font-family: 'Bangers', cursive;
+      max-height: 100%;
+      margin: 0 7px;
+      border-bottom: #df0707 solid 4px; }
+
+.footer__navs {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 30px auto; }
+
+.footer__navs__socialMedia {
+  width: 20%;
+  height: 200px;
+  display: flex; }
+  .footer__navs__socialMedia ul {
+    display: flex;
+    padding: 0;
+    width: 160px;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 auto;
+    justify-content: space-between; }
+  .footer__navs__socialMedia li {
+    width: 100%; }
+
+.footer__navs__socialMedia--facebook {
+  margin: 0;
+  background-image: url("../images/facebooklogo.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  display: block; }
+
+.footer__navs__socialMedia--twitter {
+  margin: 0;
+  background-image: url("../images/twitterlogo.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  display: block; }
+
+.footer__navs__socialMedia--instagram {
+  margin: 0;
+  background-image: url("../images/instagramlogo.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  display: block; }
+
+.footer__navs__right ul {
+  padding: 0;
+  width: 200px; }
+  .footer__navs__right ul li {
+    margin-top: 20px; }
+
+.footer__navs__right a {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: 'Share', cursive;
+  color: #161616;
+  font-weight: 500;
+  letter-spacing: .80px; }
+
+.footer__navs__left ul {
+  padding: 0;
+  width: 200px; }
+  .footer__navs__left ul li {
+    margin-top: 20px; }
+
+.footer__navs__left a {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: 'Share', cursive;
+  color: #161616;
+  font-weight: 500;
+  letter-spacing: .80px; }
+
+.Hero {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/introDrums2.jpg"); }
+  .Hero .Hero__text {
+    background-color: rgba(231, 230, 230, 0.8);
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 10px; }
+
+.form1 {
+  padding: 3%;
+  margin-top: 2%;
+  width: 46%;
+  height: 700px;
+  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15); }
+  .form1 input {
+    height: 50px;
+    display: block;
+    width: 90%;
+    font-family: 'Share', cursive;
+    font-size: 1.7rem;
+    background-color: #e2dede;
+    border: none; }
+  .form1 div {
+    margin-top: 4.2%; }
+  .form1 textarea {
+    width: 520px;
+    height: 150px;
+    margin-top: 10px;
+    background-color: lightgray; }
+
+label {
+  margin-top: 10px;
+  font-family: 'Share', cursive;
+  font-size: 1.5rem; }
+
+#submitBtn {
+  width: 30%;
+  height: 7%;
+  margin: 0 30%;
+  background-color: lightslategray;
+  color: white; }
+
+.contactContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between; }
+  .contactContainer .contactContainer__companyInfo {
+    margin-top: 2%;
+    height: 700px;
+    width: 47%;
+    background: url("../images/concert.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .contactContainer .contactContainer__companyInfo .contactContainer__companyInfo__text {
+      padding: 10px 5px;
+      text-align: center;
+      background-color: rgba(231, 230, 230, 0.8);
+      width: 500px;
+      height: 350px;
+      font-size: 1.8rem;
+      font-family: 'Share', cursive; }
+      .contactContainer .contactContainer__companyInfo .contactContainer__companyInfo__text p {
+        margin: 50px 0; }
+
+.filters {
+  width: 30%;
+  height: 100px;
+  position: relative;
+  font-family: 'Share', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto; }
+  .filters select {
+    background: #ceced0;
+    height: 40%;
+    width: 49%;
+    outline: none; }
+    .filters select-selected {
+      background-color: DodgerBlue; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 30px; }
+  .row .cards__content2 {
+    padding: 10px;
+    width: 32%;
+    height: 30%;
+    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+    margin-bottom: 20px; }
+    .row .cards__content2 img {
+      width: 100%;
+      height: 390px;
+      display: block; }
+    .row .cards__content2 .description {
+      height: 30%;
+      max-width: 90%;
+      margin: 10px auto;
+      border-top: 2px solid red; }
+      .row .cards__content2 .description > p {
+        font-size: 1.5rem; }
+      .row .cards__content2 .description p {
+        font-size: 1.2rem;
+        font-family: 'Share', cursive;
+        line-height: 1.5; }
