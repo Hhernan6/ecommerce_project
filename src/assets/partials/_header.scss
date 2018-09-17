@@ -9,15 +9,22 @@
     border-bottom: 2px solid rgb(156, 150, 150);
     z-index: 100;
     ul {
-        
-        display: flex;
         padding: 0;
+        display: flex;
+        width: 55%;
+        height: 100%;
+        align-items: center;
+        margin-right:  auto;
         li {
-            margin-left: 50px;
+            margin-left: 40px;
+            @media (max-width: 768px) {
+                margin-left: 30px;
+            }
+            
             a {
                 
                 text-transform: uppercase;
-                font-size: 1.3rem;
+                font-size: 1.5rem;
                 font-family: 'Share', cursive;
                 color: rgb(22, 22, 22);
                 font-weight: 500;
@@ -26,39 +33,14 @@
         }
     }
 }
-.mainNav__logoContainer {
-    display: flex;
-    
-    margin: 3px 0 0 15px;
-    width: 170px;
-    max-height: 100%;
-    .mainNav__logo {
-        background-image: url('../images/drumicon.png');
-        height: 35px;
-        width: 35px;
-        background-size: cover;
-        margin-top: 5px;
-        
-    }
-    
-    p {
-        color: rgb(4, 26, 41);
-        letter-spacing: 1.2px;
-        max-width: 190px;
-        font-size: 2.7rem;
-        font-family: 'Bangers', cursive;
-        max-height: 100%;
-        margin: 0 7px;
-        border-bottom: rgb(242, 3, 3) solid 4px;
-        
-    }
-}
+
 .mainNav__side {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   margin: 0 10px 0 auto;
-    width: 260px;
+  margin: 0 auto;
+    width: 250px;
+    height: 100%;
 
     .mainNav__search {
         background-image: url('../images/searchicon.png');
@@ -68,10 +50,12 @@
         margin-right: 10px;
     } 
     button {
-        width: 95px;
-        height: 45px;
+        text-transform: uppercase;
+        width: 38%;
+        height: 50px;
         cursor: pointer;
         border-radius: 20px;
         outline: none;
+        font-family: 'Share', cursive;
     }
 }

@@ -19,24 +19,27 @@ const contact = () => {
             <p>Email: something@something.com</p>
         </div>
         </div>
-        <form className="form1">
-          <div>
+        <form className="form1" method="get">
+          <div className="contact__inputs">
             <label htmlFor="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" />
           </div>
-          <div>
+          <div className="contact__inputs">
             <label htmlFor="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" />
           </div>
-          <div>
+          <div className="contact__inputs">
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" />
           </div>
-          <div>
+          <div className="contact__inputs">
             <label htmlFor="phoneNum">Phone Number:</label>
             <input type="tel" id="phoneNum" name="phoneNum" />
           </div>
-          <textarea />
+          <div className="contact__inputs">
+            <label for="comments">Comments</label>
+          <textarea name="comments"></textarea>
+          </div>
           <input type="submit" value="Submit" id="submitBtn"/>
         </form>
         <div />

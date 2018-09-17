@@ -79,7 +79,7 @@ const Home = () => {
           <div className="bigCard__container__inner">
             <p>
               Shop now! Browse our products page and the find the best cymbals,
-              drum set, drumheads, and more!{" "}
+              drum kits, drumheads, and more!{" "}
             </p>
             <button>Shop Now!</button>
           </div>
@@ -90,48 +90,36 @@ const Home = () => {
       <div className="cardsContainer">
         <h2>Customer Reviews</h2>
         <section className="cards">
-          <div className="cards__content">
+          <figure className="cards__content">
             <img src={Derik} alt="Luis" />
-            <p>
-            When I went to the Snares and Drums website, I knew that I found
-              the right music store to shop at. I am drummer and when to shop at
-              other music stores, I felt unwanted and not paid attention to. I
-              felt like those music stores did not care about the drum
-              department. At Snare and Drums, I found all of that.{" "}
-            </p>
+            <figcaption>
+              Groove has provided me with the best customer service of any other music store. I felt genuily cared for.
+            </figcaption>
             <div className="cards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
-          </div>
-          <div className="cards__content">
+          </figure>
+          <figure className="cards__content">
             <img src={Luis} alt="" />
-            <p>
-              When I went to the Snares and Drums website, I knew that I found
-              the right music store to shop at. I am drummer and when to shop at
-              other music stores, I felt unwanted and not paid attention to. I
-              felt like those music stores did not care about the drum
-              department. At Snare and Drums, I found all of that.{" "}
-            </p>
+            <figcaption>
+             Groove has provided me with the best prices and quality equipment. I am really glad I discovered Groove.
+            </figcaption>
             <div className="cards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
-          </div>
-          <div className="cards__content">
+          </figure>
+          <figure className="cards__content">
             <img src={Seyfat} alt="" />
-            <p>
-              When I went to the Snares and Drums website, I knew that I found
-              the right music store to shop at. I am drummer and when to shop at
-              other music stores, I felt unwanted and not paid attention to. I
-              felt like those music stores did not care about the drum
-              department. At Snared and Drums, I found all of that.{" "}
-            </p>
+            <figcaption>
+              I'm a drummer and being able to shop somewhere where they focus on drums only, is definitely a big plus!
+            </figcaption>
             <div className="cards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
-          </div>
+          </figure>
         </section>
       </div>
     </main>

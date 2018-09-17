@@ -8,9 +8,9 @@ const header = () => {
     return (
         <header>
            <nav className="mainNav">
-            <div className="mainNav__logoContainer">
+           <div className="logoContainer logoContainer--mainNav ">
                     <p>Groove</p>
-                    <div className="mainNav__logo"></div>
+                    <span className="logoContainer__logo"></span>
                </div>
                <ul>    
                     <li><Link to="/">Home</Link></li>

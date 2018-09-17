@@ -2,7 +2,7 @@
   "name": "ecommerce-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hhernan6.github.io/ecommerce_project/",
+  "homepage": "https://hhernan6.github.io/ecommerce_project",
   "dependencies": {
     "node-sass-chokidar": "^1.3.3",
     "react": "^16.5.0",
@@ -15,9 +15,8 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
+ 
 }

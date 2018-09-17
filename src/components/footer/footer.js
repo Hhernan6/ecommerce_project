@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 const Footer = () => {
     return (
         <footer>
-            
-            <div className="footer__logoContainer ">
+
+            <div className="logoContainer logoContainer--footer ">
                     <p>Groove</p>
-                    <span className="footer__logoContainer__logo"></span>
+                    <span className="logoContainer__logo"></span>
                </div>
                <div className="footer__navs">
                     <nav className="footer__navs__left">

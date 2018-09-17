@@ -19,20 +19,21 @@ class Cards extends React.Component {
       };
     render() {
     return (
-        <div className="cards__content2">
+        <div className="productCard__content">
         <img src={this.props.image} alt="DW performance drum set"/>
         <div className="description">
-          <p>{this.props.title}</p>
+          <h1>{this.props.title}</h1>
           <p>{this.props.description}</p>
           <p>Price: {this.props.price} </p>
-          <div>
-          <p>Quantity: {this.state.quantity}</p>
-          {/* <button onClick={() => {
+        <div className="productCard__content__bottom">
+        <button onClick={() => {
               this.handleQuanity('+');
           }}>+</button>
           <button onClick={() => {
               this.handleQuanity('-');
-          }}>-</button> */}
+          }}>-</button>
+          <p>Quantity: {this.state.quantity}</p>
+
           </div>
 
           </div>
