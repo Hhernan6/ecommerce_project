@@ -18,9 +18,9 @@ const Footer = () => {
                    </nav>
                    <nav className="footer__navs__socialMedia">
                     <ul>
-                        <li><a className="footer__navs__socialMedia--facebook" href="facebook.com">v</a></li>
-                        <li><a className="footer__navs__socialMedia--twitter" href="facebook.com">v</a></li>
-                        <li><a className="footer__navs__socialMedia--instagram" href="facebook.com">v</a></li>
+                        <li><a className="footer__navs__socialMedia--facebook" href="facebook.com">f</a></li>
+                        <li><a className="footer__navs__socialMedia--twitter" href="facebook.com">t</a></li>
+                        <li><a className="footer__navs__socialMedia--instagram" href="facebook.com">i</a></li>
                     </ul>
                    
                    </nav>

@@ -1,0 +1,34 @@
+
+
+IF ADMIN WANTS TO **VIEW** products
+GET http://groove.com/products
+
+IF ADMIN WANTS TO **ADD** product(s)
+POST http://groove.com/products/product_id
+
+IF ADMIN WANTS TO **EDIT** product(s)
+PUT http://groove.com/products/product_id
+
+IF ADMIN WANTS TO **DELETE** products
+DELETE http://groove.com/products/product_id
+
+
+IF ADMIN WANTS TO **VIEW** CURRENT ADMIN USERS
+GET http://groove.com/admins
+
+IF ADMIN WANTS TO **ADD** A NEW ADMIN USER
+POST http://groove.com/admins/admin_id
+
+IF ADMIN WANTS TO **EDIT** CURRENT ADMIN USERS INFORMATION
+PUT http://groove/admins/admin_id
+
+IF ADMIN WANTS TO **DELETE** AN ADMIN USER
+DELETE http://groove/admins/admin_id
+
+Must include plans for an admin to view/delete information submitted through contact form
+
+IF ADMIN WANTS TO **VIEW** INFORMATION SUBMITTED THROUGH A CONTACT FORM
+GET http://groove/submitted_data
+
+IF ADMIN WANTS TO **DELETE** INFORMATION SUBMITTED THROUGH A CONTACT FORM
+DELETE http://groove.com/submitted_data/data_id

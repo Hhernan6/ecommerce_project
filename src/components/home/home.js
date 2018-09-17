@@ -39,7 +39,7 @@ const Home = () => {
         <div className="intro__container">
           <img src={IntroDrumsTwo} alt="" />
           <p>
-            Snares and Drums was founded in 2016. It was founded in the idea of
+            Groove was founded in 2016. It was founded in the idea of
             solely focusing on drum products. We want to bring the best products
             at the lowest prices. We want our customers to feel appreciated,
             that is why we also bring the customer service in the country.{" "}

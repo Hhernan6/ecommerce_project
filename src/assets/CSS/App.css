@@ -27,6 +27,15 @@
         color: #161616;
         font-weight: 500;
         letter-spacing: .80px; }
+        .mainNav ul li a::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: red;
+          transition: width .2s ease-out; }
+        .mainNav ul li a:hover::after {
+          width: 100%; }
 
 .mainNav__side {
   display: flex;
@@ -358,11 +367,6 @@ a {
 ul {
   list-style: none; }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column; }
-
 main {
   margin-top: 100px; }
 
@@ -673,7 +677,7 @@ footer {
     height: 50px;
     display: block;
     width: 90%;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     font-size: 1.7rem;
     background-color: #e2dede;
     border: none; }
@@ -685,7 +689,7 @@ footer {
       width: 90%;
       display: block;
       margin-top: 10px;
-      font-family: 'Share', cursive;
+      font-family: "Share", cursive;
       font-size: 1.7rem; }
   .form1 textarea {
     display: block;
@@ -716,15 +720,19 @@ footer {
     align-items: center;
     justify-content: center; }
     .contactContainer .contactContainer__companyInfo .contactContainer__companyInfo__text {
-      padding: 10px 5px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       background-color: rgba(231, 230, 230, 0.8);
-      width: 450px;
-      height: 350px;
+      width: 380px;
+      height: 330px;
       font-size: 1.8rem;
-      font-family: 'Share', cursive; }
-      .contactContainer .contactContainer__companyInfo .contactContainer__companyInfo__text p {
-        margin: 50px 0; }
+      font-family: "Share", cursive; }
+      @media (max-width: 768px) {
+        .contactContainer .contactContainer__companyInfo .contactContainer__companyInfo__text {
+          width: 315px;
+          font-size: 1.5rem; } }
 
 .filters {
   width: 60%;
@@ -768,7 +776,7 @@ footer {
     .row .productCard__content__bottom {
       display: flex;
       justify-content: space-between;
-      max-width: 180px;
+      max-width: 190px;
       align-items: center; }
       .row .productCard__content__bottom p {
         text-transform: uppercase;
@@ -805,9 +813,9 @@ footer {
 
 .logoContainer--mainNav {
   vertical-align: middle;
-  margin: 0 auto;
+  margin-right: auto;
   position: relative;
-  width: 210px;
+  width: 205px;
   max-height: 100%; }
   .logoContainer--mainNav .logoContainer__logo {
     background-image: url("../images/drumicon.png");

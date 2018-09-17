@@ -1,7 +1,7 @@
 import React from "react";
 class Cards extends React.Component {
     constructor(props) {
-        super(props)
+        super(props)  
         this.state = {
         quantity: 0
         }
@@ -33,7 +33,6 @@ class Cards extends React.Component {
               this.handleQuanity('-');
           }}>-</button>
           <p>Quantity: {this.state.quantity}</p>
-
           </div>
 
           </div>

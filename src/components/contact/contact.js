@@ -14,9 +14,9 @@ const contact = () => {
       <section className="contactContainer">
         <div className="contactContainer__companyInfo">
         <div className="contactContainer__companyInfo__text">
-            <p>123 rd view something, N.C</p>
-            <p>Phone Number: 8484848484</p>
-            <p>Email: something@something.com</p>
+            <address>123 Main st Charlotte, N.C.</address>
+            <p>Phone Number: 704748484</p>
+            <p>Email: Groove@gmail.com</p>
         </div>
         </div>
         <form className="form1" method="get">
@@ -37,7 +37,7 @@ const contact = () => {
             <input type="tel" id="phoneNum" name="phoneNum" />
           </div>
           <div className="contact__inputs">
-            <label for="comments">Comments</label>
+            <label htmlFor="comments">Comments</label>
           <textarea name="comments"></textarea>
           </div>
           <input type="submit" value="Submit" id="submitBtn"/>
