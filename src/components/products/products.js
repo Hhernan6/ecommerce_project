@@ -1,61 +1,9 @@
 import React from "react";
-import Json from "./Json.js";
+
 import Cards from "../products/Cards.js";
 
-class Products extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      productsItems: Json,
-      filteredArray: []
-    };
-  }
-
-  brandFilter = e => {
-    e.preventDefault();
-    let priceValue = document.getElementById("priceSelect").value;
-    let brandValue = document.getElementById("brandSelect").value;
-    let productTypeValue = document.getElementById("productTypeSelect").value;
-    console.log(priceValue);
-    console.log(brandValue);
-    console.log(productTypeValue);
-    
-    // let drumProducts = [];
-
-    let allFilters = this.state.productsItems.products;
-    if (brandValue !== 'Brand') {
-      console.log('in brand filter');
-      allFilters = allFilters.filter(product => product.brand === brandValue);
-      console.log(allFilters);
-   
-    } 
-    if (priceValue !== 'Price') {
-      console.log('in price filter');
-      allFilters = allFilters.filter(product => product.price <= priceValue);
-      console.log(allFilters);
-    } 
-    if (productTypeValue !== 'Product Type') {
-      console.log('in product type filter');
-      allFilters = allFilters.filter(
-        product => product.productType === productTypeValue
-      );
-      console.log(allFilters);
-    } 
-
-    this.setState({
-      filteredArray: allFilters
-    });
-  };
-
-  render() {
-    let products = [];
-    console.log('state:',this.state);
-    if (this.state.filteredArray.length > 0) {
-      products = this.state.filteredArray;
-    } else {
-      products = this.state.productsItems.products;
-    }
-
+ const Products = (props) => {
+   console.log(props.products)
     return (
       <main>
         <div className="Hero">
@@ -63,7 +11,7 @@ class Products extends React.Component {
             <h1>Products</h1>
           </div>
         </div>
-        <form id="form" onChange={this.brandFilter}>
+        <form id="form" onChange={props.brandFilter}>
           <section className="filters">
             <select id="priceSelect" name="Price" form="form">
               <option value="Price">Price: </option>
@@ -75,24 +23,24 @@ class Products extends React.Component {
             <select id="brandSelect" name="Product Type" form="form">
               <option value="Brand">Brand:</option>
 
-              <option value="Sabian">Sabian</option>
+              <option value="Roland">Roland</option>
 
               <option value="DW">DW</option>
 
-              <option value="Promark">Promark</option>
-              <option value="Evans">Evans</option>
+              <option value="Tama">Tama</option>
+              <option value="Allora Paris">Allora Paris</option>
             </select>
             <select id="productTypeSelect" name="Brand" form="form">
               <option value="Product Type">Product Type:</option>
               <option value="Cymbal">Cymbal</option>
-              <option value="Drum Kit">Drum Kit</option>
+              <option value="Drum kit">Drum Kit</option>
               <option value="Drumhead">Drumhead</option>
               <option value="Drumstick">Drumstick</option>
             </select>
           </section>
         </form>
         <div className="row">
-          {products.map(cardsList => {
+          {props.products.map(cardsList => {
             return (
               <Cards
                 key={cardsList.title}
@@ -107,6 +55,6 @@ class Products extends React.Component {
       </main>
     );
   }
-}
+
 
 export default Products;
