@@ -13,8 +13,7 @@ const header = props => {
     <header>
       <nav className="mainNav">
         <div className="logoContainer logoContainer--mainNav ">
-          <p>Groove</p>
-          <span className="logoContainer__logo" />
+          <p>Groove</p> 
         </div>
         <ul>
           <li>
@@ -28,7 +27,7 @@ const header = props => {
           </li>
           {auth0Client.isAuthenticated() ? (
            <li>
-             <Link to ="/admin"> Admin</Link>
+             <Link to ="/admin/products"> Admin</Link>
            </li>
           ): null}
           
@@ -42,9 +41,7 @@ const header = props => {
           )}
              {auth0Client.isAuthenticated() && (
           <div>
-            <label>
-              {auth0Client.getProfile().name}
-            </label>
+           
             <button
               className="btn"
               onClick={() => {

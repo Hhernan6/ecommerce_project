@@ -4,9 +4,9 @@ import Derik from "../../assets/images/derik.jpg";
 import Luis from "../../assets/images/luis.jpg";
 import Seyfat from "../../assets/images/seyfat.jpg";
 import DW from "../../assets/images/dwdrumset.jpeg";
-import Sabian from "../../assets/images/cymbals.jpg";
-import Promark from "../../assets/images/promarksticks.jpg";
-import Drumheads from "../../assets/images/drumheads.jpg";
+import Sabian from "../../assets/images/guitar.jpg";
+import Promark from "../../assets/images/keyboard.jpg";
+import Drumheads from "../../assets/images/saxophone.jpg";
 import IntroDrums from "../../assets/images/introDrums.jpg";
 import IntroDrumsTwo from "../../assets/images/drumsconcert.jpg";
 

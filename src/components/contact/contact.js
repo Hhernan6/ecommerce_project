@@ -19,7 +19,7 @@ const contact = () => {
             <p>Email: Groove@gmail.com</p>
         </div>
         </div>
-        <form className="form1" method="get">
+        <form className="form1" method="POST" action="http://localhost:3007/admin/contact">
           <div className="contact__inputs">
             <label htmlFor="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" />

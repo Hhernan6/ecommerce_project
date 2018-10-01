@@ -5,10 +5,10 @@ const AdminHeader = () => {
   return (
     <nav className="admin-Nav">
       <li>
-        <Link to="/admin">Products</Link>
+        <Link to="/admin/products">Products</Link>
       </li>
       <li>
-        <Link to="/AdminContact">Form</Link>
+        <Link to="/admin/Contact">contact Info</Link>
       </li>
     </nav>
   );

@@ -27,9 +27,9 @@ class Auth {
     return this.idToken;
   }
 
-  showAdmin() {
-      console.log(this.email === 'horacio.hhh1@gmail.com');
-  }
+  // showAdmin() {
+  //     console.log(this.email === 'horacio.hhh1@gmail.com');
+  // }
 
   handleAuthentication() {
     return new Promise((resolve, reject) => {
@@ -39,14 +39,12 @@ class Auth {
           return reject(err);
           
         }
-        console.log(authResult.idTokenPayload)
+        // console.log(authResult.idTokenPayload)
         this.email = authResult.idTokenPayload.name;
         // this.showAdmin();
         this.idToken = authResult.idToken;
         this.profile = authResult.idTokenPayload;
-        if (authResult.idTokenPayload.name !== "horacio.hhh1@gmail.com") {
-          
-        }
+ 
         // set the time that the id token will expire at
         this.expiresAt = authResult.expiresIn * 1000 + new Date().getTime();
         resolve();

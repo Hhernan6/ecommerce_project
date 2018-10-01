@@ -2,18 +2,26 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   height: 100px;
-  background-color: #ecebeb;
+  background-color: #dbdddf;
   z-index: 100; }
   .mainNav ul {
     padding: 0;
     display: flex;
-    width: 55%;
+    width: 70%;
     height: 100%;
     align-items: center;
-    margin-right: auto; }
+    justify-content: flex-end;
+    margin-left: auto; }
+    @media (max-width: 768px) {
+      .mainNav ul {
+        width: 54%; } }
+    @media (max-width: 375px) {
+      .mainNav ul {
+        display: none; } }
     .mainNav ul li {
       margin-left: 40px; }
       @media (max-width: 768px) {
@@ -23,7 +31,7 @@
         text-transform: uppercase;
         font-size: 1.5rem;
         font-family: 'Share', cursive;
-        color: #161616;
+        color: #434141;
         font-weight: 500;
         letter-spacing: .80px; }
         .mainNav ul li a::after {
@@ -40,23 +48,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  width: 250px;
+  margin-left: auto;
+  width: 150px;
   height: 100%; }
-  .mainNav__side .mainNav__search {
-    background-image: url("../images/searchicon.png");
-    height: 40px;
-    width: 40px;
-    background-size: cover;
-    margin-right: 10px; }
   .mainNav__side button {
     text-transform: uppercase;
-    width: 38%;
-    height: 50px;
+    font-size: 1.5rem;
+    width: 120px;
+    height: 60px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 4px;
     outline: none;
-    font-family: 'Share', cursive; }
+    opacity: 0.7;
+    font-family: 'Share', cursive;
+    background-color: #f20808;
+    color: white;
+    letter-spacing: .9px;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+    .mainNav__side button:hover {
+      background-color: #f20808;
+      color: white;
+      opacity: 1; }
+    @media (max-width: 375px) {
+      .mainNav__side button {
+        display: none; } }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -384,7 +400,7 @@ main {
       background-size: cover;
       height: 500px; } }
   .hero__text {
-    background-color: rgba(231, 230, 230, 0.9);
+    background-color: rgba(254, 254, 254, 0.7);
     height: 200px;
     width: 600px;
     padding: 13px;
@@ -395,7 +411,7 @@ main {
       font-family: "RVMontserrat";
       text-transform: uppercase; }
     .hero__text p {
-      color: #f20808;
+      color: #fe0606;
       font-size: 160%;
       font-family: "RVMontserrat";
       text-transform: uppercase;
@@ -570,7 +586,7 @@ main {
 footer {
   border-top: 2px solid #d6d3d3;
   height: 400px;
-  background-color: #ecebeb;
+  background-color: #dbdddf;
   margin-top: 20px;
   width: 100%; }
 
@@ -703,6 +719,8 @@ footer {
   margin: 0 33%;
   background-color: lightslategray;
   color: white; }
+  #submitBtn:hover {
+    background-color: aliceblue; }
 
 .contactContainer {
   display: flex;
@@ -812,26 +830,19 @@ footer {
 
 .logoContainer--mainNav {
   vertical-align: middle;
-  margin-right: auto;
-  position: relative;
-  width: 205px;
-  max-height: 100%; }
-  .logoContainer--mainNav .logoContainer__logo {
-    background-image: url("../images/drumicon.png");
-    height: 35px;
-    width: 35px;
-    display: inline-block;
-    background-size: cover; }
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: auto; }
   .logoContainer--mainNav > p {
-    display: inline-block;
-    color: #101111;
+    color: #757474;
     letter-spacing: 1.2px;
-    max-width: 190px;
-    font-size: 2.7rem;
-    font-family: 'Bangers', cursive;
+    font-size: 2.1rem;
+    font-family: 'Fugaz One', cursive;
     max-height: 100%;
-    margin: 0 7px;
-    border-bottom: #df0707 solid 4px; }
+    margin: 0;
+    border-bottom: solid 3px #f20808;
+    text-transform: uppercase; }
 
 .logoContainer--footer {
   margin-top: 20px;
@@ -839,39 +850,122 @@ footer {
   text-align: center;
   width: 100%;
   max-height: 100%; }
-  .logoContainer--footer::before {
-    content: "";
-    width: 25%;
-    left: 12%;
-    top: 53%;
-    display: block;
-    border-bottom: 3px solid #a39f9f;
-    position: absolute; }
-  .logoContainer--footer::after {
-    content: "";
-    width: 25%;
-    right: 12%;
-    top: 53%;
-    display: block;
-    border-bottom: 3px solid #aca9a9;
-    position: absolute; }
-  .logoContainer--footer .logoContainer__logo {
-    background-image: url("../images/drumicon.png");
-    height: 35px;
-    width: 35px;
-    display: inline-block;
-    background-size: cover;
-    padding-top: 20px; }
   .logoContainer--footer > p {
     display: inline-block;
-    color: #101111;
+    color: #757474;
     letter-spacing: 1.2px;
     max-width: 190px;
     font-size: 2.7rem;
-    font-family: 'Bangers', cursive;
+    font-family: 'Fugaz One', cursive;
+    text-transform: uppercase;
     max-height: 100%;
     margin: 0 7px;
-    border-bottom: #df0707 solid 4px; }
+    border-bottom: #df0707 solid 3px; }
+
+.modal,
+.modal2, .modal3 {
+  background-color: rgba(26, 24, 24, 0.75);
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0; }
+  .modal__content,
+  .modal2__content, .modal3__content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9dfdf;
+    opacity: 1;
+    height: 300px;
+    width: 610px;
+    z-index: 200px;
+    font-family: "Share", cursive; }
+    .modal__content p,
+    .modal2__content p, .modal3__content p {
+      font-size: 1.8rem;
+      padding: 12px; }
+    .modal__content__buttons,
+    .modal2__content__buttons, .modal3__content__buttons {
+      height: 50px;
+      width: 290px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.6rem; }
+      .modal__content__buttons > button,
+      .modal2__content__buttons > button, .modal3__content__buttons > button {
+        height: 100%;
+        width: 49%;
+        cursor: pointer;
+        outline: none;
+        text-transform: uppercase;
+        border-radius: 10px; }
+        .modal__content__buttons > button:hover,
+        .modal2__content__buttons > button:hover, .modal3__content__buttons > button:hover {
+          background: #ce1e1e;
+          color: white; }
+
+.form2 {
+  background: #b3b0b0;
+  width: 500px;
+  height: 85%; }
+  .form2 input {
+    margin: 5px auto;
+    height: 50px;
+    display: block;
+    width: 90%;
+    font-family: "Share", cursive;
+    font-size: 1.7rem;
+    background-color: #e2dede;
+    border: none; }
+  .form2 .contact__inputs {
+    margin: 18px auto;
+    width: 100%; }
+    .form2 .contact__inputs label {
+      margin: 0 auto;
+      width: 90%;
+      display: block;
+      margin-top: 10px;
+      font-family: "Share", cursive;
+      font-size: 1.7rem; }
+  .form2 .modal2__buttons {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto; }
+    .form2 .modal2__buttons > button {
+      width: 45%;
+      height: 50px;
+      border: none;
+      background-color: lightslategray;
+      color: white;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Share', cursive;
+      font-size: 1.7rem;
+      padding: 0; }
+      .form2 .modal2__buttons > button:hover {
+        background-color: #c91010; }
+    .form2 .modal2__buttons #submitBtn2 {
+      width: 45%;
+      height: 50px;
+      background-color: lightslategray;
+      color: white;
+      border-radius: 10px;
+      margin: 0;
+      cursor: pointer; }
+      .form2 .modal2__buttons #submitBtn2:hover {
+        background-color: #03ac03; }
 
 .admin-Nav {
   background-color: lightslategray;
@@ -890,7 +984,7 @@ footer {
     justify-content: space-around;
     padding: 0; }
     .name-card ul li {
-      font-family: 'Share', cursive;
+      font-family: "Share", cursive;
       font-size: 1.7rem; }
 
 .admin-cards {
@@ -911,8 +1005,9 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: 'Share', cursive;
-  padding: 10px; }
+  font-family: "Share", cursive;
+  padding: 10px;
+  background-color: white; }
   .cards__container__content h1 {
     font-size: 1.2rem;
     max-width: 12%;
@@ -947,3 +1042,14 @@ footer {
     .cards__container__content__btns button:hover {
       background-color: lightslategray;
       color: white; }
+
+.row__cardContent {
+  width: 45%;
+  text-align: center;
+  box-shadow: 0 0 30px 0 rgba(58, 57, 57, 0.15);
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 4px; }
+  .row__cardContent p {
+    font-size: 1.5rem;
+    line-height: 1.5; }

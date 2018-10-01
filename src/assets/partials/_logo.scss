@@ -1,30 +1,20 @@
 .logoContainer--mainNav {
-    vertical-align: middle;
-    margin-right: auto;
-    position: relative;
-
-    width: 205px;
-    max-height: 100%;
-    .logoContainer__logo {
-    background-image: url('../images/drumicon.png');
-    height: 35px;
-    width: 35px;
-    display: inline-block;
-    background-size: cover;
-   
-        
-
-    }
+    
+vertical-align: middle;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
     > p {
-      display: inline-block;
-        color: rgb(16, 17, 17);
+        color: rgb(117, 116, 116);
         letter-spacing: 1.2px;
-        max-width: 190px;
-        font-size: 2.7rem;
-        font-family: 'Bangers', cursive;
+      
+        font-size: 2.1rem;
+        font-family: 'Fugaz One', cursive;
         max-height: 100%;
-        margin: 0 7px;
-        border-bottom: rgb(223, 7, 7) solid 4px;
+        margin: 0;
+        border-bottom: solid 3px rgb(242, 8, 8);
+        text-transform: uppercase;
     }
 }
 
@@ -32,47 +22,19 @@
     margin-top: 20px;
     position: relative;
     text-align: center;
-    &::before {
-        content: "";
-        width: 25%;
-         left: 12%;
-        top: 53%;
-        display: block;
-        
-        border-bottom: 3px solid  rgb(163, 159, 159);;
-     
-        position: absolute;
-    }
-    &::after {
-        content: "";
-        width: 25%;
-         right: 12%;
-        top: 53%;
-        display: block;
-        border-bottom: 3px solid rgb(172, 169, 169);;
-        position: absolute;
-    }
+
     width: 100%;
     max-height: 100%;
-    .logoContainer__logo {
-    background-image: url('../images/drumicon.png');
-    height: 35px;
-    width: 35px;
-    display: inline-block;
-    background-size: cover;
-    padding-top: 20px;
-        
-
-    }
     > p {
       display: inline-block;
-        color: rgb(16, 17, 17);
+        color: rgb(117, 116, 116);
         letter-spacing: 1.2px;
         max-width: 190px;
         font-size: 2.7rem;
-        font-family: 'Bangers', cursive;
+        font-family: 'Fugaz One', cursive;
+        text-transform: uppercase;
         max-height: 100%;
         margin: 0 7px;
-        border-bottom: rgb(223, 7, 7) solid 4px;
+        border-bottom: rgb(223, 7, 7) solid 3px;
     }
 }

@@ -62,6 +62,9 @@
   margin: 0 33%;
   background-color: lightslategray;
   color: white;
+  &:hover {
+    background-color: aliceblue;
+  }
 }
 .contactContainer {
   display: flex;

@@ -31,7 +31,7 @@ class Hero extends Component {
       <div className="hero">
         <div className="hero__text">
           <h1>Add more to your groove!</h1>
-          <p>Drum sets, cymbals, drumheads, and more!</p>
+          <p>Drum kits, Saxophones, Guitars, and Keyboards!</p>
         </div>
       </div>
     );

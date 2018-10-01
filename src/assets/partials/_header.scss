@@ -2,19 +2,27 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     height: 100px;
-    background-color: rgb(236, 235, 235);
-    
+    background-color: rgb(219, 221, 223);
     z-index: 100;
     ul {
         padding: 0;
         display: flex;
-        width: 55%;
+        width: 70%;
         height: 100%;
         align-items: center;
-        margin-right:  auto;
+        justify-content: flex-end;
+        margin-left: auto;
+        @media (max-width: 768px) {
+            width: 54%;
+
+        }
+        @media (max-width: 375px) {
+            display: none;
+        }
         li {
             margin-left: 40px;
             @media (max-width: 768px) {
@@ -26,7 +34,7 @@
                 text-transform: uppercase;
                 font-size: 1.5rem;
                 font-family: 'Share', cursive;
-                color: rgb(22, 22, 22);
+                color: rgb(67, 65, 65);
                 font-weight: 500;
                 letter-spacing: .80px;
                 &::after {
@@ -51,24 +59,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  margin: 0 auto;
-    width: 250px;
+     margin-left: auto;
+    width: 150px;
     height: 100%;
 
-    .mainNav__search {
-        background-image: url('../images/searchicon.png');
-        height: 40px;
-        width: 40px;
-        background-size: cover;
-        margin-right: 10px;
-    } 
+
     button {
         text-transform: uppercase;
-        width: 38%;
-        height: 50px;
+        font-size: 1.5rem;
+        width: 120px;
+        height: 60px;
         cursor: pointer;
-        border-radius: 20px;
+        border-radius: 4px;
         outline: none;
+        opacity: 0.7;
         font-family: 'Share', cursive;
+        background-color: rgb(242, 8, 8);
+        color: white;
+        letter-spacing: .9px;
+        border: none;
+        
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        &:hover {
+            background-color: rgb(242, 8, 8);
+            color: white;
+            opacity: 1;
+        }
+        @media (max-width: 375px) {
+            display: none;
+        }
     }
 }

@@ -1,96 +1,227 @@
-.admin-Nav {
-    background-color: lightslategray;
-    height: 80px;
-    width: 100%;
-}
-.name-card {
-    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-    height: 80px;
-    width: 95%;
-    margin: 60px auto 20px auto;
-    ul {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 0;
-     
+.modal,
+.modal2, .modal3 {
+  background-color: rgba(26, 24, 24, 0.75);
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
 
-        li {
-           
-            font-family: 'Share', cursive;
-            font-size: 1.7rem;
-           
+  &__content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(217, 223, 223);
+    opacity: 1;
+    height: 300px;
+    width: 610px;
+    z-index: 200px;
+    font-family: "Share", cursive;
+
+    p {
+      font-size: 1.8rem;
+      padding: 12px;
+    }
+    &__buttons {
+      height: 50px;
+      width: 290px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.6rem;
+  
+      > button {
+        height: 100%;
+        width: 49%;
+        cursor: pointer;
+        outline: none;
+        text-transform: uppercase;
+        border-radius: 10px;
+        &:hover {
+          background: rgb(206, 30, 30);
+          color: white;
         }
     }
+    }
+    
+  }
+}
+.form2 {
+  background: rgb(179, 176, 176);
+  width: 500px;
+  height: 85%;
+
+  input {
+    margin: 5px auto;
+    height: 50px;
+    display: block;
+    width: 90%;
+    font-family: "Share", cursive;
+    font-size: 1.7rem;
+    background-color: rgb(226, 222, 222);
+    border: none;
+  }
+
+  .contact__inputs {
+    margin: 18px auto;
+    width: 100%;
+    label {
+      margin: 0 auto;
+      width: 90%;
+      display: block;
+      margin-top: 10px;
+      font-family: "Share", cursive;
+      font-size: 1.7rem;
+    }
+  }
+  .modal2__buttons {
+      display: flex;
+      margin-top: 50px;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      > button {
+        width: 45%;
+        height: 50px;
+        border: none;
+        background-color: lightslategray;
+        color: white;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+        font-family: 'Share', cursive;
+        font-size: 1.7rem;
+        padding: 0;
+        &:hover {
+            background-color: rgb(201, 16, 16);
+          }
+      }
+  #submitBtn2 {
+    width: 45%;
+    height: 50px;
+    background-color: lightslategray;
+    color: white;
+    border-radius: 10px;
+    margin: 0;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(3, 172, 3);
+    }
+  }
+}
+}
+
+.admin-Nav {
+  background-color: lightslategray;
+  height: 80px;
+  width: 100%;
+}
+.name-card {
+  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+  height: 80px;
+  width: 95%;
+  margin: 60px auto 20px auto;
+
+  ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+
+    li {
+      font-family: "Share", cursive;
+      font-size: 1.7rem;
+    }
+  }
 }
 
 .admin-cards {
-    width: 100%;
-    height: auto;
-   
-    
-    &__container {
-        box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-        margin: 20px auto 0 auto;
-        width: 95%;
-        display: flex;
-        height: 200px;
-        img {
-            width: 11%;
-            height: 90%;
-            margin: 0 2.5% 0 1%;
-        }
+  width: 100%;
+  height: auto;
+
+  &__container {
+    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+    margin: 20px auto 0 auto;
+    width: 95%;
+    display: flex;
+    height: 200px;
+    img {
+      width: 11%;
+      height: 90%;
+      margin: 0 2.5% 0 1%;
     }
+  }
 }
 
 .cards__container__content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Share', cursive;
-    padding: 10px;
-    
-    h1 {
-        font-size: 1.2rem;
-        max-width: 12%;
-        margin: 0 22px 0 22px;
-    }
-    .cards__container__content--description {
-        max-width: 20%;
-        height: 50%;
-        line-height: 1.5;
-        overflow: scroll;
-    }
-    .cards__container__content--price {
-        min-width: 8%;
-        font-weight: bold;
-        font-size: 1.1rem;
-    }
-    .cards__container__content--id {
-        min-width: 16%;
-    }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Share", cursive;
+  padding: 10px;
+  background-color: white;
+
+  h1 {
+    font-size: 1.2rem;
+    max-width: 12%;
+    margin: 0 22px 0 22px;
+  }
+  .cards__container__content--description {
+    max-width: 20%;
+    height: 50%;
+    line-height: 1.5;
+    overflow: scroll;
+  }
+  .cards__container__content--price {
+    min-width: 8%;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .cards__container__content--id {
+    min-width: 16%;
+  }
 }
 
-
 .cards__container__content__btns {
-    width: 26%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: auto;
-    button {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        width: 140px;
-        height: 50px;
-        cursor: pointer;
-        outline: none;
-        letter-spacing: 1px;
-        background-color: lightgray;
-        &:hover {
-            background-color: lightslategray;
-            color: white;
+  width: 26%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  button {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    width: 140px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 1px;
+    background-color: lightgray;
+    &:hover {
+      background-color: lightslategray;
+      color: white;
+    }
+  }
+}
+.row {
+    &__cardContent {
+        width: 45%;
+        text-align: center;
+        box-shadow: 0 0 30px 0 rgba(58, 57, 57, 0.15); 
+        padding: 12px;
+        margin-top: 20px;
+        border-radius: 4px;
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5;
         }
     }
 }

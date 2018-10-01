@@ -10,17 +10,22 @@ import Callback from "./Callback";
 import Admin from "./components/Admin/admin";
 import SecuredRoute from "./SecuredRoute/SecuredRoute";
 import AdminContact from './components/Admin/AdminContact/AdminContact';
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       data: null,
       filteredArray: [],
-      loading: true
+      loading: true,
+      contactData: null
     };
   }
-  componentDidMount() {
-    fetch("http://localhost:3007/products")
+
+
+   async componentDidMount() {
+
+    await fetch("http://localhost:3007/products")
       .then(response => response.json())
       .then(data =>
         this.setState({
@@ -31,6 +36,20 @@ class App extends Component {
       .catch(() => {
         alert("Server is Down for maintence");
       });
+      await fetch("http://localhost:3007/admin/contact")
+      .then(response => response.json())
+      .then(contactData =>
+        this.setState({
+          contactData,
+          loading: false
+        }, () => console.log(this.state.contactData))
+      )
+      .catch(() => {
+        alert("Server is Down for maintence");
+      });
+
+
+
   }
 
   brandFilter = e => {
@@ -85,13 +104,11 @@ class App extends Component {
             <Header />
             <Switch>
               <Route path="/" component={Home} exact />
-              
-              {/* <Route path="/products" render={()=><Products products={this.state.data} /> }/> */}
               <Route path="/product" render={() => <Products products={products} brandFilter={this.brandFilter}/> }/>
               <Route path="/contact" component={contact} />
               <Route exact path="/callback" component={Callback} />
-              <Route path="/AdminContact" component={AdminContact}/>
-              <SecuredRoute path="/admin" component={Admin} products={this.state.data}/>
+              <SecuredRoute path="/admin/Contact"   component ={AdminContact} contactInfo={this.state.contactData}/>
+              <SecuredRoute path="/admin/products" component={Admin} products={this.state.data} exact />
             </Switch>
             <Footer />
           </div>
