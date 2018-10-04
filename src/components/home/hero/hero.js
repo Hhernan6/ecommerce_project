@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Drum from "../../../assets/images/drumset2.jpg";
-import Drums from "../../../assets/images/drumset3.jpg";
-import Drumt from "../../../assets/images/drumview.jpg";
+import Drum from "../../../assets/images/guitar-hero.jpg";
+import Drums from "../../../assets/images/keyboard-hero.jpg";
+import Drumt from "../../../assets/images/saxophone-hero.jpg";
+import DrumHero from "../../../assets/images/drumsconcert.jpg";
 
 let i = 0;
 let images = [];
@@ -9,6 +10,7 @@ let images = [];
 images[0] = `url(${Drum})`;
 images[1] = `url(${Drums})`;
 images[2] = `url(${Drumt})`;
+images[3] = `url(${DrumHero})`
 class Hero extends Component {
   changeImg = () => {
     let hero = document.querySelector(".hero");
@@ -19,7 +21,7 @@ class Hero extends Component {
     } else {
       i = 0;
     }
-    setTimeout(this.changeImg, 2000);
+    setTimeout(this.changeImg, 4000);
   };
 }
   componentDidMount() {
@@ -32,6 +34,7 @@ class Hero extends Component {
         <div className="hero__text">
           <h1>Add more to your groove!</h1>
           <p>Drum kits, Saxophones, Guitars, and Keyboards!</p>
+          <button>Shop Now</button>
         </div>
       </div>
     );

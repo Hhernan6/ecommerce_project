@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   height: 100px;
-  background-color: #dbdddf;
+  background-color: #1f2833;
   z-index: 100; }
   .mainNav ul {
     padding: 0;
@@ -23,26 +23,31 @@
       .mainNav ul {
         display: none; } }
     .mainNav ul li {
-      margin-left: 40px; }
+      list-style: none;
+      margin-right: 10px;
+      padding-right: 12px; }
       @media (max-width: 768px) {
         .mainNav ul li {
           margin-left: 30px; } }
       .mainNav ul li a {
         text-transform: uppercase;
         font-size: 1.5rem;
-        font-family: 'Share', cursive;
-        color: #434141;
+        font-family: "Share", cursive;
+        color: white;
         font-weight: 500;
-        letter-spacing: .80px; }
+        letter-spacing: 0.8px; }
         .mainNav ul li a::after {
-          content: '';
+          content: "";
           display: block;
           width: 0;
           height: 2px;
           background: red;
-          transition: width .2s ease-out; }
+          transition: width 0.2s ease-out; }
         .mainNav ul li a:hover::after {
           width: 100%; }
+
+.mainNav__links--border {
+  border-right: 2px solid #C5C6C7; }
 
 .mainNav__side {
   display: flex;
@@ -59,15 +64,14 @@
     cursor: pointer;
     border-radius: 4px;
     outline: none;
-    opacity: 0.7;
-    font-family: 'Share', cursive;
-    background-color: #f20808;
+    font-family: "Share", cursive;
+    background-color: #d40a0a;
     color: white;
-    letter-spacing: .9px;
+    letter-spacing: 0.9px;
     border: none;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
     .mainNav__side button:hover {
-      background-color: #f20808;
+      background-color: #e60404;
       color: white;
       opacity: 1; }
     @media (max-width: 375px) {
@@ -383,7 +387,7 @@ ul {
   list-style: none; }
 
 main {
-  margin-top: 100px; }
+  padding-top: 100px; }
 
 .hero {
   height: 600px;
@@ -400,18 +404,36 @@ main {
       background-size: cover;
       height: 500px; } }
   .hero__text {
-    background-color: rgba(254, 254, 254, 0.7);
-    height: 200px;
+    background-color: rgba(235, 230, 230, 0.74);
+    height: 45%;
     width: 600px;
     padding: 13px;
     text-align: center; }
+    .hero__text button {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      width: 120px;
+      height: 60px;
+      cursor: pointer;
+      border-radius: 4px;
+      outline: none;
+      font-family: "Share", cursive;
+      background-color: #352e5c;
+      color: white;
+      letter-spacing: 0.9px;
+      border: none;
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
+      .hero__text button:hover {
+        background-color: #e60404;
+        color: white;
+        opacity: 1; }
     .hero__text h1 {
-      color: #252424;
+      color: #151414;
       font-size: 1.7rem;
       font-family: "RVMontserrat";
       text-transform: uppercase; }
     .hero__text p {
-      color: #fe0606;
+      color: #0e0e0e;
       font-size: 160%;
       font-family: "RVMontserrat";
       text-transform: uppercase;
@@ -586,7 +608,7 @@ main {
 footer {
   border-top: 2px solid #d6d3d3;
   height: 400px;
-  background-color: #dbdddf;
+  background-color: #1f2833;
   margin-top: 20px;
   width: 100%; }
 
@@ -645,7 +667,7 @@ footer {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-family: 'Share', cursive;
-  color: #161616;
+  color: white;
   font-weight: 500;
   letter-spacing: .80px; }
 
@@ -659,7 +681,7 @@ footer {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-family: 'Share', cursive;
-  color: #161616;
+  color: white;
   font-weight: 500;
   letter-spacing: .80px; }
 
@@ -835,7 +857,7 @@ footer {
   align-items: center;
   margin-left: auto; }
   .logoContainer--mainNav > p {
-    color: #757474;
+    color: white;
     letter-spacing: 1.2px;
     font-size: 2.1rem;
     font-family: 'Fugaz One', cursive;
@@ -852,7 +874,7 @@ footer {
   max-height: 100%; }
   .logoContainer--footer > p {
     display: inline-block;
-    color: #757474;
+    color: white;
     letter-spacing: 1.2px;
     max-width: 190px;
     font-size: 2.7rem;
@@ -863,7 +885,8 @@ footer {
     border-bottom: #df0707 solid 3px; }
 
 .modal,
-.modal2, .modal3 {
+.modal2,
+.modal3 {
   background-color: rgba(26, 24, 24, 0.75);
   z-index: 100;
   height: 100%;
@@ -877,7 +900,8 @@ footer {
   left: 0;
   right: 0; }
   .modal__content,
-  .modal2__content, .modal3__content {
+  .modal2__content,
+  .modal3__content {
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -889,18 +913,20 @@ footer {
     z-index: 200px;
     font-family: "Share", cursive; }
     .modal__content p,
-    .modal2__content p, .modal3__content p {
+    .modal2__content p,
+    .modal3__content p {
       font-size: 1.8rem;
       padding: 12px; }
     .modal__content__buttons,
-    .modal2__content__buttons, .modal3__content__buttons {
+    .modal2__content__buttons,
+    .modal3__content__buttons {
       height: 50px;
       width: 290px;
       display: flex;
-      justify-content: space-between;
-      font-size: 1.6rem; }
+      justify-content: space-between; }
       .modal__content__buttons > button,
-      .modal2__content__buttons > button, .modal3__content__buttons > button {
+      .modal2__content__buttons > button,
+      .modal3__content__buttons > button {
         height: 100%;
         width: 49%;
         cursor: pointer;
@@ -908,7 +934,8 @@ footer {
         text-transform: uppercase;
         border-radius: 10px; }
         .modal__content__buttons > button:hover,
-        .modal2__content__buttons > button:hover, .modal3__content__buttons > button:hover {
+        .modal2__content__buttons > button:hover,
+        .modal3__content__buttons > button:hover {
           background: #ce1e1e;
           color: white; }
 
@@ -951,7 +978,7 @@ footer {
       border-radius: 10px;
       outline: none;
       cursor: pointer;
-      font-family: 'Share', cursive;
+      font-family: "Share", cursive;
       font-size: 1.7rem;
       padding: 0; }
       .form2 .modal2__buttons > button:hover {
@@ -968,9 +995,41 @@ footer {
         background-color: #03ac03; }
 
 .admin-Nav {
-  background-color: lightslategray;
   height: 80px;
-  width: 100%; }
+  width: 95%;
+  display: flex;
+  align-items: center;
+  margin-top: 50px; }
+  .admin-Nav button {
+    height: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: "Share", cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: #eb0808;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(163, 160, 160, 0.9);
+    cursor: pointer;
+    color: white; }
+    .admin-Nav button:hover {
+      background-color: #1F2833;
+      box-shadow: 0 4px 8px 0 rgba(172, 171, 171, 0.9);
+      opacity: 1; }
+  .admin-Nav ul {
+    list-style: none;
+    display: flex;
+    width: 90%; }
+    .admin-Nav ul li {
+      list-style: none;
+      margin-right: 10px;
+      padding-right: 8px; }
+      .admin-Nav ul li a {
+        font-family: "Share", cursive;
+        font-size: 1.5rem;
+        color: #434141;
+        text-transform: uppercase; }
 
 .name-card {
   box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
@@ -997,7 +1056,7 @@ footer {
     display: flex;
     height: 200px; }
     .admin-cards__container img {
-      width: 11%;
+      width: 15%;
       height: 90%;
       margin: 0 2.5% 0 1%; }
 
@@ -1010,13 +1069,8 @@ footer {
   background-color: white; }
   .cards__container__content h1 {
     font-size: 1.2rem;
-    max-width: 12%;
+    min-width: 12%;
     margin: 0 22px 0 22px; }
-  .cards__container__content .cards__container__content--description {
-    max-width: 20%;
-    height: 50%;
-    line-height: 1.5;
-    overflow: scroll; }
   .cards__container__content .cards__container__content--price {
     min-width: 8%;
     font-weight: bold;
@@ -1036,11 +1090,12 @@ footer {
     width: 140px;
     height: 50px;
     cursor: pointer;
+    border-radius: 4px;
     outline: none;
     letter-spacing: 1px;
     background-color: lightgray; }
     .cards__container__content__btns button:hover {
-      background-color: lightslategray;
+      background-color: lightblue;
       color: white; }
 
 .row__cardContent {
@@ -1050,6 +1105,8 @@ footer {
   padding: 12px;
   margin-top: 20px;
   border-radius: 4px; }
+  .row__cardContent h1 {
+    font-size: 2.5rem; }
   .row__cardContent p {
     font-size: 1.5rem;
     line-height: 1.5; }

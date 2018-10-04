@@ -16,13 +16,13 @@ const header = props => {
           <p>Groove</p> 
         </div>
         <ul>
-          <li>
+          <li className="mainNav__links--border">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="mainNav__links--border">
             <Link to="/product">Products</Link>
           </li>
-          <li>
+          <li className="mainNav__links--border">
             <Link to="/contact">Contact</Link>
           </li>
           {auth0Client.isAuthenticated() ? (

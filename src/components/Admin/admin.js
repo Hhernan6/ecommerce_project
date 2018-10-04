@@ -1,7 +1,7 @@
 import React from "react";
-
+import { Link, withRouter } from "react-router-dom";
 import AdminCards from "./AdminCards/AdminCards";
-import AdminHeader from "./adminHeader/AdminHeader";
+
 
 const Admin = props => {
  
@@ -25,7 +25,18 @@ const Admin = props => {
 
   return (
     <main>
-      
+       <nav className="admin-Nav">
+    <ul> 
+      <li className="mainNav__links--border">
+        <Link to="/admin/products">Products</Link>
+      </li>
+      <li>
+        <Link to="/admin/Contact">Contact</Link>
+      </li>
+      </ul>
+      <button onClick={showformModal}>Add product</button>
+   
+    </nav>
       <div className="modal2">
         
         <form className="form2" method="POST" action="http://localhost:3007/products">
@@ -51,7 +62,7 @@ const Admin = props => {
           </div>
           <div className="contact__inputs">
             <label htmlFor="ProductType">ProductType</label>
-            <input type="text" id="ProductType" name="ProductType" />
+            <input type="text" id="ProductType" name="productType" />
           </div>
           <div className="modal2__buttons">
           <input type="submit" value="Submit" id="submitBtn2"/>
@@ -61,24 +72,13 @@ const Admin = props => {
        
       </div>
      
-      <AdminHeader />
-      <button onClick={showformModal}>Add new product</button>
-      <div className="name-card">
-        <ul>
-          <li>Name</li>
-          <li>ID</li>
-          <li>Price</li>
-          <li>Description</li>
-          <li>Image</li>
-          <li>Edit</li>
-          <li>Delete</li>
-        </ul>
-      </div>
+      
+
       <div className="admin-cards">
         {props.products.map(cardsList => {
           return (
             <AdminCards
-              key={cardsList.title}
+              key={cardsList._id}
               title={cardsList.title}
               description={cardsList.description}
               price={cardsList.price}
@@ -86,6 +86,8 @@ const Admin = props => {
               objectID={cardsList._id}
               // openModal={showModal}
               deleteProduct={deleteFunc}
+              productType={cardsList.productType}
+              brand={cardsList.brand}
             />
           );
         })}
@@ -94,4 +96,4 @@ const Admin = props => {
   );
 };
 
-export default Admin;
+export default withRouter(Admin);
