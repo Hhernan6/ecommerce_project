@@ -16,14 +16,6 @@ const Footer = () => {
                             <li><Link to="/contact">Contact</Link></li>
                         </ul>
                    </nav>
-                   <nav className="footer__navs__socialMedia">
-                    <ul>
-                        <li><a className="footer__navs__socialMedia--facebook" href="facebook.com" title="facebook"></a></li>
-                        <li><a className="footer__navs__socialMedia--twitter" href="facebook.com" title="twiiter"></a></li>
-                        <li><a className="footer__navs__socialMedia--instagram" href="facebook.com" title="instagram"></a></li>
-                    </ul>
-                   
-                   </nav>
                    <nav className="footer__navs__right">
                         <ul>
                             <li><a href="">Customer Service</a></li>
@@ -33,6 +25,14 @@ const Footer = () => {
                    </nav>
 
                </div>
+               <nav className="footer__navs__socialMedia">
+                    <ul>
+                        <li><a className="footer__navs__socialMedia--facebook" href="facebook.com" title="facebook"></a></li>
+                        <li><a className="footer__navs__socialMedia--twitter" href="facebook.com" title="twiiter"></a></li>
+                        <li><a className="footer__navs__socialMedia--instagram" href="facebook.com" title="instagram"></a></li>
+                    </ul>
+                   
+                   </nav>
     
         </footer>
     )

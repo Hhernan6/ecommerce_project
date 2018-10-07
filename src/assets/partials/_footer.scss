@@ -1,6 +1,6 @@
 footer {
     border-top: 2px solid rgb(214, 211, 211);
-    height: 400px;
+   
     background-color: #1f2833;
     margin-top: 20px;
     width: 100%;
@@ -12,11 +12,16 @@ footer {
     justify-content: space-between;
     width: 90%;
     margin: 30px auto;
+   
+    @media (max-width: 678px) {
+    flex-direction: column;
+    align-items: center;
+
+    }
 }
 
 .footer__navs__socialMedia {
-    width: 20%;
-    height: 200px;
+   
     display: flex;
    
     ul {display: flex;

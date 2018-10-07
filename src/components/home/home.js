@@ -35,8 +35,8 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      <section className="intro">
-        <div className="intro__container">
+      <section className="intro-card">
+        <div className="intro-card__container">
           <img src={IntroDrumsTwo} alt="" />
           <p>
             Groove was founded in 2016. It was founded in the idea of
@@ -74,9 +74,9 @@ const Home = () => {
 
       
       </section>  */}
-      <section className="bigCard">
-        <div className="bigCard__container">
-          <div className="bigCard__container__inner">
+      <section className="smallCard">
+        <div className="smallCard__container">
+          <div className="smallCard__container__content">
             <p>
               Shop now! Browse our products page and the find the best cymbals,
               drum kits, drumheads, and more!{" "}
@@ -87,35 +87,35 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="cardsContainer">
+      <div className="customerCards-container">
         <h2>Customer Reviews</h2>
-        <section className="cards">
-          <figure className="cards__content">
+        <section className="customerCards">
+          <figure className="customerCards__card">
             <img src={Derik} alt="Luis" />
             <figcaption>
               Groove has provided me with the best customer service of any other music store. I felt genuily cared for.
             </figcaption>
-            <div className="cards__content__rating">
+            <div className="customerCards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
           </figure>
-          <figure className="cards__content">
+          <figure className="customerCards__card">
             <img src={Luis} alt="" />
             <figcaption>
              Groove has provided me with the best prices and quality equipment. I am really glad I discovered Groove.
             </figcaption>
-            <div className="cards__content__rating">
+            <div className="customerCards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
           </figure>
-          <figure className="cards__content">
+          <figure className="customerCards__card">
             <img src={Seyfat} alt="" />
             <figcaption>
               I'm a drummer and being able to shop somewhere where they focus on drums only, is definitely a big plus!
             </figcaption>
-            <div className="cards__content__rating">
+            <div className="customerCards__content__rating">
               <p>Rating: </p>
               <span />
             </div>

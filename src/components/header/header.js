@@ -12,11 +12,11 @@ const header = props => {
   return (
     <header>
       <nav className="mainNav">
-        <div className="logoContainer logoContainer--mainNav ">
-          <p>Groove</p> 
-        </div>
+  
+          <p className="mainNav-logo">Groove</p> 
+      
         <ul>
-          <li className="mainNav__links--border">
+          <li>
             <Link to="/">Home</Link>
           </li>
           <li className="mainNav__links--border">
@@ -26,13 +26,13 @@ const header = props => {
             <Link to="/contact">Contact</Link>
           </li>
           {auth0Client.isAuthenticated() ? (
-           <li>
+           <li className="mainNav__links--border">
              <Link to ="/admin/products"> Admin</Link>
            </li>
           ): null}
           
         </ul>
-        <div className="mainNav__side">
+      
         
           {!auth0Client.isAuthenticated() && (
             <button onClick={auth0Client.signIn}>
@@ -54,7 +54,7 @@ const header = props => {
         )}
 
 
-        </div>
+     
       </nav>
     </header>
   );

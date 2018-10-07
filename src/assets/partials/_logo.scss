@@ -1,22 +1,17 @@
-.logoContainer--mainNav {
-    
-vertical-align: middle;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    > p {
+
+    .mainNav-logo {
         color: white;
         letter-spacing: 1.2px;
-      
+        margin-left: auto;
         font-size: 2.1rem;
         font-family: 'Fugaz One', cursive;
-        max-height: 100%;
-        margin: 0;
         border-bottom: solid 3px rgb(242, 8, 8);
         text-transform: uppercase;
+        @media (max-width: 767px) {
+        margin: 0 auto 0 10px;
+        }
     }
-}
+
 
 .logoContainer--footer {
     margin-top: 20px;
