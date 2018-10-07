@@ -1,14 +1,5 @@
 import React from "react";
 import Hero from "./hero/hero";
-import Derik from "../../assets/images/derik.jpg";
-import Luis from "../../assets/images/luis.jpg";
-import Seyfat from "../../assets/images/seyfat.jpg";
-import DW from "../../assets/images/dwdrumset.jpeg";
-import Sabian from "../../assets/images/guitar.jpg";
-import Promark from "../../assets/images/keyboard.jpg";
-import Drumheads from "../../assets/images/saxophone.jpg";
-import IntroDrums from "../../assets/images/introDrums.jpg";
-import IntroDrumsTwo from "../../assets/images/drumsconcert.jpg";
 
 const Home = () => {
   //   let i = 0;
@@ -37,12 +28,12 @@ const Home = () => {
       <Hero />
       <section className="intro-card">
         <div className="intro-card__container">
-          <img src={IntroDrumsTwo} alt="" />
+          <img src={require("../../assets/images/drumsconcert.jpg")} alt="" />
           <p>
-            Groove was founded in 2016. It was founded in the idea of
-            solely focusing on drum products. We want to bring the best products
-            at the lowest prices. We want our customers to feel appreciated,
-            that is why we also bring the customer service in the country.{" "}
+            Groove was founded in 2016. It was founded in the idea of solely
+            focusing on drum products. We want to bring the best products at the
+            lowest prices. We want our customers to feel appreciated, that is
+            why we also bring the customer service in the country.{" "}
           </p>
         </div>
       </section>
@@ -51,16 +42,16 @@ const Home = () => {
         <h2>Available Products</h2>
         <div className="availableProducts__container">
           <figure>
-          <img src={DW} alt="" />
+            <img src={require("../../assets/images/dwdrumset.jpeg")} alt="" />
           </figure>
           <figure>
-          <img src={Sabian} alt="" />
+            <img src={require("../../assets/images/guitar.jpg")} alt="" />
           </figure>
           <figure>
-          <img src={Drumheads} alt="" />
+            <img src={require("../../assets/images/saxophone.jpg")} alt="" />
           </figure>
           <figure>
-          <img src={Promark} alt="" />
+            <img src={require("../../assets/images/keyboard.jpg")} alt="" />
           </figure>
         </div>
       </section>
@@ -83,7 +74,7 @@ const Home = () => {
             </p>
             <button>Shop Now!</button>
           </div>
-          <img src={IntroDrums} alt="" />
+          <img src={require("../../assets/images/introDrums.jpg")} alt="" />
         </div>
       </section>
 
@@ -91,9 +82,10 @@ const Home = () => {
         <h2>Customer Reviews</h2>
         <section className="customerCards">
           <figure className="customerCards__card">
-            <img src={Derik} alt="Luis" />
+            <img src={require("../../assets/images/derik.jpg")} alt="Luis" />
             <figcaption>
-              Groove has provided me with the best customer service of any other music store. I felt genuily cared for.
+              Groove has provided me with the best customer service of any other
+              music store. I felt genuily cared for.
             </figcaption>
             <div className="customerCards__content__rating">
               <p>Rating: </p>
@@ -101,9 +93,10 @@ const Home = () => {
             </div>
           </figure>
           <figure className="customerCards__card">
-            <img src={Luis} alt="" />
+            <img src={require("../../assets/images/luis.jpg")} alt="" />
             <figcaption>
-             Groove has provided me with the best prices and quality equipment. I am really glad I discovered Groove.
+              Groove has provided me with the best prices and quality equipment.
+              I am really glad I discovered Groove.
             </figcaption>
             <div className="customerCards__content__rating">
               <p>Rating: </p>
@@ -111,9 +104,10 @@ const Home = () => {
             </div>
           </figure>
           <figure className="customerCards__card">
-            <img src={Seyfat} alt="" />
+            <img src={require("../../assets/images/seyfat.jpg")} alt="" />
             <figcaption>
-              I'm a drummer and being able to shop somewhere where they focus on drums only, is definitely a big plus!
+              I'm a drummer and being able to shop somewhere where they focus on
+              drums only, is definitely a big plus!
             </figcaption>
             <div className="customerCards__content__rating">
               <p>Rating: </p>

@@ -27,10 +27,10 @@ const Admin = props => {
     <main>
        <nav className="admin-Nav">
     <ul> 
-      <li className="mainNav__links--border">
+      <li>
         <Link to="/admin/products">Products</Link>
       </li>
-      <li>
+      <li className="mainNav__links--border">
         <Link to="/admin/Contact">Contact</Link>
       </li>
       </ul>
@@ -74,7 +74,7 @@ const Admin = props => {
      
       
 
-      <div className="admin-cards">
+      <div className="productCards-container">
         {props.products.map(cardsList => {
           return (
             <AdminCards

@@ -11,7 +11,7 @@ import Cards from "../products/Cards.js";
             <h1>Products</h1>
           </div>
         </div>
-        <form id="form" onChange={props.brandFilter}>
+        <form z onChange={props.brandFilter}>
           <section className="filters">
             <select id="priceSelect" name="Price" form="form">
               <option value="Price">Price: </option>

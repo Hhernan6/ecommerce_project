@@ -33,7 +33,7 @@
         justify-content: space-around;
         margin-top: 30px;
         font-family: 'Share', cursive;
-        .productCard__content {
+        .row__productCard {
             padding: 10px;
             width: 450px;
             height: 830px;
@@ -82,7 +82,7 @@
             }
         }
     }
-    .description {
+    .productCard__description {
         max-height: 100%;
         max-width: 95%;
         margin: 10px auto;

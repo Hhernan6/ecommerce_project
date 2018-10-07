@@ -125,7 +125,8 @@
   margin-top: 50px;
 
   button {
-    height: 80%;
+    height: 70px;
+    width: 200px;
     margin: 0 auto;
     padding: 10px;
     border-radius: 4px;
@@ -138,11 +139,10 @@
     cursor: pointer;
     color: white;
     &:hover {
-        background-color: #1F2833;
-        box-shadow: 0 4px 8px 0 rgba(172, 171, 171, 0.9);
-        opacity: 1;
+      background-color: #1f2833;
+      box-shadow: 0 4px 8px 0 rgba(172, 171, 171, 0.9);
+      opacity: 1;
     }
-   
   }
   ul {
     list-style: none;
@@ -152,116 +152,118 @@
     li {
       list-style: none;
       margin-right: 10px;
-    
-      padding-right: 8px;
+
+      padding-left: 8px;
       a {
         font-family: "Share", cursive;
         font-size: 1.5rem;
         color: rgb(67, 65, 65);
         text-transform: uppercase;
-        
-        
       }
     }
   }
 }
-.name-card {
-  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-  height: 80px;
+
+.productCards-container {
+  display: flex;
+  flex-wrap: wrap;
   width: 95%;
-  margin: 60px auto 20px auto;
-
-  ul {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0;
-
-    li {
-      font-family: "Share", cursive;
-      font-size: 1.7rem;
-    }
-  }
-}
-
-.admin-cards {
-  width: 100%;
-  height: auto;
-
-  &__container {
-    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-    margin: 20px auto 0 auto;
-    width: 95%;
-    display: flex;
-    height: 200px;
-    img {
-      width: 15%;
-      height: 90%;
-      margin: 0 2.5% 0 1%;
-    }
-  }
-}
-
-.cards__container__content {
-  display: flex;
   justify-content: space-around;
-  align-items: center;
-  font-family: "Share", cursive;
-  padding: 10px;
-  background-color: white;
+  margin: 50px auto;
+  height: 100%;
 
-  h1 {
-    font-size: 1.2rem;
-    min-width: 12%;
-    margin: 0 22px 0 22px;
-  }
-  .cards__container__content--price {
-    min-width: 8%;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  .cards__container__content--id {
-    min-width: 16%;
-  }
-}
-
-.cards__container__content__btns {
-  width: 26%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: auto;
-  button {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    width: 140px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    letter-spacing: 1px;
-    background-color: lightgray;
-    &:hover {
-      background-color: lightblue;
-      color: white;
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    .productCards__description {
+      border-left: red solid 2px;
+      height: 290px;
+      width: 350px;
+      text-align: center;
+      padding-left: 12px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-family: "Share", cursive;
+        font-size: 1.3rem;
+        line-height: 1.2;
+        
+        span {
+          font-weight: bold;
+        }
+      }
     }
   }
-}
-.row {
-  &__cardContent {
-    width: 45%;
-    text-align: center;
-    box-shadow: 0 0 30px 0 rgba(58, 57, 57, 0.15);
-    padding: 12px;
+  &__card {
     margin-top: 20px;
-    border-radius: 4px;
-    h1 {
-      font-size: 2.5rem;
+    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+    width: 700px;
+    height: auto;
+    padding: 12px;
+    @media (max-width: 767px) {
+      width: 500px;
     }
-    p {
-      font-size: 1.5rem;
-      line-height: 1.5;
+
+    img {
+      width: 300px;
+      height: 300px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+  &__btns {
+    padding-top: 12px;
+    width: 300px;
+  
+    @media (max-width: 767px) {
+      width: 100%;
+    
+    }
+    button {
+      font-size: 1.4rem;
+      font-family: "Share", cursive;
+      border-radius: 4px;
+      width: 110px;
+      padding: 12px;
+      margin-left: 10px;
+      text-transform: uppercase;
+      background-color: rgb(24, 24, 45);
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      &:hover {
+        background-color: rgb(216, 6, 6);
+      }
+      @media (max-width: 767px) {
+       
+        margin: 0 auto;
+      }
     }
   }
 }
+
+// .row {
+//   &__cardContent {
+//     width: 45%;
+//     text-align: center;
+//     box-shadow: 0 0 30px 0 rgba(58, 57, 57, 0.15);
+//     padding: 12px;
+//     margin-top: 20px;
+//     border-radius: 4px;
+//     h1 {
+//       font-size: 2.5rem;
+//     }
+//     p {
+//       font-size: 1.5rem;
+//       line-height: 1.5;
+//     }
+//   }
+// }

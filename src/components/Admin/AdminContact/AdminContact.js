@@ -1,15 +1,23 @@
-import React from 'react' 
-import AdminHeader from '../adminHeader/AdminHeader';
+import React from "react";
 
-import AdminContactCards from '../AdminContactCards/AdminContactCards';
-const contactAdmin = (props) => {
-    return (
-        <main>
-        <AdminHeader />
-        <div className="row">
+import { Link, withRouter } from "react-router-dom";
+import AdminContactCards from "../AdminContactCards/AdminContactCards";
+const contactAdmin = props => {
+  return (
+    <main>
+      <nav className="admin-Nav">
+        <ul>
+          <li>
+            <Link to="/admin/products">Products</Link>
+          </li>
+          <li className="mainNav__links--border">
+            <Link to="/admin/Contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="row">
         {props.contactInfo.map(cardsList => {
           return (
-              
             <AdminContactCards
               key={cardsList.comments}
               firstName={cardsList.firstName}
@@ -18,14 +26,12 @@ const contactAdmin = (props) => {
               phoneNum={cardsList.phoneNum}
               comments={cardsList.comments}
               // openModal={showModal}
-         
             />
           );
         })}
-        </div>
-      
-        </main>
-    )
-}
+      </div>
+    </main>
+  );
+};
 
-export default contactAdmin
+export default withRouter(contactAdmin);

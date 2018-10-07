@@ -6,7 +6,7 @@ class Cards extends React.Component {
         quantity: 0
         }
     }
-    handleQuanity = action => {
+    handleQuantity = action => {
         if (action === "+") {
           this.setState({
             quantity: this.state.quantity + 1
@@ -19,18 +19,18 @@ class Cards extends React.Component {
       };
     render() {
     return (
-        <div className="productCard__content">
+        <div className="row__productCard">
         <img src={this.props.image} alt="DW performance drum set"/>
-        <div className="description">
+        <div className="productCard__description">
           <h1>{this.props.title}</h1>
           <p>{this.props.description}</p>
           <p>Price: {this.props.price} </p>
-        <div className="productCard__content__bottom">
+        <div className="row__productCard__bottom">
         <button onClick={() => {
-              this.handleQuanity('+');
+              this.handleQuantity('+');
           }}>+</button>
           <button onClick={() => {
-              this.handleQuanity('-');
+              this.handleQuantity('-');
           }}>-</button>
           <p>Quantity: {this.state.quantity}</p>
           </div>

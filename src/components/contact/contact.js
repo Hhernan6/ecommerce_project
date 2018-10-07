@@ -11,15 +11,15 @@ const contact = () => {
       <h1>Contact Us</h1></div>
       </div>
 
-      <section className="contactContainer">
-        <div className="contactContainer__companyInfo">
-        <div className="contactContainer__companyInfo__text">
+      <section className="companyInfo">
+        <div className="companyInfo__content">
+        <div className="companyInfo__content__text">
             <address>123 Main st Charlotte, N.C.</address>
             <p>Phone Number: 704748484</p>
             <p>Email: Groove@gmail.com</p>
         </div>
         </div>
-        <form className="form1" method="POST" action="http://localhost:3007/admin/contact">
+        <form className="contactForm" method="POST" action="http://localhost:3007/admin/contact">
           <div className="contact__inputs">
             <label htmlFor="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" />
