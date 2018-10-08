@@ -624,6 +624,7 @@ main {
 
 footer {
   border-top: 2px solid #d6d3d3;
+  height: 355px;
   background-color: #1f2833;
   margin-top: 20px;
   width: 100%; }
@@ -919,7 +920,7 @@ footer {
 .modal,
 .modal2,
 .modal3 {
-  background-color: rgba(26, 24, 24, 0.75);
+  background-color: rgba(26, 24, 24, 0.832);
   z-index: 100;
   height: 100%;
   width: 100%;
@@ -968,14 +969,14 @@ footer {
         .modal__content__buttons > button:hover,
         .modal2__content__buttons > button:hover,
         .modal3__content__buttons > button:hover {
-          background: #ce1e1e;
+          background: #d02222;
           color: white; }
 
-.form2 {
-  background: #b3b0b0;
+.modalForm {
+  background: #bf0a0a;
   width: 500px;
   height: 85%; }
-  .form2 input {
+  .modalForm input {
     margin: 5px auto;
     height: 50px;
     display: block;
@@ -984,28 +985,29 @@ footer {
     font-size: 1.7rem;
     background-color: #e2dede;
     border: none; }
-  .form2 .contact__inputs {
+  .modalForm .contact__inputs {
     margin: 18px auto;
     width: 100%; }
-    .form2 .contact__inputs label {
+    .modalForm .contact__inputs label {
+      color: white;
       margin: 0 auto;
       width: 90%;
       display: block;
       margin-top: 10px;
       font-family: "Share", cursive;
       font-size: 1.7rem; }
-  .form2 .modal2__buttons {
+  .modalForm .modal2__buttons {
     display: flex;
     margin-top: 50px;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: auto; }
-    .form2 .modal2__buttons > button {
+    .modalForm .modal2__buttons > button {
       width: 45%;
       height: 50px;
       border: none;
-      background-color: lightslategray;
+      background-color: #303233;
       color: white;
       border-radius: 10px;
       outline: none;
@@ -1013,18 +1015,18 @@ footer {
       font-family: "Share", cursive;
       font-size: 1.7rem;
       padding: 0; }
-      .form2 .modal2__buttons > button:hover {
-        background-color: #c91010; }
-    .form2 .modal2__buttons #submitBtn2 {
+      .modalForm .modal2__buttons > button:hover {
+        background-color: #060606; }
+    .modalForm .modal2__buttons #submitBtn2 {
       width: 45%;
       height: 50px;
-      background-color: lightslategray;
+      background-color: #313232;
       color: white;
       border-radius: 10px;
       margin: 0;
       cursor: pointer; }
-      .form2 .modal2__buttons #submitBtn2:hover {
-        background-color: #03ac03; }
+      .modalForm .modal2__buttons #submitBtn2:hover {
+        background-color: #026e02; }
 
 .admin-Nav {
   height: 80px;
@@ -1047,7 +1049,7 @@ footer {
     cursor: pointer;
     color: white; }
     .admin-Nav button:hover {
-      background-color: #1f2833;
+      background-color: #da2202;
       box-shadow: 0 4px 8px 0 rgba(172, 171, 171, 0.9);
       opacity: 1; }
   .admin-Nav ul {
@@ -1085,7 +1087,11 @@ footer {
       padding-left: 12px; }
       @media (max-width: 767px) {
         .productCards-container__flex .productCards__description {
-          width: 100%; } }
+          width: 100%;
+          border-left: none;
+          height: auto;
+          border-top: 2px solid red;
+          margin-top: 10px; } }
       .productCards-container__flex .productCards__description h1 {
         font-size: 1.5rem; }
       .productCards-container__flex .productCards__description p {
@@ -1111,10 +1117,15 @@ footer {
           width: 100%; } }
   .productCards-container__btns {
     padding-top: 12px;
-    width: 300px; }
+    width: 300px;
+    margin-left: auto; }
     @media (max-width: 767px) {
       .productCards-container__btns {
-        width: 100%; } }
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 16px; } }
     .productCards-container__btns button {
       font-size: 1.4rem;
       font-family: "Share", cursive;
@@ -1132,3 +1143,50 @@ footer {
       @media (max-width: 767px) {
         .productCards-container__btns button {
           margin: 0 auto; } }
+
+.contactRow {
+  width: 98%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .contactRow__content {
+    padding: 12px;
+    margin-top: 20px;
+    width: 510px;
+    height: 300px;
+    box-shadow: 0 0 20px 0 rgba(167, 166, 166, 0.345);
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 460px) {
+      .contactRow__content {
+        width: 380px;
+        height: 430px;
+        flex-direction: column; } }
+  .contactRow__info {
+    text-align: center;
+    width: 210px;
+    font-family: 'Share', cursive; }
+    @media (max-width: 460px) {
+      .contactRow__info {
+        width: 100%; } }
+    .contactRow__info h2 {
+      font-size: 2.7rem; }
+    .contactRow__info p {
+      font-size: 1.3rem;
+      min-width: 200px; }
+    .contactRow__info__comments {
+      border-left: 2px solid red;
+      padding: 12px;
+      width: 260px;
+      text-align: center;
+      height: auto; }
+      @media (max-width: 460px) {
+        .contactRow__info__comments {
+          width: 100%;
+          border-top: 2px red solid;
+          border-left: none; } }
+      .contactRow__info__comments p {
+        font-size: 1.3rem;
+        font-family: 'Share', cursive; }

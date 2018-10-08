@@ -5,7 +5,7 @@ import AdminCards from "./AdminCards/AdminCards";
 
 const Admin = props => {
  
-  const showformModal = () => {
+  const showAddProductModal = () => {
     let modal2 = document.querySelector(".modal2");
     if (modal2.style.display === "none" || modal2.style.display === "") {
       modal2.style.display = "flex";
@@ -34,12 +34,12 @@ const Admin = props => {
         <Link to="/admin/Contact">Contact</Link>
       </li>
       </ul>
-      <button onClick={showformModal}>Add product</button>
+      <button onClick={showAddProductModal}>Add product</button>
    
     </nav>
       <div className="modal2">
         
-        <form className="form2" method="POST" action="http://localhost:3007/products">
+        <form className="modalForm" method="POST" action="http://localhost:3007/products">
           <div className="contact__inputs">
             <label htmlFor="title">Name</label>
             <input type="text" id="productName" name="title" />
@@ -66,7 +66,7 @@ const Admin = props => {
           </div>
           <div className="modal2__buttons">
           <input type="submit" value="Submit" id="submitBtn2"/>
-          <button onClick={showformModal} type="button" >Cancel</button>
+          <button onClick={showAddProductModal} type="button" >Cancel</button>
           </div>
         </form>
        

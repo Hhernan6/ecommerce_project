@@ -1,0 +1,61 @@
+.contactRow {
+    width: 98%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   &__content {
+       padding: 12px;
+       margin-top: 20px;
+       width: 510px;
+       height: 300px;
+       box-shadow: 0 0 20px 0 rgba(167, 166, 166, 0.345);
+       
+       display: flex;
+       justify-content: space-between;
+       
+       @media (max-width: 460px) {
+        width: 380px;
+        height: 430px;
+        flex-direction: column;
+       }
+   }
+   &__info {
+   
+       text-align: center;
+       width: 210px;
+       font-family: 'Share', cursive;
+       @media (max-width: 460px) {
+    width: 100%;
+
+      
+       
+       }
+       h2 {
+           font-size: 2.7rem;
+       }
+       p{
+           font-size: 1.3rem;
+           min-width: 200px;
+       }
+      &__comments {
+       border-left: 2px solid red;
+          padding: 12px;
+          width: 260px;
+          text-align: center;
+          height: auto;
+          @media (max-width: 460px) {
+            width: 100%;
+            border-top: 2px red solid;
+            border-left: none;
+               
+               }
+          p {
+              font-size: 1.3rem;
+              font-family: 'Share', cursive;
+          }
+      }
+       
+   }
+}

@@ -111,7 +111,7 @@ class AdminCards extends React.Component {
 
         <div className="modal3" id={`${this.props.objectID + 1}`}>
           <form
-            className="form2"
+            className="modalForm"
             id={`${this.props.title}`}
             onSubmit={() => this.sendData(this.props.objectID)}
           >
