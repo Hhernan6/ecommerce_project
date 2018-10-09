@@ -26,17 +26,19 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      <section className="intro-card">
-        <div className="intro-card__container">
-          <img src={require("../../assets/images/drumsconcert.jpg")} alt="" />
-          <p>
-            Groove was founded in 2016. It was founded in the idea of solely
-            focusing on drum products. We want to bring the best products at the
-            lowest prices. We want our customers to feel appreciated, that is
-            why we also bring the customer service in the country.{" "}
-          </p>
+
+      <section className="small-card">
+        <div className="small-card__container">
+        <img src={require("../../assets/images/introDrums.jpg")} alt="" />
+          <div className="small-card__container__content">
+            <p>
+               Welcome to Groove! Start exploring our variety of products selection and hope you leave statisfied.
+            </p>
+          </div>
+         
         </div>
       </section>
+
 
       <section className="availableProducts">
         <h2>Available Products</h2>
@@ -65,9 +67,9 @@ const Home = () => {
 
       
       </section>  */}
-      <section className="smallCard">
-        <div className="smallCard__container">
-          <div className="smallCard__container__content">
+      <section className="small-card">
+        <div className="small-card__container">
+          <div className="small-card__container__content">
             <p>
               Shop now! Browse our products page and the find the best cymbals,
               drum kits, drumheads, and more!{" "}

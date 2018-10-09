@@ -1,6 +1,6 @@
 footer {
     border-top: 2px solid rgb(214, 211, 211);
-   height: 355px;
+   height: 100%;
     background-color: #1f2833;
     margin-top: 20px;
     width: 100%;
@@ -23,7 +23,8 @@ footer {
 .footer__navs__socialMedia {
    
     display: flex;
-   
+    padding-bottom: 20px;
+    margin-top: 40px;
     ul {display: flex;
         padding: 0;
         width: 160px;
@@ -34,25 +35,27 @@ footer {
         
     
     }
-    li {
-        width: 100%;
+    .margin-left {
+        // width: 100%;
+        margin-left: 16px;
     
     }
    
 }
 .footer__navs__socialMedia--facebook {
     margin: 0;
-    background-image: url('../images/facebooklogo.png');
+    background-image: url('../images//facebook-icon.svg');
     background-size: cover;
     height: 50px;
     width: 50px;
     display: block;
 
+
     
 }
 .footer__navs__socialMedia--twitter {
     margin: 0;
-    background-image: url('../images/twitterlogo.png');
+    background-image: url('../images/twitter-icon.svg');
     background-size: cover;
     height: 50px;
     width: 50px;
@@ -62,11 +65,12 @@ footer {
 
 .footer__navs__socialMedia--instagram {
     margin: 0;
-    background-image: url('../images/instagramlogo.png');
+    background-image: url('../images/instagram-icon.svg');
     background-size: cover;
     height: 50px;
     width: 50px;
     display: block;
+
 
 }
 .footer__navs__right {

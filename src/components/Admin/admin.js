@@ -19,7 +19,7 @@ const Admin = props => {
       method: 'delete'
     })
     .then(response => response.json())
-   window.location.reload();
+  //  window.location.reload();
   
   } 
 

@@ -4,6 +4,11 @@ import React from "react";
 
 // export default aux;
 const contact = () => {
+
+  
+  // You can run the elevator, by calling.
+ 
+
   return (
     <main>
       <div className="Hero">
@@ -44,6 +49,7 @@ const contact = () => {
         </form>
         <div />
       </section>
+      <div><p className="elevator-btn">go to the top</p></div>
     </main>
   );
 };
