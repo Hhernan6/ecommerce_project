@@ -469,7 +469,7 @@ main {
   padding-top: 100px; }
 
 .hero {
-  height: 600px;
+  height: 80vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -477,16 +477,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px; }
+  padding: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.37)); }
   @media (max-width: 768px) {
     .hero {
       background-position: bottom; } }
   .hero__text {
-    background-color: rgba(235, 230, 230, 0.74);
-    height: 300px;
     width: 600px;
-    padding: 13px;
-    text-align: center; }
+    padding: 14px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.777); }
     .hero__text button {
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -496,24 +496,25 @@ main {
       border-radius: 4px;
       outline: none;
       font-family: "Share", cursive;
-      background-color: #352e5c;
+      background-color: #d40a0a;
       color: white;
       letter-spacing: 0.9px;
       border: none;
-      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
+      margin-right: 10px;
+      box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
       .hero__text button:hover {
         background-color: #e60404;
         color: white;
         opacity: 1; }
     .hero__text h1 {
-      color: #151414;
-      font-size: 1.7rem;
-      font-family: "RVMontserrat";
+      color: #161123;
+      font-size: 2.7rem;
+      font-family: "Montserrat";
       text-transform: uppercase; }
     .hero__text p {
-      color: #0e0e0e;
-      font-size: 160%;
-      font-family: "RVMontserrat";
+      color: #010101;
+      font-size: 1.8rem;
+      font-family: "Montserrat";
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 0.9px;
@@ -527,7 +528,7 @@ main {
     text-align: center;
     font-size: 4rem;
     font-family: "Share", cursive;
-    margin-bottom: 0; }
+    margin-bottom: 16px; }
   .availableProducts .availableProducts__container {
     width: 100%;
     height: 100%;
@@ -589,17 +590,24 @@ main {
       .small-card__container__content p {
         font-size: 1.8rem; } }
   .small-card__container__content button {
-    padding: 12px;
-    border-radius: 4px;
-    font-family: "Share", cursive;
-    font-size: 1.5rem;
-    outline: none;
     text-transform: uppercase;
-    margin: 0 auto;
-    cursor: pointer; }
+    font-size: 1.5rem;
+    width: 120px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    font-family: "Share", cursive;
+    background-color: #d40a0a;
+    color: white;
+    letter-spacing: 0.9px;
+    border: none;
+    margin-right: 10px;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
     .small-card__container__content button:hover {
-      background-color: #dd0505;
-      color: white; }
+      background-color: #e60404;
+      color: white;
+      opacity: 1; }
 
 .customerCards-container {
   height: 100%;
@@ -862,7 +870,7 @@ footer {
   width: 100%;
   height: 100%;
   position: relative;
-  font-family: 'Share', cursive;
+  font-family: "Share", cursive;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -875,7 +883,7 @@ footer {
     width: 400px;
     font-size: 1.2rem;
     outline: none;
-    font-family: 'Share', cursive; }
+    font-family: "Share", cursive; }
 
 .row {
   display: flex;
@@ -885,7 +893,7 @@ footer {
   margin: 0 auto;
   justify-content: space-around;
   margin-top: 30px;
-  font-family: 'Share', cursive; }
+  font-family: "Share", cursive; }
   .row .row__productCard {
     padding: 10px;
     width: 450px;
@@ -907,7 +915,7 @@ footer {
       align-items: center; }
       .row .row__productCard__bottom p {
         text-transform: uppercase;
-        letter-spacing: .90px;
+        letter-spacing: 0.9px;
         font-size: 1.4rem;
         height: auto; }
       .row .row__productCard__bottom button {
@@ -936,7 +944,7 @@ footer {
     font-size: 1.5rem; }
   .productCard__description p {
     font-size: 1.2rem;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     line-height: 1.5; }
 
 .mainNav-logo {
@@ -969,9 +977,9 @@ footer {
     margin: 0 7px;
     border-bottom: #df0707 solid 3px; }
 
-.modal,
-.modal2,
-.modal3 {
+.deleteModal,
+.editFormModal,
+.addProductModal {
   background-color: rgba(26, 24, 24, 0.832);
   z-index: 100;
   height: 100%;
@@ -984,50 +992,50 @@ footer {
   top: 0;
   left: 0;
   right: 0; }
-  .modal__content,
-  .modal2__content,
-  .modal3__content {
-    flex-direction: column;
+
+.deleteModal__content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9dfdf;
+  opacity: 1;
+  height: 300px;
+  width: 610px;
+  z-index: 200px;
+  font-family: "Share", cursive; }
+  @media (max-width: 460px) {
+    .deleteModal__content {
+      width: 430px; } }
+  .deleteModal__content p {
+    font-size: 1.8rem;
+    padding: 12px; }
+  .deleteModal__content__buttons {
+    height: 50px;
+    width: 290px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #d9dfdf;
-    opacity: 1;
-    height: 300px;
-    width: 610px;
-    z-index: 200px;
-    font-family: "Share", cursive; }
-    .modal__content p,
-    .modal2__content p,
-    .modal3__content p {
-      font-size: 1.8rem;
-      padding: 12px; }
-    .modal__content__buttons,
-    .modal2__content__buttons,
-    .modal3__content__buttons {
-      height: 50px;
-      width: 290px;
-      display: flex;
-      justify-content: space-between; }
-      .modal__content__buttons > button,
-      .modal2__content__buttons > button,
-      .modal3__content__buttons > button {
-        height: 100%;
-        width: 49%;
-        cursor: pointer;
-        outline: none;
-        text-transform: uppercase;
-        border-radius: 10px; }
-        .modal__content__buttons > button:hover,
-        .modal2__content__buttons > button:hover,
-        .modal3__content__buttons > button:hover {
-          background: #d02222;
-          color: white; }
+    justify-content: space-between; }
+    .deleteModal__content__buttons button {
+      padding: 16px;
+      width: 120px;
+      cursor: pointer;
+      outline: none;
+      text-transform: uppercase;
+      border-radius: 4px; }
+    .deleteModal__content__buttons--red:hover {
+      background-color: #d40a0a;
+      color: white; }
+    .deleteModal__content__buttons--green:hover {
+      background-color: #018515;
+      color: white; }
 
 .modalForm {
   background: #bf0a0a;
   width: 500px;
-  height: 85%; }
+  height: 750px; }
+  @media (max-width: 460px) {
+    .modalForm {
+      width: 400px; } }
   .modalForm input {
     margin: 5px auto;
     height: 50px;

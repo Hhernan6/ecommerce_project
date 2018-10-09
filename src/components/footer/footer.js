@@ -27,9 +27,9 @@ const Footer = () => {
                </div>
                <nav className="footer__navs__socialMedia">
                     <ul>
-                        <li><a className="footer__navs__socialMedia--facebook" href="facebook.com" title="facebook"></a></li>
-                        <li className="margin-left"><a className="footer__navs__socialMedia--twitter" href="facebook.com" title="twiiter"></a></li>
-                        <li className="margin-left"><a className="footer__navs__socialMedia--instagram" href="facebook.com" title="instagram"></a></li>
+                        <li><a className="footer__navs__socialMedia--facebook" href="http://facebook.com" title="facebook"></a></li>
+                        <li className="margin-left"><a className="footer__navs__socialMedia--twitter" href="http://twitter.com" title="twitter"></a></li>
+                        <li className="margin-left"><a className="footer__navs__socialMedia--instagram" href="https://instagram.com" title="instagram"></a></li>
                     </ul>
                    
                    </nav>

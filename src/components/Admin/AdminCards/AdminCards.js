@@ -13,7 +13,7 @@ class AdminCards extends React.Component {
     };
   }
 
-  showModal = id => {
+  showdeleteModal = id => {
     let modal = document.getElementById(`${id}`);
 
     if (modal.style.display === "none" || modal.style.display === "") {
@@ -80,36 +80,36 @@ class AdminCards extends React.Component {
         </div>
         <div className="productCards-container__btns">
           <button
-            className="deleteButton"
+            className="editButton"
             onClick={() => this.showeditformModal(this.props.objectID)}
           >
             Edit
           </button>
           <button
             className="deleteButton"
-            onClick={() => this.showModal(this.props.objectID)}
+            onClick={() => this.showdeleteModal(this.props.objectID)}
           >
             Delete
           </button>
         </div>
 
-        <div className="modal" id={this.props.objectID}>
-          <div className="modal__content">
+        <div className="deleteModal" id={this.props.objectID}>
+          <div className="deleteModal__content">
             <p>Are you sure you want to delete this product item?</p>
-            <div className="modal__content__buttons">
-              <button
+            <div className="deleteModal__content__buttons">
+              <button className="deleteModal__content__buttons--green"
                 onClick={() => this.props.deleteProduct(this.props.objectID)}
               >
                 Yes
               </button>
-              <button onClick={() => this.showModal(this.props.objectID)}>
+              <button className="deleteModal__content__buttons--red" onClick={() => this.showdeleteModal(this.props.objectID)}>
                 No
               </button>
             </div>
           </div>
         </div>
 
-        <div className="modal3" id={`${this.props.objectID + 1}`}>
+        <div className="editFormModal" id={`${this.props.objectID + 1}`}>
           <form
             className="modalForm"
             id={`${this.props.title}`}
@@ -145,16 +145,7 @@ class AdminCards extends React.Component {
                 value={this.state.price}
               />
             </div>
-            <div className="contact__inputs">
-              <label htmlFor="description">Description</label>
-              <input
-                type="text"
-                id="description"
-                name="description"
-                onChange={this.getFormValues}
-                value={this.state.description}
-              />
-            </div>
+     
             <div className="contact__inputs">
               <label htmlFor="brand">Brand</label>
               <input
@@ -173,6 +164,16 @@ class AdminCards extends React.Component {
                 name="productType"
                 onChange={this.getFormValues}
                 value={this.state.productType}
+              />
+            </div>
+            <div className="contact__inputs">
+              <label htmlFor="description">Description</label>
+              <input
+                type="text"
+                id="description"
+                name="description"
+                onChange={this.getFormValues}
+                value={this.state.description}
               />
             </div>
             <div className="modal2__buttons">

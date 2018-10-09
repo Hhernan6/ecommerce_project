@@ -2,7 +2,7 @@ main {
   padding-top: 100px;
 }
 .hero {
-  height: 600px;
+  height: 80vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,47 +11,28 @@ main {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.37));
   @media (max-width: 768px) {
     background-position: bottom;
   }
-
   &__text {
-    background-color: rgba(235, 230, 230, 0.74);
-    height: 300px;
     width: 600px;
-    padding: 13px;
+    padding: 14px;
     text-align: center;
-
+    background-color: rgba(255, 255, 255, 0.777);
     button {
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      width: 120px;
-      height: 60px;
-      cursor: pointer;
-      border-radius: 4px;
-      outline: none;
-      font-family: "Share", cursive;
-      background-color: rgb(53, 46, 92);
-      color: white;
-      letter-spacing: 0.9px;
-      border: none;
-      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
-      &:hover {
-        background-color: rgb(230, 4, 4);
-        color: white;
-        opacity: 1;
-      }
+      @include buttonStyling;
     }
     h1 {
-      color: rgb(21, 20, 20);
-      font-size: 1.7rem;
-      font-family: "RVMontserrat";
+      color: rgb(22, 17, 35);
+      font-size: 2.7rem;
+      font-family: "Montserrat";
       text-transform: uppercase;
     }
     p {
-      color: rgb(14, 14, 14);
-      font-size: 160%;
-      font-family: "RVMontserrat";
+      color: rgb(1, 1, 1);
+      font-size: 1.8rem;
+      font-family: "Montserrat";
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 0.9px;
@@ -62,7 +43,6 @@ main {
 
 .availableProducts {
   width: 95%;
-
   height: 100%;
   margin: 60px auto;
 
@@ -70,7 +50,7 @@ main {
     text-align: center;
     font-size: 4rem;
     font-family: "Share", cursive;
-    margin-bottom: 0;
+    margin-bottom: 16px;
   }
   .availableProducts__container {
     width: 100%;
@@ -145,18 +125,7 @@ main {
     }
   }
   button {
-    padding: 12px;
-    border-radius: 4px;
-    font-family: "Share", cursive;
-    font-size: 1.5rem;
-    outline: none;
-    text-transform: uppercase;
-    margin: 0 auto;
-    cursor: pointer;
-    &:hover {
-      background-color: rgb(221, 5, 5);
-      color: white;
-    }
+    @include buttonStyling;
   }
 }
 .customerCards-container {
@@ -246,4 +215,3 @@ main {
     }
   }
 }
-

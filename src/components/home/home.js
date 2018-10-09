@@ -2,44 +2,20 @@ import React from "react";
 import Hero from "./hero/hero";
 
 const Home = () => {
-  //   let i = 0;
-  //   let images = [];
-  //   let time = 3000;
-
-  //   images[0] = `url(${Speaker})`;
-  //   images[1] =`url(${Drum})`;
-  //   images[2] = `url(${DrumTwo})`;;
-
-  //   function changeImg() {
-  //     const hero = document.querySelector(".hero");
-  //     hero.style.backgroundImage = images[i];
-  //     if (i < images.length - 1) {
-  //       i++;
-  //     } else {
-  //       i = 0;
-  //     }
-  //     setTimeout(changeImg, time);
-  //   }
-
-  //   window.onload = changeImg;
-
   return (
     <main>
       <Hero />
-
       <section className="small-card">
         <div className="small-card__container">
-        <img src={require("../../assets/images/introDrums.jpg")} alt="" />
+          <img src={require("../../assets/images/introDrums.jpg")} alt="" />
           <div className="small-card__container__content">
             <p>
-               Welcome to Groove! Start exploring our variety of products selection and hope you leave statisfied.
+              Welcome to Groove! We have new products available now! Start
+              exploring our variety of products selection and start grooving!
             </p>
           </div>
-         
         </div>
       </section>
-
-
       <section className="availableProducts">
         <h2>Available Products</h2>
         <div className="availableProducts__container">
@@ -57,16 +33,7 @@ const Home = () => {
           </figure>
         </div>
       </section>
-      {/* <section className="availableProducts">
-      <h2>Coming Soon</h2>
-      <div className="availableProducts__container">
-        <img src={DW} alt=""></img>
-        <img src={Sabian} alt=""></img>
-        <img src={Sabian} alt=""></img>
-      </div>
 
-      
-      </section>  */}
       <section className="small-card">
         <div className="small-card__container">
           <div className="small-card__container__content">

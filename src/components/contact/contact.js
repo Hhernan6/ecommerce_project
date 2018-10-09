@@ -27,19 +27,19 @@ const contact = () => {
         <form className="contactForm" method="POST" action="http://localhost:3007/admin/contact">
           <div className="contact__inputs">
             <label htmlFor="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" />
+            <input type="text" id="firstName" name="firstName" required/>
           </div>
           <div className="contact__inputs">
             <label htmlFor="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" />
+            <input type="text" id="lastName" name="lastName" required/>
           </div>
           <div className="contact__inputs">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" required/>
           </div>
           <div className="contact__inputs">
             <label htmlFor="phoneNum">Phone Number:</label>
-            <input type="tel" id="phoneNum" name="phoneNum" />
+            <input type="tel" id="phoneNum" name="phoneNum" required/>
           </div>
           <div className="contact__inputs">
             <label htmlFor="comments">Comments</label>
@@ -49,7 +49,7 @@ const contact = () => {
         </form>
         <div />
       </section>
-      <div><p className="elevator-btn">go to the top</p></div>
+     
     </main>
   );
 };
