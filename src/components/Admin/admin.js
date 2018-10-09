@@ -69,7 +69,7 @@ const Admin = props => {
             <label htmlFor="description">Description</label>
             <input type="text" id="description" name="description" />
           </div>
-          <div className="modal2__buttons">
+          <div className="modalForm__buttons">
             <input type="submit" value="Submit" id="submitBtn2" />
             <button onClick={showAddProductModal} type="button">
               Cancel

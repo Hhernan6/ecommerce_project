@@ -17,7 +17,6 @@
     justify-content: flex-end;
     margin: 0 auto;
     @media (max-width: 768px) {
-  
       display: none;
     }
     @media (max-width: 375px) {
@@ -26,7 +25,7 @@
     li {
       list-style: none;
       margin-right: 10px;
-      
+
       padding-left: 12px;
       @media (max-width: 768px) {
         margin-left: 30px;
@@ -39,31 +38,29 @@
         color: white;
         font-weight: 500;
         letter-spacing: 0.8px;
-        @include hoverLinks
+        @include hoverLinks;
       }
     }
   }
   button {
-@include buttonStyling;
+    @include buttonStyling;
     @media (max-width: 767px) {
       display: none;
     }
   }
 }
 .mainNav__links--border {
-    border-left:  2px solid #C5C6C7;
+  border-left: 2px solid #c5c6c7;
 }
 
-
-
-.mobileNav{
+.mobileNav {
   display: none;
   position: fixed;
   height: 100%;
   width: 100%;
-   background-color: #1f2833;
-   z-index: 1000;
-  
+  background-color: #1f2833;
+  z-index: 1000;
+
   button {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -106,38 +103,35 @@
       color: white;
     }
   }
-   &__links {
-     
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-     height: 80%;
-     width: 100%;
-     .main-nav__listItem--margin-top {
-       margin-top: 10px;
-     }
-     li {
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+    .main-nav__listItem--margin-top {
+      margin-top: 10px;
+    }
+    li {
       font-size: 3rem;
-       a {
-         color: white;
-         font-family: 'Share', cursive;
-         letter-spacing: 0.8px;
-       }
-     }
-   }
-
-
+      a {
+        color: white;
+        font-family: "Share", cursive;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
 }
 .menu-icon {
-  background-image: url('../images/menu-icon.svg');
+  background-image: url("../images/menu-icon.svg");
   width: 50px;
   height: 50px;
   background-size: cover;
   display: none;
   margin-right: 10px;
   cursor: pointer;
- 
+
   height: 50px;
   width: 50px;
   margin-right: 10px;
@@ -151,7 +145,6 @@
     font-size: 1.8rem;
     font-family: "Share", cursive;
     color: white;
-    
   }
   @media (max-width: 768px) {
     display: block;

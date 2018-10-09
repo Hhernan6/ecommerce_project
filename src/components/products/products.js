@@ -31,6 +31,7 @@ const Products = props => {
             <option value="Allora Paris">Allora Paris</option>
             <option value="Jean Baptiste">Jean Baptiste</option>
             <option value="Gibson">Gibson</option>
+            <option value="Korg">Korg</option>
           </select>
           <select id="productTypeSelect" name="Brand" form="form">
             <option value="Product Type">Product Type:</option>

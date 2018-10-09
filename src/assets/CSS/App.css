@@ -41,27 +41,27 @@
           display: block;
           width: 0;
           height: 2px;
-          background: red;
+          background: #d70303;
           transition: width 0.2s ease-out; }
         .mainNav__links li a:hover::after {
           width: 100%; }
   .mainNav button {
     text-transform: uppercase;
     font-size: 1.5rem;
-    width: 120px;
+    width: 160px;
     height: 60px;
     cursor: pointer;
     border-radius: 4px;
     outline: none;
     font-family: "Share", cursive;
-    background-color: #d40a0a;
+    background-color: #d70303;
     color: white;
     letter-spacing: 0.9px;
     border: none;
     margin-right: 10px;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
     .mainNav button:hover {
-      background-color: #e60404;
+      background-color: #eb0404;
       color: white;
       opacity: 1; }
     @media (max-width: 767px) {
@@ -69,7 +69,7 @@
         display: none; } }
 
 .mainNav__links--border {
-  border-left: 2px solid #C5C6C7; }
+  border-left: 2px solid #c5c6c7; }
 
 .mobileNav {
   display: none;
@@ -129,7 +129,7 @@
       font-size: 3rem; }
       .mobileNav__links li a {
         color: white;
-        font-family: 'Share', cursive;
+        font-family: "Share", cursive;
         letter-spacing: 0.8px; }
 
 .menu-icon {
@@ -474,11 +474,11 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.37)); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.37));
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   @media (max-width: 768px) {
     .hero {
       background-position: bottom; } }
@@ -490,20 +490,20 @@ main {
     .hero__text button {
       text-transform: uppercase;
       font-size: 1.5rem;
-      width: 120px;
+      width: 160px;
       height: 60px;
       cursor: pointer;
       border-radius: 4px;
       outline: none;
       font-family: "Share", cursive;
-      background-color: #d40a0a;
+      background-color: #d70303;
       color: white;
       letter-spacing: 0.9px;
       border: none;
       margin-right: 10px;
       box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
       .hero__text button:hover {
-        background-color: #e60404;
+        background-color: #eb0404;
         color: white;
         opacity: 1; }
     .hero__text h1 {
@@ -538,14 +538,31 @@ main {
     margin: 0 auto; }
     .availableProducts .availableProducts__container figure {
       width: 700px;
-      height: 100%;
-      margin: 0 auto; }
-    .availableProducts .availableProducts__container img {
-      box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-      padding: 12px;
-      width: 100%;
-      height: 400px;
-      margin: 10px 0; }
+      height: 380px;
+      margin: 10px auto;
+      position: relative; }
+      .availableProducts .availableProducts__container figure img {
+        box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+        width: 100%;
+        height: 100%; }
+      .availableProducts .availableProducts__container figure figcaption {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.633);
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        font-family: "Share", cursive;
+        opacity: 0; }
+        .availableProducts .availableProducts__container figure figcaption:hover {
+          opacity: 1; }
 
 .small-card {
   width: 95%;
@@ -574,7 +591,7 @@ main {
 .small-card__container__content {
   width: 50%;
   text-align: center;
-  border-bottom: red solid 2px;
+  border-bottom: #d70303 solid 2px;
   padding-bottom: 20px; }
   @media (max-width: 767px) {
     .small-card__container__content {
@@ -592,20 +609,20 @@ main {
   .small-card__container__content button {
     text-transform: uppercase;
     font-size: 1.5rem;
-    width: 120px;
+    width: 160px;
     height: 60px;
     cursor: pointer;
     border-radius: 4px;
     outline: none;
     font-family: "Share", cursive;
-    background-color: #d40a0a;
+    background-color: #d70303;
     color: white;
     letter-spacing: 0.9px;
     border: none;
     margin-right: 10px;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
     .small-card__container__content button:hover {
-      background-color: #e60404;
+      background-color: #eb0404;
       color: white;
       opacity: 1; }
 
@@ -628,7 +645,7 @@ main {
   justify-content: space-around;
   margin-top: 30px; }
   .customerCards figcaption {
-    border-bottom: 2px red solid;
+    border-bottom: 2px #d70303 solid;
     display: block;
     margin-top: 10px;
     font-size: 1.5rem;
@@ -977,117 +994,6 @@ footer {
     margin: 0 7px;
     border-bottom: #df0707 solid 3px; }
 
-.deleteModal,
-.editFormModal,
-.addProductModal {
-  background-color: rgba(26, 24, 24, 0.832);
-  z-index: 100;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-  top: 0;
-  left: 0;
-  right: 0; }
-
-.deleteModal__content {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #d9dfdf;
-  opacity: 1;
-  height: 300px;
-  width: 610px;
-  z-index: 200px;
-  font-family: "Share", cursive; }
-  @media (max-width: 460px) {
-    .deleteModal__content {
-      width: 430px; } }
-  .deleteModal__content p {
-    font-size: 1.8rem;
-    padding: 12px; }
-  .deleteModal__content__buttons {
-    height: 50px;
-    width: 290px;
-    display: flex;
-    justify-content: space-between; }
-    .deleteModal__content__buttons button {
-      padding: 16px;
-      width: 120px;
-      cursor: pointer;
-      outline: none;
-      text-transform: uppercase;
-      border-radius: 4px; }
-    .deleteModal__content__buttons--red:hover {
-      background-color: #d40a0a;
-      color: white; }
-    .deleteModal__content__buttons--green:hover {
-      background-color: #018515;
-      color: white; }
-
-.modalForm {
-  background: #bf0a0a;
-  width: 500px;
-  height: 750px; }
-  @media (max-width: 460px) {
-    .modalForm {
-      width: 400px; } }
-  .modalForm input {
-    margin: 5px auto;
-    height: 50px;
-    display: block;
-    width: 90%;
-    font-family: "Share", cursive;
-    font-size: 1.7rem;
-    background-color: #e2dede;
-    border: none; }
-  .modalForm .contact__inputs {
-    margin: 18px auto;
-    width: 100%; }
-    .modalForm .contact__inputs label {
-      color: white;
-      margin: 0 auto;
-      width: 90%;
-      display: block;
-      margin-top: 10px;
-      font-family: "Share", cursive;
-      font-size: 1.7rem; }
-  .modalForm .modal2__buttons {
-    display: flex;
-    margin-top: 50px;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: auto; }
-    .modalForm .modal2__buttons > button {
-      width: 45%;
-      height: 50px;
-      border: none;
-      background-color: #303233;
-      color: white;
-      border-radius: 10px;
-      outline: none;
-      cursor: pointer;
-      font-family: "Share", cursive;
-      font-size: 1.7rem;
-      padding: 0; }
-      .modalForm .modal2__buttons > button:hover {
-        background-color: #060606; }
-    .modalForm .modal2__buttons #submitBtn2 {
-      width: 45%;
-      height: 50px;
-      background-color: #313232;
-      color: white;
-      border-radius: 10px;
-      margin: 0;
-      cursor: pointer; }
-      .modalForm .modal2__buttons #submitBtn2:hover {
-        background-color: #026e02; }
-
 .admin-Nav {
   height: 80px;
   width: 95%;
@@ -1095,22 +1001,23 @@ footer {
   align-items: center;
   margin-top: 50px; }
   .admin-Nav button {
-    height: 70px;
-    width: 200px;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 4px;
-    font-family: "Share", cursive;
-    font-size: 1.5rem;
     text-transform: uppercase;
-    background-color: #eb0808;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(163, 160, 160, 0.9);
+    font-size: 1.5rem;
+    width: 160px;
+    height: 60px;
     cursor: pointer;
-    color: white; }
+    border-radius: 4px;
+    outline: none;
+    font-family: "Share", cursive;
+    background-color: #d70303;
+    color: white;
+    letter-spacing: 0.9px;
+    border: none;
+    margin-right: 10px;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
     .admin-Nav button:hover {
-      background-color: #da2202;
-      box-shadow: 0 4px 8px 0 rgba(172, 171, 171, 0.9);
+      background-color: #eb0404;
+      color: white;
       opacity: 1; }
   .admin-Nav ul {
     list-style: none;
@@ -1127,15 +1034,17 @@ footer {
         text-transform: uppercase; }
 
 .productCards-container {
-  display: flex;
   flex-wrap: wrap;
   width: 95%;
-  justify-content: space-around;
   margin: 50px auto;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
   .productCards-container__flex {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
     @media (max-width: 767px) {
       .productCards-container__flex {
         flex-direction: column; } }
@@ -1250,3 +1159,114 @@ footer {
       .contactRow__info__comments p {
         font-size: 1.3rem;
         font-family: 'Share', cursive; }
+
+.deleteModal,
+.editFormModal,
+.addProductModal {
+  background-color: rgba(26, 24, 24, 0.832);
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.deleteModal__content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9dfdf;
+  opacity: 1;
+  height: 300px;
+  width: 610px;
+  z-index: 200px;
+  font-family: "Share", cursive; }
+  @media (max-width: 460px) {
+    .deleteModal__content {
+      width: 430px; } }
+  .deleteModal__content p {
+    font-size: 1.8rem;
+    padding: 12px; }
+  .deleteModal__content__buttons {
+    height: 50px;
+    width: 290px;
+    display: flex;
+    justify-content: space-between; }
+    .deleteModal__content__buttons button {
+      padding: 16px;
+      width: 120px;
+      cursor: pointer;
+      outline: none;
+      text-transform: uppercase;
+      border-radius: 4px; }
+    .deleteModal__content__buttons--red:hover {
+      background-color: #d40a0a;
+      color: white; }
+    .deleteModal__content__buttons--green:hover {
+      background-color: #018515;
+      color: white; }
+
+.modalForm {
+  background: #bf0a0a;
+  width: 500px;
+  height: 750px; }
+  @media (max-width: 460px) {
+    .modalForm {
+      width: 400px; } }
+  .modalForm input {
+    margin: 5px auto;
+    height: 50px;
+    display: block;
+    width: 90%;
+    font-family: "Share", cursive;
+    font-size: 1.7rem;
+    background-color: #e2dede;
+    border: none; }
+  .modalForm .contact__inputs {
+    margin: 18px auto;
+    width: 100%; }
+    .modalForm .contact__inputs label {
+      color: white;
+      margin: 0 auto;
+      width: 90%;
+      display: block;
+      margin-top: 10px;
+      font-family: "Share", cursive;
+      font-size: 1.7rem; }
+  .modalForm .modalForm__buttons {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto; }
+    .modalForm .modalForm__buttons > button {
+      width: 45%;
+      height: 50px;
+      border: none;
+      background-color: #303233;
+      color: white;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+      font-family: "Share", cursive;
+      font-size: 1.7rem;
+      padding: 0; }
+      .modalForm .modalForm__buttons > button:hover {
+        background-color: #060606; }
+    .modalForm .modalForm__buttons #submitBtn2 {
+      width: 45%;
+      height: 50px;
+      background-color: #313232;
+      color: white;
+      border-radius: 10px;
+      margin: 0;
+      cursor: pointer; }
+      .modalForm .modalForm__buttons #submitBtn2:hover {
+        background-color: #026e02; }

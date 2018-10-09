@@ -74,7 +74,9 @@ class AdminCards extends React.Component {
           <img src={this.props.image} alt="DW performance drum set" />
           <div className="productCards__description">
             <h1>{this.props.title}</h1>
-            <p>Price: <span>{this.props.price} </span></p>
+            <p>
+              Price: <span>{this.props.price} </span>
+            </p>
             <p>{this.props.description}</p>
           </div>
         </div>
@@ -97,12 +99,16 @@ class AdminCards extends React.Component {
           <div className="deleteModal__content">
             <p>Are you sure you want to delete this product item?</p>
             <div className="deleteModal__content__buttons">
-              <button className="deleteModal__content__buttons--green"
+              <button
+                className="deleteModal__content__buttons--green"
                 onClick={() => this.props.deleteProduct(this.props.objectID)}
               >
                 Yes
               </button>
-              <button className="deleteModal__content__buttons--red" onClick={() => this.showdeleteModal(this.props.objectID)}>
+              <button
+                className="deleteModal__content__buttons--red"
+                onClick={() => this.showdeleteModal(this.props.objectID)}
+              >
                 No
               </button>
             </div>
@@ -145,7 +151,7 @@ class AdminCards extends React.Component {
                 value={this.state.price}
               />
             </div>
-     
+
             <div className="contact__inputs">
               <label htmlFor="brand">Brand</label>
               <input
@@ -176,7 +182,7 @@ class AdminCards extends React.Component {
                 value={this.state.description}
               />
             </div>
-            <div className="modal2__buttons">
+            <div className="modalForm__buttons">
               <input type="submit" value="Submit" id="submitBtn2" />
               <button
                 onClick={() => this.showeditformModal(this.props.objectID)}

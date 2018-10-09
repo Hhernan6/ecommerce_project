@@ -7,11 +7,9 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 20px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.37));
+  @include flex(flex, center, center);
   @media (max-width: 768px) {
     background-position: bottom;
   }
@@ -62,16 +60,33 @@ main {
 
     figure {
       width: 700px;
-      height: 100%;
-      margin: 0 auto;
-    }
+      height: 380px;
+      margin: 10px auto;
+      position: relative;
 
-    img {
-      box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-      padding: 12px;
-      width: 100%;
-      height: 400px;
-      margin: 10px 0;
+      img {
+        box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+        width: 100%;
+        height: 100%;
+      }
+      figcaption {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.633);
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        @include flex(flex, center, center);
+        color: white;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        font-family: $mainFont;
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -105,9 +120,8 @@ main {
 }
 .small-card__container__content {
   width: 50%;
-
   text-align: center;
-  border-bottom: red solid 2px;
+  border-bottom: $mainRedColor solid 2px;
   padding-bottom: 20px;
   @media (max-width: 767px) {
     width: 100%;
@@ -150,7 +164,7 @@ main {
   margin-top: 30px;
 
   figcaption {
-    border-bottom: 2px red solid;
+    border-bottom: 2px $mainRedColor solid;
     display: block;
     margin-top: 10px;
     font-size: 1.5rem;

@@ -1,36 +1,31 @@
-import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
-import auth0Client from '../../Auth';
+import React from "react";
+import { Link, withRouter } from "react-router-dom";
+import auth0Client from "../../Auth";
 // const aux = (props) => props.children;
-
 // export default aux;
+
 const header = props => {
   const signOut = () => {
     auth0Client.signOut();
     props.history.replace("/");
-
   };
 
   const toggleMobileNav = () => {
-    const mobileNav = document.querySelector('.mobileNav')
-    if (mobileNav.style.display === 'block')
-    mobileNav.style.display = 'none'
+    const mobileNav = document.querySelector(".mobileNav");
+    if (mobileNav.style.display === "block") mobileNav.style.display = "none";
     else {
-      mobileNav.style.display = 'block'
+      mobileNav.style.display = "block";
     }
-  }
+  };
   return (
     <header>
       <nav className="mobileNav">
-      <div className="menu-icon--mobile" onClick={toggleMobileNav}/>
-      {!auth0Client.isAuthenticated() && (
-            <button onClick={auth0Client.signIn}>
-              Sign In
-            </button>
-          )}
-             {auth0Client.isAuthenticated() && (
+        <div className="menu-icon--mobile" onClick={toggleMobileNav} />
+        {!auth0Client.isAuthenticated() && (
+          <button onClick={auth0Client.signIn}>Sign In</button>
+        )}
+        {auth0Client.isAuthenticated() && (
           <div>
-           
             <button
               className="btn"
               onClick={() => {
@@ -41,31 +36,35 @@ const header = props => {
             </button>
           </div>
         )}
-      <ul className="mobileNav__links">
+        <ul className="mobileNav__links">
           <li onClick={toggleMobileNav}>
             <Link to="/">Home</Link>
           </li>
-          <li className="main-nav__listItem--margin-top" onClick={toggleMobileNav}>
+          <li
+            className="main-nav__listItem--margin-top"
+            onClick={toggleMobileNav}
+          >
             <Link to="/product">Products</Link>
           </li>
-          <li className="main-nav__listItem--margin-top " onClick={toggleMobileNav}>
+          <li
+            className="main-nav__listItem--margin-top "
+            onClick={toggleMobileNav}
+          >
             <Link to="/contact">Contact</Link>
           </li>
           {auth0Client.isAuthenticated() ? (
-           <li className="main-nav__listItem--margin-top " onClick={toggleMobileNav}>
-             <Link to ="/admin/products"> Admin</Link>
-           </li>
-          ): null}
-          
+            <li
+              className="main-nav__listItem--margin-top "
+              onClick={toggleMobileNav}
+            >
+              <Link to="/admin/products"> Admin</Link>
+            </li>
+          ) : null}
         </ul>
-      
-        
- 
       </nav>
       <nav className="mainNav">
-  
-          <p className="mainNav-logo">Groove</p> 
-      
+        <p className="mainNav-logo">Groove</p>
+
         <ul className="mainNav__links">
           <li>
             <Link to="/">Home</Link>
@@ -77,22 +76,17 @@ const header = props => {
             <Link to="/contact">Contact</Link>
           </li>
           {auth0Client.isAuthenticated() ? (
-           <li className="mainNav__links--border">
-             <Link to ="/admin/products"> Admin</Link>
-           </li>
-          ): null}
-          
+            <li className="mainNav__links--border">
+              <Link to="/admin/products"> Admin</Link>
+            </li>
+          ) : null}
         </ul>
-      
-        
-          {!auth0Client.isAuthenticated() && (
-            <button onClick={auth0Client.signIn}>
-              Sign In
-            </button>
-          )}
-             {auth0Client.isAuthenticated() && (
+
+        {!auth0Client.isAuthenticated() && (
+          <button onClick={auth0Client.signIn}>Sign In</button>
+        )}
+        {auth0Client.isAuthenticated() && (
           <div>
-           
             <button
               className="btn"
               onClick={() => {
@@ -104,8 +98,7 @@ const header = props => {
           </div>
         )}
 
-
-      <div className="menu-icon" onClick={toggleMobileNav}/>
+        <div className="menu-icon" onClick={toggleMobileNav} />
       </nav>
     </header>
   );

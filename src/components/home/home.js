@@ -21,15 +21,19 @@ const Home = () => {
         <div className="availableProducts__container">
           <figure>
             <img src={require("../../assets/images/dwdrumset.jpeg")} alt="" />
+            <figcaption>Drum Kits</figcaption>
           </figure>
           <figure>
             <img src={require("../../assets/images/guitar.jpg")} alt="" />
+            <figcaption>Guitars</figcaption>
           </figure>
           <figure>
             <img src={require("../../assets/images/saxophone.jpg")} alt="" />
+            <figcaption>Saxophone</figcaption>
           </figure>
           <figure>
             <img src={require("../../assets/images/keyboard.jpg")} alt="" />
+            <figcaption>Keyboards</figcaption>
           </figure>
         </div>
       </section>
