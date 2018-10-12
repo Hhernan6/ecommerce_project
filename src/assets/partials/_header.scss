@@ -32,12 +32,7 @@
       }
 
       a {
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-family: $mainFont;
-        color: white;
-        font-weight: 500;
-        letter-spacing: 0.8px;
+        @include linkStyling;
         @include hoverLinks;
       }
     }

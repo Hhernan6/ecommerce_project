@@ -23,9 +23,8 @@ class App extends Component {
   }
 
 
-   async componentDidMount() {
-
-    await fetch("http://localhost:3007/products")
+    componentDidMount() {
+     fetch("http://localhost:3007/products")
       .then(response => response.json())
       .then(data =>
         this.setState({
@@ -33,10 +32,10 @@ class App extends Component {
           loading: false
         }, () => console.log(this.state.data))
       )
-      .catch(() => {
-        alert("Server is Down for maintence");
+      .catch((e) => {
+        throw e;
       });
-      await fetch("http://localhost:3007/admin/contact")
+     fetch("http://localhost:3007/admin/contact")
       .then(response => response.json())
       .then(contactData =>
         this.setState({
@@ -104,7 +103,7 @@ class App extends Component {
             <Header />
             <Switch>
               <Route path="/" component={Home} exact />
-              <Route path="/product" render={() => <Products products={products} brandFilter={this.brandFilter}/> }/>
+              <Route path="/products" render={() => <Products products={products} brandFilter={this.brandFilter}/> }/>
               <Route path="/contact" component={contact} />
               <Route exact path="/callback" component={Callback} />
               <SecuredRoute path="/admin/Contact"   component ={AdminContact} contactInfo={this.state.contactData}/>

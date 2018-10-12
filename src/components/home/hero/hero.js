@@ -7,10 +7,10 @@ import Guitar from "../../../assets/images/guitar-hero.jpg";
 let i = 0;
 let images = [];
 
-images[0] = `url(${Keyboard})`;
-images[1] = `url(${Drums})`;
-images[2] = `url(${"https://cdn.pixabay.com/photo/2015/03/26/10/22/band-691224_1280.jpg"})`;
-images[3] = `url(${Guitar})`
+images[0] = `url(${"https://images.unsplash.com/photo-1466767574486-40e61f77bdd6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=42afb2e7f389e92324b9f2917182b3ed&auto=format&fit=crop&w=1950&q=80"})`;
+images[1] = `url(${"https://images.unsplash.com/photo-1521547418549-6a31aad7c177?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ed97836abc675e636784c4925e9d31fb&auto=format&fit=crop&w=1650&q=80"})`;
+images[2] = `url(${"https://www.maxpixel.net/static/photo/2x/Saxophone-Musician-Performance-Band-Concert-Music-3264716.jpg"})`;
+images[3] = `url(${"https://images.unsplash.com/photo-1421217336522-861978fdf33a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a94d8eeeab21910577f3aa06616c2a3&auto=format&fit=crop&w=1650&q=80"})`
 class Hero extends Component {
   changeImg = () => {
     let hero = document.querySelector(".hero");

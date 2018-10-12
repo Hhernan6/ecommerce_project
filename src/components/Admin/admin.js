@@ -5,20 +5,13 @@ import AdminCards from "./AdminCards/AdminCards";
 const Admin = props => {
   const showAddProductModal = () => {
     let addProductModal = document.querySelector(".addProductModal");
-    // if (addProductModal.style.display === "none" || addProductModal.style.display === "") {
-    //   addProductModal.style.display = "flex";
-    // } else {
-    //   addProductModal.style.display = "none";
-    // }
-
     if (addProductModal.style.display === 'flex') {
       addProductModal.style.display = 'none';
     } else {
         addProductModal.style.display = 'flex';
-      }
+    }
   }
   
-
   const deleteFunc = ID => {
     fetch(`http://localhost:3007/products/${ID}`, {
       method: "delete"
@@ -82,13 +75,12 @@ const Admin = props => {
         {props.products.map(cardsList => {
           return (
             <AdminCards
-              key={cardsList._id}
+              key={cardsList.productID}
               title={cardsList.title}
               description={cardsList.description}
               price={cardsList.price}
               image={cardsList.productImage}
-              objectID={cardsList._id}
-              // openModal={showModal}
+              objectID={cardsList.productID}
               deleteProduct={deleteFunc}
               productType={cardsList.productType}
               brand={cardsList.brand}

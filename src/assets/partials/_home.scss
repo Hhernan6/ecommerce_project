@@ -1,82 +1,31 @@
 main {
   padding-top: 100px;
 }
-.hero {
-  height: 80vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.37));
-  @include flex(flex, center, center);
-  @media (max-width: 768px) {
-    background-position: bottom;
-  }
-  &__text {
-    width: 600px;
-    padding: 14px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.777);
-    button {
-      @include buttonStyling;
-    }
-    h1 {
-      color: rgb(22, 17, 35);
-      font-size: 2.7rem;
-      font-family: "Montserrat";
-      text-transform: uppercase;
-    }
-    p {
-      color: rgb(1, 1, 1);
-      font-size: 1.8rem;
-      font-family: "Montserrat";
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 0.9px;
-      text-align: center;
-    }
-  }
-}
-
 .availableProducts {
-  width: 95%;
-  height: 100%;
+  @include dimensions(95%, 100%);
   margin: 60px auto;
 
   h2 {
-    text-align: center;
     font-size: 4rem;
-    font-family: "Share", cursive;
+    font-family: $mainFont;
     margin-bottom: 16px;
   }
   .availableProducts__container {
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    display: flex;
+    @include dimensions(100%, 100%);
     flex-wrap: wrap;
-    margin: 0 auto;
-
+    @include flex(flex, space-between, center);
     figure {
-      width: 700px;
-      height: 380px;
+      @include dimensions(700px, 380px);
       margin: 10px auto;
       position: relative;
-
       img {
-        box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-        width: 100%;
-        height: 100%;
+        @include dimensions(100%, 100%);
       }
       figcaption {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.633);
         top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
+        @include dimensions(100%, 100%);
         @include flex(flex, center, center);
         color: white;
         font-size: 2.6rem;
@@ -90,50 +39,37 @@ main {
     }
   }
 }
-
 .small-card {
-  width: 95%;
-  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+  box-shadow: $cardBoxShadow;
   padding: 12px;
-  height: 100%;
+  @include dimensions(95%, 100%);
   margin: 50px auto;
-  background-color: white;
   .small-card__container {
-    width: 98%;
-    height: 90%;
-    display: flex;
-
-    justify-content: space-between;
-    margin: 0 auto;
+    @include dimensions(98%, 90%);
+    @include flex(flex, space-between, none);
     @media (max-width: 767px) {
       flex-direction: column-reverse;
     }
     img {
-      width: 45%;
-      height: 350px;
+      @include dimensions(45%, 350px);
       @media (max-width: 767px) {
-        width: 100%;
-        height: 300px;
+        @include dimensions(100%, 300px);
       }
     }
   }
 }
 .small-card__container__content {
-  width: 50%;
-  text-align: center;
+  @include dimensions(50%, '');
   border-bottom: $mainRedColor solid 2px;
   padding-bottom: 20px;
   @media (max-width: 767px) {
-    width: 100%;
+    @include dimensions(100%, '');
   }
-
   p {
     font-size: 2rem;
-    font-family: "Share", cursive;
-    text-align: center;
-    max-width: 100%;
-    line-height: 1.3;
-    height: auto;
+    font-family: $mainFont;
+    line-height: 1.5;
+    @include dimensions(100%, auto);
     @media (max-width: 460px) {
       font-size: 1.8rem;
     }
@@ -143,86 +79,54 @@ main {
   }
 }
 .customerCards-container {
-  height: 100%;
   margin-top: 50px;
-  width: 98%;
-  margin: 0 auto;
-
+  @include dimensions(98%, 100%);
   h2 {
-    text-align: center;
     font-size: 2.9rem;
-    font-family: "Share", cursive;
+    font-family: $mainFont;
   }
 }
 .customerCards {
-  display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  justify-content: space-around;
+ @include dimensions(100%, 100%);
   margin-top: 30px;
-
+  @include flex(flex, space-between, center);
   figcaption {
     border-bottom: 2px $mainRedColor solid;
-    display: block;
     margin-top: 10px;
     font-size: 1.5rem;
-    max-height: 60%;
+    line-height: 1.5;
+    font-family: $mainFont;
+    padding-bottom: 12px;
     width: 100%;
-    line-height: 1.8;
-    font-family: "Share", cursive;
-    padding-bottom: 10px;
-    text-align: center;
-    @media (max-width: 768px) {
-      max-width: 100%;
-    }
   }
-}
-@media (max-width: 768px) {
-  width: 280px;
-  margin: 0 auto;
 }
 
 .customerCards__card {
-  width: 400px;
-  height: 100%;
-  margin: 0 auto;
-
+  @include dimensions(400px, 100%);
   .customerCards__content__rating {
     display: flex;
-    width: 100%;
-    height: 100%;
+    @include dimensions(100%, 100%);
     align-items: center;
-
-    // background: green;
+    @include flex(flex, '', center);
     p {
       max-height: 30%;
       display: inline-block;
       font-size: 1.3rem;
-      font-family: "Share", cursive;
-
-      // background: yellow;
+      font-family: $mainFont;
     }
     span {
-      align-self: center;
-      width: 100px;
-      height: 100px;
+      @include dimensions(100px, 100px);
       background-size: cover;
-
       background-image: url("../images/ratingicon.png");
     }
   }
 
   img {
-    width: 70%;
-    height: 240px;
+    @include dimensions(70%, 240px);
     margin: 0 auto;
     display: block;
     border-radius: 50%;
-    @media (max-width: 1115px) {
-      height: 250px;
-    }
     @media (max-width: 768px) {
       height: 200px;
       width: 60%;

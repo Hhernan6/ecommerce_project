@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer>
       <div className="logoContainer logoContainer--footer ">
         <p>Groove</p>
-        <span className="logoContainer__logo" />
       </div>
       <div className="footer__navs">
         <nav className="footer__navs__left">

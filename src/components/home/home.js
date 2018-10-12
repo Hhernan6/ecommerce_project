@@ -8,20 +8,20 @@ const Home = () => {
       <section className="small-card">
         <div className="small-card__container">
           <img src={require("../../assets/images/introDrums.jpg")} alt="" />
-          <div className="small-card__container__content">
+          <div className="small-card__container__content text-center">
             <p>
               Welcome to Groove! We have new products available now! Start
-              exploring our variety of products selection and start grooving!
+              exploring our vast selection ofproducts and start grooving!
             </p>
           </div>
         </div>
       </section>
       <section className="availableProducts">
-        <h2>Available Products</h2>
-        <div className="availableProducts__container">
+        <h2 className="text-center">Available Products</h2>
+        <div className="availableProducts__container margin-auto">
           <figure>
             <img src={require("../../assets/images/dwdrumset.jpeg")} alt="" />
-            <figcaption>Drum Kits</figcaption>
+            <figcaption >Drum Kits</figcaption>
           </figure>
           <figure>
             <img src={require("../../assets/images/guitar.jpg")} alt="" />
@@ -39,8 +39,8 @@ const Home = () => {
       </section>
 
       <section className="small-card">
-        <div className="small-card__container">
-          <div className="small-card__container__content">
+        <div className="small-card__container margin-auto">
+          <div className="small-card__container__content text-center">
             <p>
               Shop now! Browse our products page and the find the best cymbals,
               drum kits, drumheads, and more!{" "}
@@ -51,9 +51,9 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="customerCards-container">
+      <div className="customerCards-container text-center ">
         <h2>Customer Reviews</h2>
-        <section className="customerCards">
+        <section className="customerCards margin-auto">
           <figure className="customerCards__card">
             <img src={require("../../assets/images/derik.jpg")} alt="Luis" />
             <figcaption>

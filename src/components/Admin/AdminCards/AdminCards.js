@@ -5,7 +5,7 @@ class AdminCards extends React.Component {
     super(props);
     this.state = {
       title: this.props.title,
-      imageURL: this.props.image,
+      productImage: this.props.image,
       price: this.props.price,
       description: this.props.description,
       brand: this.props.brand,
@@ -37,22 +37,19 @@ class AdminCards extends React.Component {
   getFormValues = event => {
     this.setState({
       [event.target.name]: event.target.value
-    }),
-      () => {
-        console.log(event.target.value);
-      };
+    })
   };
   sendData = id => {
     console.log(this.state.price);
     const {
       title,
       productType,
-      imageURL,
+      productImage,
       description,
       brand,
       price
     } = this.state;
-    let body2 = { title, productType, imageURL, description, brand, price };
+    let body2 = { title, brand, productType, productImage, price, description};
 
     fetch(`http://localhost:3007/products/${id}`, {
       method: "PUT",
@@ -61,9 +58,9 @@ class AdminCards extends React.Component {
       },
       body: JSON.stringify(body2)
     })
-      .then(response => response.json())
-      .catch(() => {
-        alert("Server is Down for maintence");
+      .then(response => response.json()).then(response => console.log(response.json))
+      .catch((e) => {
+        console.log(e);
       });
   };
   render() {
@@ -101,14 +98,12 @@ class AdminCards extends React.Component {
             <div className="deleteModal__content__buttons">
               <button
                 className="deleteModal__content__buttons--green"
-                onClick={() => this.props.deleteProduct(this.props.objectID)}
-              >
+                onClick={() => this.props.deleteProduct(this.props.objectID)}>
                 Yes
               </button>
               <button
                 className="deleteModal__content__buttons--red"
-                onClick={() => this.showdeleteModal(this.props.objectID)}
-              >
+                onClick={() => this.showdeleteModal(this.props.objectID)}>
                 No
               </button>
             </div>
@@ -119,8 +114,7 @@ class AdminCards extends React.Component {
           <form
             className="modalForm"
             id={`${this.props.title}`}
-            onSubmit={() => this.sendData(this.props.objectID)}
-          >
+            onSubmit={() => this.sendData(this.props.objectID)}>
             <div className="contact__inputs">
               <label htmlFor="title">Product Name</label>
               <input
@@ -128,18 +122,16 @@ class AdminCards extends React.Component {
                 id="productName"
                 name="title"
                 onChange={this.getFormValues}
-                value={this.state.title}
-              />
+                value={this.state.title} />
             </div>
             <div className="contact__inputs">
               <label htmlFor="productImage">Image URL</label>
               <input
                 type="text"
                 id="productImage"
-                name="imageURL"
+                name="productImage"
                 onChange={this.getFormValues}
-                value={this.state.imageURL}
-              />
+                value={this.state.productImage} />
             </div>
             <div className="contact__inputs">
               <label htmlFor="price">Price:</label>
@@ -148,8 +140,7 @@ class AdminCards extends React.Component {
                 id="price"
                 name="price"
                 onChange={this.getFormValues}
-                value={this.state.price}
-              />
+                value={this.state.price} />
             </div>
 
             <div className="contact__inputs">
@@ -159,8 +150,7 @@ class AdminCards extends React.Component {
                 id="brand"
                 name="brand"
                 onChange={this.getFormValues}
-                value={this.state.brand}
-              />
+                value={this.state.brand}/>
             </div>
             <div className="contact__inputs">
               <label htmlFor="ProductType">ProductType</label>
@@ -169,8 +159,7 @@ class AdminCards extends React.Component {
                 id="productType"
                 name="productType"
                 onChange={this.getFormValues}
-                value={this.state.productType}
-              />
+                value={this.state.productType}/>
             </div>
             <div className="contact__inputs">
               <label htmlFor="description">Description</label>
@@ -179,15 +168,13 @@ class AdminCards extends React.Component {
                 id="description"
                 name="description"
                 onChange={this.getFormValues}
-                value={this.state.description}
-              />
+                value={this.state.description}/>
             </div>
             <div className="modalForm__buttons">
               <input type="submit" value="Submit" id="submitBtn2" />
               <button
                 onClick={() => this.showeditformModal(this.props.objectID)}
-                type="button"
-              >
+                type="button">
                 Cancel
               </button>
             </div>

@@ -39,3 +39,17 @@
   justify-content: $justifyContent;
   align-items: $alignItems;
 }
+
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin linkStyling {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: $mainFont;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}

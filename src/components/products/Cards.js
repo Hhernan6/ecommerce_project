@@ -1,4 +1,5 @@
 import React from "react";
+
 class Cards extends React.Component {
   constructor(props) {
     super(props);
@@ -6,6 +7,7 @@ class Cards extends React.Component {
       quantity: 0
     };
   }
+
   handleQuantity = action => {
     if (action === "+") {
       this.setState({
@@ -17,14 +19,16 @@ class Cards extends React.Component {
       });
     }
   };
+
   render() {
     return (
       <div className="row__productCard">
         <img src={this.props.image} alt="DW performance drum set" />
         <div className="productCard__description">
           <h1>{this.props.title}</h1>
-          <p>{this.props.description}</p>
-          <p>Price: {this.props.price} </p>
+          <p className="productCard__description--height">{this.props.description}</p>
+          <p>Price: <span className="productCard__description--bold">
+          {this.props.price} </span></p>
           <div className="row__productCard__bottom">
             <button
               onClick={() => {

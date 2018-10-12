@@ -44,7 +44,7 @@ const header = props => {
             className="main-nav__listItem--margin-top"
             onClick={toggleMobileNav}
           >
-            <Link to="/product">Products</Link>
+            <Link to="/products">Products</Link>
           </li>
           <li
             className="main-nav__listItem--margin-top "
@@ -70,7 +70,7 @@ const header = props => {
             <Link to="/">Home</Link>
           </li>
           <li className="mainNav__links--border">
-            <Link to="/product">Products</Link>
+            <Link to="/products">Products</Link>
           </li>
           <li className="mainNav__links--border">
             <Link to="/contact">Contact</Link>

@@ -1,9 +1,7 @@
 import React from "react";
-
 import Cards from "../products/Cards.js";
 
 const Products = props => {
-  console.log(props.products);
   return (
     <main>
       <div className="Hero">
@@ -46,7 +44,7 @@ const Products = props => {
         {props.products.map(cardsList => {
           return (
             <Cards
-              key={cardsList.title}
+              key={cardsList._id}
               title={cardsList.title}
               description={cardsList.description}
               price={cardsList.price}
