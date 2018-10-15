@@ -3,20 +3,21 @@ import { Link, withRouter } from "react-router-dom";
 import AdminCards from "./AdminCards/AdminCards";
 
 const Admin = props => {
-  const showAddProductModal = () => {
-    let addProductModal = document.querySelector(".addProductModal");
-    if (addProductModal.style.display === 'flex') {
-      addProductModal.style.display = 'none';
-    } else {
-        addProductModal.style.display = 'flex';
-    }
-  }
-  
   const deleteFunc = ID => {
     fetch(`http://localhost:3007/products/${ID}`, {
       method: "delete"
     }).then(response => response.json());
     window.location.reload();
+  };
+
+  const toggleModal = ID => {
+    let modal = document.getElementById(`${ID}`);
+    console.log(modal);
+    if (modal.style.display === "none" || modal.style.display === "") {
+      modal.style.display = "flex";
+    } else {
+      modal.style.display = "none";
+    }
   };
 
   return (
@@ -30,9 +31,11 @@ const Admin = props => {
             <Link to="/admin/Contact">Contact</Link>
           </li>
         </ul>
-        <button onClick={showAddProductModal}>Add product</button>
+        <button onClick={() => toggleModal("addProductModal")}>
+          Add product
+        </button>
       </nav>
-      <div className="addProductModal">
+      <div className="addProductModal" id="addProductModal">
         <form
           className="modalForm"
           method="POST"
@@ -64,7 +67,10 @@ const Admin = props => {
           </div>
           <div className="modalForm__buttons">
             <input type="submit" value="Submit" id="submitBtn2" />
-            <button onClick={showAddProductModal} type="button">
+            <button
+              onClick={() => toggleModal("addProductModal")}
+              type="button"
+            >
               Cancel
             </button>
           </div>
@@ -84,6 +90,7 @@ const Admin = props => {
               deleteProduct={deleteFunc}
               productType={cardsList.productType}
               brand={cardsList.brand}
+              toggle={toggleModal}
             />
           );
         })}

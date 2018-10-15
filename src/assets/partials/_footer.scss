@@ -1,86 +1,83 @@
 footer {
-  border-top: 2px solid rgb(214, 211, 211);
-  height: 100%;
+  @include dimensions(100%, 100%);
   background-color: #1f2833;
   margin-top: 20px;
-  width: 100%;
+  padding: 12px;
 }
 .footer__navs {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 30px auto;
-
+  @include dimensions(90%, 100%);
+  @include flex(flex, space-between, center);
+  margin: 0 auto;
   @media (max-width: 678px) {
     flex-direction: column;
-    align-items: center;
   }
 }
 
 .footer__navs__socialMedia {
-  
   margin: 20px 0 40px 0;
-
   ul {
-    display: flex;
+    @include flex(flex, center, center);
+    @include dimensions(200px, 100%);
     padding: 0;
-    width: 160px;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0 auto;
-    justify-content: space-between;
-    width: 200px;
   }
   .margin-left {
-    // width: 100%;
     margin-left: 16px;
   }
 }
 .footer__navs__socialMedia--facebook {
+  @include dimensions(50px, 50px);
   margin: 0;
   background-image: url("../images//facebook-icon.svg");
   background-size: cover;
-  height: 50px;
-  width: 50px;
   display: block;
 }
 .footer__navs__socialMedia--twitter {
+  @include dimensions(50px, 50px);
   margin: 0;
   background-image: url("../images/twitter-icon.svg");
   background-size: cover;
-  height: 50px;
-  width: 50px;
   display: block;
 }
 
 .footer__navs__socialMedia--instagram {
+  @include dimensions(50px, 50px);
   margin: 0;
   background-image: url("../images/instagram-icon.svg");
   background-size: cover;
-  height: 50px;
-  width: 50px;
   display: block;
 }
 .footer__navs__right {
+  
   ul {
     padding: 0;
+    width: 200px;
+    height: 210px;
     li {
-      margin-top: 20px;
+      margin-top: 30px;
+      display: inline-block;
       a {
         @include linkStyling;
+        @include hoverLinks;
       }
     }
   }
 }
 .footer__navs__left {
+  width: 150px;
+    height: 210px;
   ul {
     padding: 0;
-    width: 200px;
+    @media (max-width: 768px){
+      width: 80%;
+    }
     li {
-      margin-top: 20px;
+      margin-top: 30px;
+      display: inline-block;
+      a {
+        @include linkStyling;
+        @include hoverLinks;
+      }
     }
   }
-  a {
-    @include linkStyling;
-  }
+
 }

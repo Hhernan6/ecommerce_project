@@ -65,7 +65,7 @@ const header = props => {
       <nav className="mainNav">
         <p className="mainNav-logo">Groove</p>
 
-        <ul className="mainNav__links">
+        <ul className="mainNav__links margin-auto">
           <li>
             <Link to="/">Home</Link>
           </li>

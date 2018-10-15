@@ -1,25 +1,19 @@
 
 .admin-Nav {
-  height: 80px;
-  width: 95%;
-  display: flex;
-  align-items: center;
+  @include dimensions(95%, 80px);
+  @include flex(flex, none, center);
   margin-top: 50px;
-
   button {
     @include buttonStyling;
   }
   ul {
-    list-style: none;
-    display: flex;
+    @include flex(flex, none, none);
     width: 90%;
-
     li {
-      list-style: none;
       margin-right: 10px;
       padding-left: 8px;
       a {
-        font-family: "Share", cursive;
+        font-family: $mainFont;
         font-size: 1.5rem;
         color: rgb(67, 65, 65);
         text-transform: uppercase;
@@ -30,9 +24,8 @@
 
 .productCards-container {
   flex-wrap: wrap;
-  width: 95%;
   margin: 50px auto;
-  height: 100%;
+  @include dimensions(95%, 100%);
   @include flex(flex, space-around, center);
   &__flex {
     @include flex(flex, space-between, center);
@@ -41,26 +34,21 @@
     }
     .productCards__description {
       border-left: $mainRedColor solid 2px;
-      height: 290px;
-      width: 350px;
-      text-align: center;
+      @include dimensions(350px, 290px);
       padding-left: 12px;
       @media (max-width: 767px) {
-        width: 100%;
+        @include dimensions(100%, auto);
       border-left: none;
-      height: auto;
       border-top: 2px solid $mainRedColor;
       margin-top: 10px;
-        
       }
       h1 {
         font-size: 1.5rem;
       }
       p {
-        font-family: "Share", cursive;
+        font-family: $mainFont;
         font-size: 1.3rem;
         line-height: 1.2;
-
         span {
           font-weight: bold;
         }
@@ -68,18 +56,16 @@
     }
   }
   &__card {
+    @include dimensions(700px, auto);
     margin-top: 20px;
-    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-    width: 700px;
-    height: auto;
+    box-shadow: $cardBoxShadow;
     padding: 12px;
     @media (max-width: 767px) {
       width: 500px;
     }
 
     img {
-      width: 300px;
-      height: 300px;
+      @include dimensions(300px, 300px);
       @media (max-width: 767px) {
         width: 100%;
       }
@@ -89,12 +75,10 @@
     padding-top: 12px;
     width: 300px;
     margin-left: auto;
-  
     @media (max-width: 767px) {
       margin: 0 auto;
       width: 100%;
-      display: flex;
-      justify-content: center;
+      @include flex(flex, center, none);
       padding-top: 16px;
     }
     button {

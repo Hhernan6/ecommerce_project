@@ -29,7 +29,7 @@ const Home = () => {
           </figure>
           <figure>
             <img src={require("../../assets/images/saxophone.jpg")} alt="" />
-            <figcaption>Saxophone</figcaption>
+            <figcaption>Saxophones</figcaption>
           </figure>
           <figure>
             <img src={require("../../assets/images/keyboard.jpg")} alt="" />
@@ -38,12 +38,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="small-card">
+      <section className="small-card ">
         <div className="small-card__container margin-auto">
           <div className="small-card__container__content text-center">
             <p>
-              Shop now! Browse our products page and the find the best cymbals,
-              drum kits, drumheads, and more!{" "}
+              Shop now! Browse our products page and find the best prices on saxophones,
+              drum kits, guitars and more!{" "}
             </p>
             <button>Shop Now!</button>
           </div>
@@ -53,9 +53,9 @@ const Home = () => {
 
       <div className="customerCards-container text-center ">
         <h2>Customer Reviews</h2>
-        <section className="customerCards margin-auto">
-          <figure className="customerCards__card">
-            <img src={require("../../assets/images/derik.jpg")} alt="Luis" />
+        <section className="customerCards ">
+          <figure className="customerCards__card margin-auto ">
+            <img src={require("../../assets/images/derik.jpg")} alt="" />
             <figcaption>
               Groove has provided me with the best customer service of any other
               music store. I felt genuily cared for.
@@ -65,7 +65,7 @@ const Home = () => {
               <span />
             </div>
           </figure>
-          <figure className="customerCards__card">
+          <figure className="customerCards__card margin-auto ">
             <img src={require("../../assets/images/luis.jpg")} alt="" />
             <figcaption>
               Groove has provided me with the best prices and quality equipment.
@@ -76,11 +76,11 @@ const Home = () => {
               <span />
             </div>
           </figure>
-          <figure className="customerCards__card">
+          <figure className="customerCards__card margin-auto ">
             <img src={require("../../assets/images/seyfat.jpg")} alt="" />
             <figcaption>
-              I'm a drummer and being able to shop somewhere where they focus on
-              drums only, is definitely a big plus!
+              Groove has way better customer service, products, and prices on drum kits 
+              than any other store.
             </figcaption>
             <div className="customerCards__content__rating">
               <p>Rating: </p>

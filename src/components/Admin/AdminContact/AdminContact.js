@@ -15,7 +15,7 @@ const contactAdmin = props => {
           </li>
         </ul>
       </nav>
-      <div className="contactRow">
+      <div className="contactRow margin-auto">
         {props.contactInfo.map(cardsList => {
           return (
             <AdminContactCards

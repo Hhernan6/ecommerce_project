@@ -26,26 +26,26 @@ const contact = () => {
           action="http://localhost:3007/admin/contact"
         >
           <div className="contact__inputs">
-            <label htmlFor="firstName">First Name:</label>
+            <label className="margin-auto" htmlFor="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required />
           </div>
           <div className="contact__inputs">
-            <label htmlFor="lastName">Last Name:</label>
+            <label className="margin-auto" htmlFor="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" required />
           </div>
           <div className="contact__inputs">
-            <label htmlFor="email">Email:</label>
+            <label className="margin-auto" htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" required />
           </div>
           <div className="contact__inputs">
-            <label htmlFor="phoneNum">Phone Number:</label>
+            <label className="margin-auto" htmlFor="phoneNum">Phone Number:</label>
             <input type="tel" id="phoneNum" name="phoneNum" required />
           </div>
           <div className="contact__inputs">
-            <label htmlFor="comments">Comments</label>
-            <textarea name="comments" />
+            <label className="margin-auto" htmlFor="comments">Comments</label>
+            <textarea className="margin-auto" name="comments" />
           </div>
-          <input type="submit" value="Submit" id="submitBtn" />
+          <input className=" submitBtn margin-auto" type="submit" value="Submit" />
         </form>
         <div />
       </section>
