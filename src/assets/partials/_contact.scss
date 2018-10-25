@@ -3,7 +3,10 @@
 .contactForm {
   @include dimensions(50%, 720px);
   box-shadow: $cardBoxShadow;
-
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 710px;
+  }
   .contact__inputs {
     margin: 18px auto;
     width: 100%;

@@ -12,9 +12,9 @@ const header = props => {
 
   const toggleMobileNav = () => {
     const mobileNav = document.querySelector(".mobileNav");
-    if (mobileNav.style.display === "block") mobileNav.style.display = "none";
+    if (mobileNav.style.marginLeft === "-1000px" || mobileNav.style.marginLeft === '') mobileNav.style.marginLeft = '0';
     else {
-      mobileNav.style.display = "block";
+      mobileNav.style.marginLeft = "-1000px";
     }
   };
   return (

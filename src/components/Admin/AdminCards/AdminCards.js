@@ -57,10 +57,12 @@ class AdminCards extends React.Component {
           </div>
         </div>
         <div className="productCards-container__btns">
-          <button onClick={() => this.props.toggle(`edit-${this.props.objectID}`)}>
+          <button
+            onClick={() => this.props.toggle(`edit-${this.props.objectID}`)}
+          >
             Edit
           </button>
-          <button onClick={() => this.props.toggle(this.props.objectID)} >
+          <button onClick={() => this.props.toggle(this.props.objectID)}>
             Delete
           </button>
         </div>
@@ -89,7 +91,6 @@ class AdminCards extends React.Component {
 
         <div className="modal">
           <div className="editFormModal" id={`edit-${this.props.objectID}`}>
-            {console.log(`id after`, this.props.objectID + 1)}
             <form
               className="modalForm"
               id={`${this.props.title}`}

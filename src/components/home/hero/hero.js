@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-import Keyboard from "../../../assets/images/keyboard-hero.jpg";
-import Drums from "../../../assets/images/drumsconcert.jpg";
-import Guitar from "../../../assets/images/guitar-hero.jpg";
 
 let i = 0;
 let images = [];

@@ -9,7 +9,7 @@ import contact from "./components/contact/contact";
 import Callback from "./Callback";
 import Admin from "./components/Admin/admin";
 import SecuredRoute from "./SecuredRoute/SecuredRoute";
-import AdminContact from './components/Admin/AdminContact/AdminContact';
+import AdminContact from "./components/Admin/AdminContact/AdminContact";
 
 class App extends Component {
   constructor() {
@@ -18,37 +18,40 @@ class App extends Component {
       data: null,
       filteredArray: [],
       loading: true,
-      contactData: null
+      contactData: null,
+      checkboxArr: null
     };
   }
 
-
-    componentDidMount() {
-     fetch("http://localhost:3007/products")
+  componentDidMount() {
+    fetch("http://localhost:3007/products")
       .then(response => response.json())
       .then(data =>
-        this.setState({
-          data,
-          loading: false
-        }, () => console.log(this.state.data))
+        this.setState(
+          {
+            data,
+            loading: false
+          },
+          () => console.log(this.state.data)
+        )
       )
-      .catch((e) => {
+      .catch(e => {
         throw e;
       });
-     fetch("http://localhost:3007/admin/contact")
+    fetch("http://localhost:3007/admin/contact")
       .then(response => response.json())
       .then(contactData =>
-        this.setState({
-          contactData,
-          loading: false
-        }, () => console.log(this.state.contactData))
+        this.setState(
+          {
+            contactData,
+            loading: false
+          },
+          () => console.log(this.state.contactData)
+        )
       )
       .catch(() => {
         alert("Server is Down for maintence");
       });
-
-
-
   }
 
   brandFilter = e => {
@@ -88,13 +91,13 @@ class App extends Component {
 
   render() {
     if (this.state.loading) {
-      return null
+      return null;
     }
-    let products = [] 
+    let products = [];
     if (this.state.filteredArray.length === 0) {
-      products = this.state.data
+      products = this.state.data;
     } else {
-      products = this.state.filteredArray
+      products = this.state.filteredArray;
     }
     return (
       <div>
@@ -103,11 +106,28 @@ class App extends Component {
             <Header />
             <Switch>
               <Route path="/" component={Home} exact />
-              <Route path="/products" render={() => <Products products={products} brandFilter={this.brandFilter}/> }/>
+              <Route
+                path="/products"
+                render={() => (
+                  <Products
+                    products={products}
+                    brandFilter={this.brandFilter}
+                  />
+                )}
+              />
               <Route path="/contact" component={contact} />
               <Route exact path="/callback" component={Callback} />
-              <SecuredRoute path="/admin/Contact"   component ={AdminContact} contactInfo={this.state.contactData}/>
-              <SecuredRoute path="/admin/products" component={Admin} products={this.state.data} exact />
+              <SecuredRoute
+                path="/admin/Contact"
+                component={AdminContact}
+                contactInfo={this.state.contactData}
+              />
+              <SecuredRoute
+                path="/admin/products"
+                component={Admin}
+                products={this.state.data}
+                exact
+              />
             </Switch>
             <Footer />
           </div>

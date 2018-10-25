@@ -148,12 +148,15 @@
         display: none; } }
 
 .mobileNav {
-  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #1f2833;
-  z-index: 1000; }
+  z-index: 1000;
+  margin-left: -1000px; }
+  @media (min-width: 768px) {
+    .mobileNav {
+      display: none; } }
   .mobileNav button {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -711,7 +714,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto; }
-  @media (max-width: 678px) {
+  @media (max-width: 767px) {
     .footer__navs {
       flex-direction: column; } }
 
@@ -753,11 +756,9 @@ footer {
 
 .footer__navs__right ul {
   padding: 0;
-  width: 200px;
-  height: 210px; }
+  width: 200px; }
   .footer__navs__right ul li {
-    margin-top: 30px;
-    display: inline-block; }
+    margin-top: 30px; }
     .footer__navs__right ul li a {
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -775,38 +776,36 @@ footer {
       .footer__navs__right ul li a:hover::after {
         width: 100%; }
 
-.footer__navs__left {
-  width: 150px;
-  height: 210px; }
-  .footer__navs__left ul {
-    padding: 0; }
-    @media (max-width: 768px) {
-      .footer__navs__left ul {
-        width: 80%; } }
-    .footer__navs__left ul li {
-      margin-top: 30px;
-      display: inline-block; }
-      .footer__navs__left ul li a {
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-family: "Share", cursive;
-        color: white;
-        font-weight: 500;
-        letter-spacing: 0.8px; }
-        .footer__navs__left ul li a::after {
-          content: "";
-          display: block;
-          width: 0;
-          height: 2px;
-          background: #d70303;
-          transition: width 0.2s ease-out; }
-        .footer__navs__left ul li a:hover::after {
-          width: 100%; }
+.footer__navs__left ul {
+  padding: 0;
+  width: 200px; }
+  .footer__navs__left ul li {
+    margin-top: 30px; }
+    .footer__navs__left ul li a {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-family: "Share", cursive;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.8px; }
+      .footer__navs__left ul li a::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #d70303;
+        transition: width 0.2s ease-out; }
+      .footer__navs__left ul li a:hover::after {
+        width: 100%; }
 
 .contactForm {
   width: 50%;
   height: 720px;
   box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15); }
+  @media (max-width: 767px) {
+    .contactForm {
+      width: 100%;
+      height: 710px; } }
   .contactForm .contact__inputs {
     margin: 18px auto;
     width: 100%; }

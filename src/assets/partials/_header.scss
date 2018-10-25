@@ -35,15 +35,17 @@
 }
 
 .mobileNav {
-  display: none;
   position: fixed;
   @include dimensions(100%, 100%);
   background-color: #1f2833;
   z-index: 1000;
-
+  margin-left: -1000px;
+  @media (min-width: 768px) {
+    display: none;
+  }
   button {
-@include buttonStyling;
-margin: 10px 0 0 10px;
+    @include buttonStyling;
+    margin: 10px 0 0 10px;
   }
   .menu-icon--mobile {
     position: absolute;
@@ -77,7 +79,7 @@ margin: 10px 0 0 10px;
       font-size: 3rem;
       a {
         color: white;
-        font-family:$mainFont;
+        font-family: $mainFont;
         letter-spacing: 0.8px;
       }
     }
