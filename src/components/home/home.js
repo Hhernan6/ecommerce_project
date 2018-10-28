@@ -11,7 +11,7 @@ const Home = () => {
           <div className="small-card__container__content text-center">
             <p>
               Welcome to Groove! We have new products available now! Start
-              exploring our vast selection ofproducts and start grooving!
+              exploring our vast selection of products and start grooving!
             </p>
           </div>
         </div>
@@ -20,19 +20,19 @@ const Home = () => {
         <h2 className="text-center">Available Products</h2>
         <div className="availableProducts__container margin-auto">
           <figure>
-            <img src={require("../../assets/images/dwdrumset.jpeg")} alt="" />
+            <img src={require("../../assets/images/dwdrumset.jpeg")} alt="Drum set" />
             <figcaption >Drum Kits</figcaption>
           </figure>
           <figure>
-            <img src={require("../../assets/images/guitar.jpg")} alt="" />
+            <img src={require("../../assets/images/guitar.jpg")} alt="Guitar" />
             <figcaption>Guitars</figcaption>
           </figure>
           <figure>
-            <img src={require("../../assets/images/saxophone.jpg")} alt="" />
+            <img src={require("../../assets/images/saxophone.jpg")} alt="Person playing the saxophone" />
             <figcaption>Saxophones</figcaption>
           </figure>
           <figure>
-            <img src={require("../../assets/images/keyboard.jpg")} alt="" />
+            <img src={require("../../assets/images/keyboard.jpg")} alt="Person playing the keyboard" />
             <figcaption>Keyboards</figcaption>
           </figure>
         </div>

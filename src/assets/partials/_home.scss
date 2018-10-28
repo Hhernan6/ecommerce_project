@@ -18,6 +18,7 @@ main {
       @include dimensions(700px, 380px);
       margin: 10px auto;
       position: relative;
+      cursor: pointer;
       img {
         @include dimensions(100%, 100%);
       }

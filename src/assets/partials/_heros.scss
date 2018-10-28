@@ -11,6 +11,10 @@
     @media (max-width: 768px) {
       background-position: bottom;
     }
+    @media (max-width: 460px) {
+      height: 65vh;
+
+    }
     &__text {
       width: 600px;
       padding: 14px;
