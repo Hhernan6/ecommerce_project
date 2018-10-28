@@ -46,11 +46,10 @@ class App extends Component {
             contactData,
             loading: false
           },
-          () => console.log(this.state.contactData)
         )
       )
-      .catch(() => {
-        alert("Server is Down for maintence");
+      .catch((e) => {
+        console.log(e);
       });
   }
 
