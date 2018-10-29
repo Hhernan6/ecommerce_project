@@ -802,6 +802,12 @@ footer {
       .footer__navs__left ul li a:hover::after {
         width: 100%; }
 
+.disclaimer {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Share", cursive;
+  color: white; }
+
 .contactForm {
   width: 50%;
   height: 720px;

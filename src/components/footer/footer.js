@@ -58,6 +58,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
+      <p className="disclaimer">Disclaimer: This website is used for education purposes only. </p>
     </footer>
   );
 };
