@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3007/products")
+    fetch("https://hhhsql.herokuapp.com/products")
       .then(response => response.json())
       .then(data =>
         this.setState(
