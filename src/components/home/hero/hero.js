@@ -29,7 +29,7 @@ class Hero extends Component {
     return (
       <div className="hero">
         <div className="hero__text">
-          <h1>Add more to your groove!</h1>
+          <h1>Add more to your groove! 2</h1>
           <p>Drum kits, Saxophones, Guitars, and Keyboards!</p>
           <button>Shop Now</button>
         </div>

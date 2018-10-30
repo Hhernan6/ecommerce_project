@@ -28,8 +28,8 @@ class AdminCards extends React.Component {
       brand,
       price
     } = this.state;
-    let body2 = { title, productType, productImage, description, brand, price };
-
+    let body2 = {title, brand, description, price, productType, productImage};
+    console.log(body2)
     fetch(`http://localhost:3007/products/${id}`, {
       method: "PUT",
       headers: {

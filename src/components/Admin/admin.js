@@ -3,18 +3,19 @@ import { Link, withRouter } from "react-router-dom";
 import AdminCards from "./AdminCards/AdminCards";
 
 const Admin = props => {
-  const deleteFunc = ID => {
-    fetch(`http://localhost:3007/products/${ID}`, {
-      method: "delete"
+  const deleteFunc = id => {
+    fetch(`http://localhost:3007/products/${id}`, {
+      method: "DELETE"
     }).then(response => response.json());
     window.location.reload();
+    console.log(id);
   };
 
   const toggleModal = ID => {
     let modal = document.getElementById(`${ID}`);
-    console.log(modal);
-    if (modal.style.display === "flex" || modal.style.display === "") {
-      modal.style.display = "none";
+console.log(ID)
+    if (modal.style.display === "none" || modal.style.display === '') {
+      modal.style.display = "flex";
     } else {
       modal.style.display = "none";
     }
@@ -39,7 +40,7 @@ const Admin = props => {
         <form
           className="modalForm"
           method="POST"
-          action="http://localhost:3007/products"
+          action="http://localhost:3007/products/"
         >
           <div className="contact__inputs">
             <label htmlFor="title">Name</label>
@@ -78,6 +79,7 @@ const Admin = props => {
       </div>
 
       <div className="productCards-container">
+  
         {props.products.map(cardsList => {
           return (
             <AdminCards

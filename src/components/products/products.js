@@ -44,7 +44,7 @@ const Products = props => {
         {props.products.map(cardsList => {
           return (
             <Cards
-              key={cardsList._id}
+              key={cardsList.productID}
               title={cardsList.title}
               description={cardsList.description}
               price={cardsList.price}

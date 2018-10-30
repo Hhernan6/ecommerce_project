@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://hhhsql.herokuapp.com/products")
+    fetch("http://localhost:3007/products/")
       .then(response => response.json())
       .then(data =>
         this.setState(
@@ -36,9 +36,9 @@ class App extends Component {
         )
       )
       .catch(e => {
-        throw e;
+        throw e.message;
       });
-    fetch("http://localhost:3007/admin/contact")
+    fetch("https://hhhsql.herokuapp.com/admin/contact")
       .then(response => response.json())
       .then(contactData =>
         this.setState(
