@@ -23,7 +23,8 @@ console.log(ID)
 
   return (
     <main>
-      <nav className="admin-Nav">
+      <h1 className="text-center">Products Manager</h1>
+      <nav className="admin-nav">
         <ul>
           <li>
             <Link to="/admin/products">Products</Link>
@@ -32,13 +33,13 @@ console.log(ID)
             <Link to="/admin/Contact">Contact</Link>
           </li>
         </ul>
-        <button onClick={() => toggleModal("addProductModal")}>
+        <button onClick={() => toggleModal("add-modal")}>
           Add product
         </button>
       </nav>
-      <div className="addProductModal" id="addProductModal">
+      <div className="add-product-modal" id="add-modal">
         <form
-          className="modalForm"
+          className="modal-form"
           method="POST"
           action="http://localhost:3007/products/"
         >
@@ -66,19 +67,16 @@ console.log(ID)
             <label htmlFor="description">Description</label>
             <input type="text" id="description" name="description" />
           </div>
-          <div className="modalForm__buttons">
-            <input type="submit" value="Submit" id="submitBtn2" />
-            <button
-              onClick={() => toggleModal("addProductModal")}
-              type="button"
-            >
+          <div className="modal-form__buttons">
+            <input type="submit" value="Submit" className="modal-form__buttons--green"/>
+            <button onClick={() => toggleModal("add-modal")}type="button" className="modal-form__buttons--black" >
               Cancel
             </button>
           </div>
         </form>
       </div>
 
-      <div className="productCards-container">
+      <div className="admin-cards-wrapper">
   
         {props.products.map(cardsList => {
           return (

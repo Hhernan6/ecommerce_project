@@ -999,14 +999,14 @@ footer {
   text-transform: uppercase;
   border-bottom: #df0707 solid 3px; }
 
-.admin-Nav {
+.admin-nav {
   width: 95%;
   height: 80px;
   display: flex;
   justify-content: none;
   align-items: center;
   margin-top: 50px; }
-  .admin-Nav button {
+  .admin-nav button {
     text-transform: uppercase;
     font-size: 1.5rem;
     width: 160px;
@@ -1020,25 +1020,25 @@ footer {
     letter-spacing: 0.9px;
     border: none;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
-    .admin-Nav button:hover {
+    .admin-nav button:hover {
       background-color: #eb0404;
       color: white;
       opacity: 1; }
-  .admin-Nav ul {
+  .admin-nav ul {
     display: flex;
     justify-content: none;
     align-items: none;
     width: 90%; }
-    .admin-Nav ul li {
+    .admin-nav ul li {
       margin-right: 10px;
       padding-left: 8px; }
-      .admin-Nav ul li a {
+      .admin-nav ul li a {
         font-family: "Share", cursive;
         font-size: 1.5rem;
         color: #434141;
         text-transform: uppercase; }
 
-.productCards-container {
+.admin-cards-wrapper {
   flex-wrap: wrap;
   margin: 50px auto;
   width: 95%;
@@ -1046,61 +1046,61 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  .productCards-container__flex {
+  .admin-cards-wrapper__flex {
     display: flex;
     justify-content: space-between;
     align-items: center; }
     @media (max-width: 767px) {
-      .productCards-container__flex {
+      .admin-cards-wrapper__flex {
         flex-direction: column; } }
-    .productCards-container__flex .productCards__description {
+    .admin-cards-wrapper__flex .product-cards__description {
       border-left: #d70303 solid 2px;
       width: 350px;
       height: 290px;
       padding-left: 12px; }
       @media (max-width: 767px) {
-        .productCards-container__flex .productCards__description {
+        .admin-cards-wrapper__flex .product-cards__description {
           width: 100%;
           height: auto;
           border-left: none;
           border-top: 2px solid #d70303;
           margin-top: 10px; } }
-      .productCards-container__flex .productCards__description h1 {
+      .admin-cards-wrapper__flex .product-cards__description h1 {
         font-size: 1.5rem; }
-      .productCards-container__flex .productCards__description p {
+      .admin-cards-wrapper__flex .product-cards__description p {
         font-family: "Share", cursive;
         font-size: 1.3rem;
         line-height: 1.2; }
-        .productCards-container__flex .productCards__description p span {
+        .admin-cards-wrapper__flex .product-cards__description p span {
           font-weight: bold; }
-  .productCards-container__card {
+  .admin-cards-wrapper__card {
     width: 700px;
     height: auto;
     margin-top: 20px;
     box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
     padding: 12px; }
     @media (max-width: 767px) {
-      .productCards-container__card {
+      .admin-cards-wrapper__card {
         width: 500px; } }
-    .productCards-container__card img {
+    .admin-cards-wrapper__card img {
       width: 300px;
       height: 300px; }
       @media (max-width: 767px) {
-        .productCards-container__card img {
+        .admin-cards-wrapper__card img {
           width: 100%; } }
-  .productCards-container__btns {
+  .admin-cards-wrapper__btns {
     padding-top: 12px;
     width: 300px;
     margin-left: auto; }
     @media (max-width: 767px) {
-      .productCards-container__btns {
+      .admin-cards-wrapper__btns {
         margin: 0 auto;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: none;
         padding-top: 16px; } }
-    .productCards-container__btns button {
+    .admin-cards-wrapper__btns button {
       font-size: 1.4rem;
       font-family: "Share", cursive;
       border-radius: 4px;
@@ -1112,10 +1112,10 @@ footer {
       color: white;
       cursor: pointer;
       display: inline-block; }
-      .productCards-container__btns button:hover {
+      .admin-cards-wrapper__btns button:hover {
         background-color: #d80606; }
       @media (max-width: 767px) {
-        .productCards-container__btns button {
+        .admin-cards-wrapper__btns button {
           margin: 0 auto; } }
 
 .contactRow {
@@ -1165,9 +1165,9 @@ footer {
         font-size: 1.3rem;
         font-family: "Share", cursive; }
 
-.deleteModal,
-.editFormModal,
-.addProductModal {
+.delete-modal,
+.edit-form-modal,
+.add-product-modal {
   background-color: rgba(26, 24, 24, 0.832);
   z-index: 100;
   height: 100%;
@@ -1181,7 +1181,7 @@ footer {
   left: 0;
   right: 0; }
 
-.deleteModal__content {
+.delete-modal__content {
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -1193,50 +1193,50 @@ footer {
   z-index: 200px;
   font-family: "Share", cursive; }
   @media (max-width: 460px) {
-    .deleteModal__content {
+    .delete-modal__content {
       width: 430px; } }
-  .deleteModal__content p {
+  .delete-modal__content p {
     font-size: 1.8rem;
     padding: 12px; }
-  .deleteModal__content__buttons {
+  .delete-modal__content__buttons {
     height: 50px;
     width: 290px;
     display: flex;
     justify-content: space-between; }
-    .deleteModal__content__buttons button {
+    .delete-modal__content__buttons button {
       padding: 16px;
       width: 120px;
       cursor: pointer;
       outline: none;
       text-transform: uppercase;
       border-radius: 4px; }
-    .deleteModal__content__buttons--red:hover {
+    .delete-modal__content__buttons--red:hover {
       background-color: #d40a0a;
       color: white; }
-    .deleteModal__content__buttons--green:hover {
+    .delete-modal__content__buttons--green:hover {
       background-color: #018515;
       color: white; }
 
-.modalForm {
-  background: #bf0a0a;
+.modal-form {
+  background: #949494;
   width: 500px;
   height: 750px; }
   @media (max-width: 460px) {
-    .modalForm {
+    .modal-form {
       width: 400px; } }
-  .modalForm input {
-    margin: 5px auto;
-    height: 50px;
-    display: block;
-    width: 90%;
-    font-family: "Share", cursive;
-    font-size: 1.7rem;
-    background-color: #e2dede;
-    border: none; }
-  .modalForm .contact__inputs {
+  .modal-form .contact__inputs {
     margin: 18px auto;
     width: 100%; }
-    .modalForm .contact__inputs label {
+    .modal-form .contact__inputs input {
+      margin: 5px auto;
+      height: 50px;
+      display: block;
+      width: 90%;
+      font-family: "Share", cursive;
+      font-size: 1.7rem;
+      background-color: #e2dede;
+      border: none; }
+    .modal-form .contact__inputs label {
       color: white;
       margin: 0 auto;
       width: 90%;
@@ -1244,34 +1244,28 @@ footer {
       margin-top: 10px;
       font-family: "Share", cursive;
       font-size: 1.7rem; }
-  .modalForm .modalForm__buttons {
+  .modal-form .modal-form__buttons {
     display: flex;
     margin-top: 50px;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: auto; }
-    .modalForm .modalForm__buttons > button {
-      width: 45%;
-      height: 50px;
-      border: none;
-      background-color: #303233;
-      color: white;
-      border-radius: 10px;
-      outline: none;
+    .modal-form .modal-form__buttons button, .modal-form .modal-form__buttons input {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      width: 160px;
+      height: 60px;
       cursor: pointer;
+      border-radius: 4px;
+      outline: none;
       font-family: "Share", cursive;
-      font-size: 1.7rem;
-      padding: 0; }
-      .modalForm .modalForm__buttons > button:hover {
-        background-color: #060606; }
-    .modalForm .modalForm__buttons #submitBtn2 {
-      width: 45%;
-      height: 50px;
-      background-color: #313232;
+      background-color: black;
       color: white;
-      border-radius: 10px;
-      margin: 0;
-      cursor: pointer; }
-      .modalForm .modalForm__buttons #submitBtn2:hover {
-        background-color: #026e02; }
+      letter-spacing: 0.9px;
+      border: none;
+      box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
+    .modal-form .modal-form__buttons--green:hover {
+      background-color: #018515; }
+    .modal-form .modal-form__buttons--black:hover {
+      background-color: #d70303; }

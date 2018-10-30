@@ -28,14 +28,14 @@ class AdminCards extends React.Component {
       brand,
       price
     } = this.state;
-    let body2 = {title, brand, description, price, productType, productImage};
-    console.log(body2)
+    let newProduct = {title, brand, description, price, productType, productImage};
+  
     fetch(`http://localhost:3007/products/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(body2)
+      body: JSON.stringify(newProduct)
     })
       .then(response => response.json())
       .then(response => console.log(response.json))
@@ -45,10 +45,10 @@ class AdminCards extends React.Component {
   };
   render() {
     return (
-      <div className="productCards-container__card">
-        <div className="productCards-container__flex">
+      <div className="admin-cards-wrapper__card">
+        <div className="admin-cards-wrapper__flex">
           <img src={this.props.image} alt="DW performance drum set" />
-          <div className="productCards__description text-center">
+          <div className="product-cards__description text-center">
             <h1>{this.props.title}</h1>
             <p>
               Price: <span>{this.props.price} </span>
@@ -56,7 +56,7 @@ class AdminCards extends React.Component {
             <p>{this.props.description}</p>
           </div>
         </div>
-        <div className="productCards-container__btns">
+        <div className="admin-cards-wrapper__btns">
           <button
             onClick={() => this.props.toggle(`edit-${this.props.objectID}`)}
           >
@@ -68,18 +68,18 @@ class AdminCards extends React.Component {
         </div>
 
         <div className="modal">
-          <div className="deleteModal" id={this.props.objectID}>
-            <div className="deleteModal__content">
+          <div className="delete-modal" id={this.props.objectID}>
+            <div className="delete-modal__content">
               <p>Are you sure you want to delete this product item?</p>
-              <div className="deleteModal__content__buttons">
+              <div className="delete-modal__content__buttons">
                 <button
-                  className="deleteModal__content__buttons--green"
+                  className="delete-modal__content__buttons--green"
                   onClick={() => this.props.deleteProduct(this.props.objectID)}
                 >
                   Yes
                 </button>
                 <button
-                  className="deleteModal__content__buttons--red"
+                  className="delete-modal__content__buttons--red"
                   onClick={() => this.props.toggle(this.props.objectID)}
                 >
                   No
@@ -90,9 +90,9 @@ class AdminCards extends React.Component {
         </div>
 
         <div className="modal">
-          <div className="editFormModal" id={`edit-${this.props.objectID}`}>
+          <div className="edit-form-modal" id={`edit-${this.props.objectID}`}>
             <form
-              className="modalForm"
+              className="modal-form"
               id={`${this.props.title}`}
               onSubmit={() => this.sendData(this.props.objectID)}
             >
@@ -157,14 +157,9 @@ class AdminCards extends React.Component {
                   value={this.state.description}
                 />
               </div>
-              <div className="modalForm__buttons">
-                <input type="submit" value="Submit" id="submitBtn2" />
-                <button
-                  onClick={() =>
-                    this.props.toggle(`edit-${this.props.objectID}`)
-                  }
-                  type="button"
-                >
+              <div className="modal-form__buttons">
+                <input type="submit" value="Submit" className="modal-form__buttons--green" />
+                <button onClick={() =>this.props.toggle(`edit-${this.props.objectID}`)} type="button" className="modal-form__buttons--black">
                   Cancel
                 </button>
               </div>

@@ -1,5 +1,5 @@
 
-.admin-Nav {
+.admin-nav {
   @include dimensions(95%, 80px);
   @include flex(flex, none, center);
   margin-top: 50px;
@@ -22,7 +22,7 @@
   }
 }
 
-.productCards-container {
+.admin-cards-wrapper {
   flex-wrap: wrap;
   margin: 50px auto;
   @include dimensions(95%, 100%);
@@ -32,7 +32,7 @@
     @media (max-width: 767px) {
       flex-direction: column;
     }
-    .productCards__description {
+    .product-cards__description {
       border-left: $mainRedColor solid 2px;
       @include dimensions(350px, 290px);
       padding-left: 12px;
