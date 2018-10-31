@@ -13,10 +13,15 @@
     flex-wrap: wrap;
     @include flex(flex, space-between, center);
     figure {
-      @include dimensions(750px, 400px);
-      margin: 10px auto;
+      @include dimensions(650px, 400px);
+      margin: 16px auto;
       position: relative;
       cursor: pointer;
+      @media (max-width: 460px) {
+        width: 320px;
+        height: 320px;
+      
+      }
 
       img {
         @include dimensions(100%, 100%);

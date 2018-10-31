@@ -1,9 +1,7 @@
 import React from "react";
 
-// const aux = (props) => props.children;
-
-// export default aux;
 const contact = () => {
+
   return (
     <main>
       <div className="page-hero">
@@ -22,31 +20,46 @@ const contact = () => {
           </div>
         </div>
         <form
+          name="contactForm"
           className="contact-form"
           method="POST"
           action="http://localhost:3007/admin/contact"
         >
           <div className="contact__inputs">
-            <label className="margin-auto" htmlFor="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required />
+            <label className="margin-auto" htmlFor="firstName">
+              First Name:
+            </label>
+            <input type="text" id="firstName" name="firstName" required/>
           </div>
           <div className="contact__inputs">
-            <label className="margin-auto" htmlFor="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required />
+            <label className="margin-auto" htmlFor="lastName">
+              Last Name:
+            </label>
+            <input type="text" id="lastName" name="lastName" required/>
           </div>
           <div className="contact__inputs">
-            <label className="margin-auto" htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+            <label className="margin-auto" htmlFor="email">
+              Email:
+            </label>
+            <input type="email" id="email" name="email" required/>
           </div>
           <div className="contact__inputs">
-            <label className="margin-auto" htmlFor="phoneNum">Phone Number:</label>
-            <input type="tel" id="phoneNum" name="phoneNum" required />
+            <label className="margin-auto" htmlFor="phoneNum">
+              Phone Number:
+            </label>
+            <input type="tel" id="phoneNum" name="phoneNum" required/>
           </div>
           <div className="contact__inputs">
-            <label className="margin-auto" htmlFor="comments">Comments</label>
-            <textarea className="margin-auto" name="comments" />
+            <label className="margin-auto" htmlFor="comments">
+              Comments
+            </label>
+            <textarea className="margin-auto" name="comments" required/>
           </div>
-          <input className="contact-form__submit-btn margin-auto" type="submit" value="Submit" />
+          <input
+            className="contact-form__submit-btn margin-auto"
+            type="submit"
+            value="Submit"
+          />
         </form>
         <div />
       </section>
