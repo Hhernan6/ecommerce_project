@@ -6,14 +6,15 @@ const Admin = props => {
   const deleteFunc = id => {
     fetch(`http://localhost:3007/products/${id}`, {
       method: "DELETE"
-    }).then(response => response.json());
+    }).then(response => response.json())
+    .catch((error) => {
+      console.log('There has been a problem with your fetch operation: ', error.message);
+    });
     window.location.reload();
-    console.log(id);
   };
 
   const toggleModal = ID => {
     let modal = document.getElementById(`${ID}`);
-console.log(ID)
     if (modal.style.display === "none" || modal.style.display === '') {
       modal.style.display = "flex";
     } else {

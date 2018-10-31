@@ -39,8 +39,8 @@ class AdminCards extends React.Component {
     })
       .then(response => response.json())
       .then(response => console.log(response.json))
-      .catch(e => {
-        console.log(e);
+      .catch((error) => {
+        console.log('There has been a problem with your fetch operation: ', error.message);
       });
   };
   render() {
