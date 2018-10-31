@@ -4,7 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./assets/CSS/App.css";
 import Home from "./Components/Home/Home";
-import Products from "./Components/Products/Products";
+import Products from "./Components/Products/products";
 import contact from "./Components/Contact/Contact";
 import Callback from "./Callback";
 import Admin from "./Components/Admin/ProductsAdmin";
