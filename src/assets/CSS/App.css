@@ -1084,7 +1084,7 @@ footer {
           border-left: none;
           border-top: 2px solid #d70303;
           margin-top: 10px; } }
-      .admin-cards-wrapper__flex .product-cards__description h1 {
+      .admin-cards-wrapper__flex .product-cards__description h2 {
         font-size: 1.5rem; }
       .admin-cards-wrapper__flex .product-cards__description p {
         font-family: "Share", cursive;

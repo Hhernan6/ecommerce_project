@@ -38,7 +38,7 @@ class App extends Component {
       .catch(e => {
         throw e.message;
       });
-    fetch("https://hhhsql.herokuapp.com/admin/contact")
+    fetch("http://localhost:3007/contact")
       .then(response => response.json())
       .then(contactData =>
         this.setState(

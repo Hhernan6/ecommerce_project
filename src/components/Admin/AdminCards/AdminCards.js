@@ -45,11 +45,11 @@ class AdminCards extends React.Component {
   };
   render() {
     return (
-      <div className="admin-cards-wrapper__card">
+      <section className="admin-cards-wrapper__card">
         <div className="admin-cards-wrapper__flex">
           <img src={this.props.image} alt="DW performance drum set" />
           <div className="product-cards__description text-center">
-            <h1>{this.props.title}</h1>
+            <h2>{this.props.title}</h2>
             <p>
               Price: <span>{this.props.price} </span>
             </p>
@@ -166,7 +166,7 @@ class AdminCards extends React.Component {
             </form>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

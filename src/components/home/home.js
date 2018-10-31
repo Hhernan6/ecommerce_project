@@ -7,7 +7,7 @@ const Home = () => {
       <Hero />
       <section className="small-card__container">
         <div className="small-card__container-content">
-          <img src={require("../../assets/images/introDrums.jpg")} alt="" />
+          <img src={require("../../assets/images/introDrums.jpg")} alt="Drum set" />
           <div className="small-card__container__content-side text-center">
             <p>
               Welcome to Groove! We have new products available now! Start
@@ -24,7 +24,7 @@ const Home = () => {
             <figcaption >Drum Kits</figcaption>
           </figure>
           <figure>
-            <img src={require("../../assets/images/guitar.jpg")} alt="Guitar" />
+            <img src={require("../../assets/images/guitar.jpg")} alt="Person playing the guitar" />
             <figcaption>Guitars</figcaption>
           </figure>
           <figure>
@@ -47,7 +47,7 @@ const Home = () => {
             </p>
             <button>Shop Now!</button>
           </div>
-          <img src={require("../../assets/images/introDrums.jpg")} alt="" />
+          <img src={require("../../assets/images/guitar-hero.jpg")} alt="Person playing the guitar" />
         </div>
       </section>
 

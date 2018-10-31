@@ -22,13 +22,13 @@ const Footer = () => {
         <nav className="footer__navs__right">
           <ul>
             <li>
-              <a href="">Customer Service</a>
+              <a href="#">Customer Service</a>
             </li>
             <li>
-              <a href="">Blog</a>
+              <a href="#">Blog</a>
             </li>
             <li>
-              <a href="">Term &amp; Conditions</a>
+              <a href="#">Term &amp; Conditions</a>
             </li>
           </ul>
         </nav>
