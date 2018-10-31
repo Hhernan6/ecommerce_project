@@ -23,13 +23,13 @@ console.log(ID)
 
   return (
     <main>
-      <h1 className="text-center">Products Manager</h1>
+      <h1 className="main-heading">Products Manager</h1>
       <nav className="admin-nav">
         <ul>
           <li>
             <Link to="/admin/products">Products</Link>
           </li>
-          <li className="mainNav__links--border">
+          <li className="main-nav__links--border">
             <Link to="/admin/Contact">Contact</Link>
           </li>
         </ul>

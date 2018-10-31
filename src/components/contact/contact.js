@@ -6,22 +6,23 @@ import React from "react";
 const contact = () => {
   return (
     <main>
-      <div className="Hero">
-        <div className="Hero__text">
+      <div className="page-hero">
+        <div className="page-hero__text">
           <h1>Contact Us</h1>
+          <p>We will respond ass soon as possible</p>
         </div>
       </div>
 
-      <section className="companyInfo">
-        <div className="companyInfo__content">
-          <div className="companyInfo__content__text">
+      <section className="company-info">
+        <div className="company-info__content">
+          <div className="company-info__content__text">
             <address>123 Main st Charlotte, N.C.</address>
             <p>Phone Number: 704748484</p>
             <p>Email: Groove@gmail.com</p>
           </div>
         </div>
         <form
-          className="contactForm"
+          className="contact-form"
           method="POST"
           action="http://localhost:3007/admin/contact"
         >
@@ -45,7 +46,7 @@ const contact = () => {
             <label className="margin-auto" htmlFor="comments">Comments</label>
             <textarea className="margin-auto" name="comments" />
           </div>
-          <input className=" submitBtn margin-auto" type="submit" value="Submit" />
+          <input className="contact-form__submit-btn margin-auto" type="submit" value="Submit" />
         </form>
         <div />
       </section>

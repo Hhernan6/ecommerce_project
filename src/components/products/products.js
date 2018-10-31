@@ -1,12 +1,13 @@
 import React from "react";
-import Cards from "../products/Cards.js";
+import Cards from "../Products/Cards.js";
 
 const Products = props => {
   return (
     <main>
-      <div className="Hero">
-        <div className="Hero__text">
+      <div className="page-hero">
+        <div className="page-hero__text">
           <h1>Products</h1>
+          <p>Start shopping and start grooving in matter of 2 days!</p>
         </div>
       </div>
       <form onChange={props.brandFilter}>

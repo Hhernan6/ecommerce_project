@@ -1,8 +1,6 @@
-main {
-  padding-top: 100px;
-}
-.availableProducts {
-  @include dimensions(95%, 100%);
+
+.available-products {
+  @include dimensions(98%, 100%);
   margin: 60px auto;
 
   h2 {
@@ -10,7 +8,7 @@ main {
     font-family: $mainFont;
     margin-bottom: 16px;
   }
-  .availableProducts__container {
+  .available-products__container {
     @include dimensions(100%, 100%);
     flex-wrap: wrap;
     @include flex(flex, space-between, center);
@@ -41,12 +39,12 @@ main {
     }
   }
 }
-.small-card {
+.small-card__container {
   box-shadow: $cardBoxShadow;
   padding: 12px;
   @include dimensions(95%, 100%);
   margin: 50px auto;
-  .small-card__container {
+  .small-card__container-content {
     @include dimensions(98%, 90%);
     @include flex(flex, space-between, none);
     @media (max-width: 767px) {
@@ -58,40 +56,44 @@ main {
         @include dimensions(100%, 300px);
       }
     }
-  }
-}
-.small-card__container__content {
-  @include dimensions(50%, '');
-  border-bottom: $mainRedColor solid 2px;
-  padding-bottom: 20px;
-  @media (max-width: 767px) {
-    @include dimensions(100%, '');
-  }
-  p {
-    font-size: 2rem;
-    font-family: $mainFont;
-    line-height: 1.5;
-    @include dimensions(100%, auto);
-    @media (max-width: 460px) {
-      font-size: 1.8rem;
+    .small-card__container__content-side {
+      @include dimensions(50%, '');
+      border-bottom: $mainRedColor solid 2px;
+      padding-bottom: 20px;
+      @media (max-width: 767px) {
+        @include dimensions(100%, '');
+      }
+      p {
+        font-size: 2rem;
+        font-family: $mainFont;
+        line-height: 1.5;
+        @include dimensions(100%, auto);
+        @media (max-width: 460px) {
+          font-size: 1.8rem;
+        }
+      }
+      button {
+        @include buttonStyling;
+      }
     }
   }
-  button {
-    @include buttonStyling;
-  }
 }
-.customerCards-container {
-  margin-top: 50px;
+
+.customer-cards-wrapper {
+  margin-top: 80px;
   @include dimensions(98%, 100%);
   h2 {
-    font-size: 2.9rem;
+    font-size: 3.2rem;
     font-family: $mainFont;
+    margin-bottom: 50px;
   }
 }
-.customerCards {
+.customer-cards {
   flex-wrap: wrap;
- @include dimensions(100%, 100%);
   margin-top: 30px;
+  
+ @include dimensions(100%, 100%);
+ 
   @include flex(flex, space-between, center);
   figcaption {
     border-bottom: 2px $mainRedColor solid;
@@ -104,9 +106,9 @@ main {
   }
 }
 
-.customerCards__card {
+.customer-cards__card {
   @include dimensions(400px, 100%);
-  .customerCards__content__rating {
+  .customer-cards__content__rating {
     display: flex;
     @include dimensions(100%, 100%);
     align-items: center;

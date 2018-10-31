@@ -1,44 +1,4 @@
-
-
-.contactForm {
-  @include dimensions(50%, 720px);
-  box-shadow: $cardBoxShadow;
-  @media (max-width: 767px) {
-    width: 100%;
-    height: 710px;
-  }
-  .contact__inputs {
-    margin: 18px auto;
-    width: 100%;
-    input {
-      @include dimensions(90%, 50px);
-      margin: 5px auto;
-      display: block;
-      font-family: $mainFont;
-      font-size: 1.7rem;
-    
-      border: 1px solid rgb(133, 132, 132);
-    }
-    label {
-      width: 90%;
-      display: block;
-      margin-top: 10px;
-      font-family: $mainFont;
-      font-size: 1.7rem;
-    }
-  }
-  textarea {
-    @include dimensions(90%, 150px);
-    display: block;
-  
-  }
-}
-
-.submitBtn {
-@include buttonStyling;
-display: block;
-}
-.companyInfo {
+.company-info {
   @include dimensions(100%, 100%);
   @include flex(flex, space-between, none);
   padding: 20px;
@@ -67,3 +27,43 @@ display: block;
     }
   }
 }
+
+.contact-form {
+  @include dimensions(50%, 720px);
+  box-shadow: $cardBoxShadow;
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 710px;
+  }
+  .contact__inputs {
+    margin: 18px auto;
+    width: 100%;
+    input {
+      @include dimensions(90%, 50px);
+      margin: 5px auto;
+      display: block;
+      font-family: $mainFont;
+      font-size: 1.7rem;
+      border: 1px solid rgb(133, 132, 132);
+    }
+    label {
+      width: 90%;
+      display: block;
+      margin-top: 10px;
+      font-family: $mainFont;
+      font-size: 1.7rem;
+    }
+  }
+  .contact-form__submit-btn {
+    @include buttonStyling;
+    display: block;
+    }
+  textarea {
+    @include dimensions(90%, 150px);
+    display: block;
+  
+  }
+}
+
+
+

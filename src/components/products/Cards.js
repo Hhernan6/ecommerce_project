@@ -22,14 +22,14 @@ class Cards extends React.Component {
 
   render() {
     return (
-      <div className="row__productCard">
+      <div className="row__product-card">
         <img src={this.props.image} alt="DW performance drum set" />
-        <div className="productCard__description">
-          <h1>{this.props.title}</h1>
-          <p className="productCard__description--height">{this.props.description}</p>
-          <p>Price: <span className="productCard__description--bold">
+        <div className="product-card__description">
+          <h2>{this.props.title}</h2>
+          <p className="product-card__description--height">{this.props.description}</p>
+          <p>Price: <span className="product-card__description--bold">
           {this.props.price} </span></p>
-          <div className="row__productCard__bottom">
+          <div className="row__product-card__bottom">
             <button
               onClick={() => {
                 this.handleQuantity("+");

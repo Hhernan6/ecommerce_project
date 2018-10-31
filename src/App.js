@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./assets/CSS/App.css";
-import Home from "./components/home/home";
-import Products from "./components/products/products";
-import contact from "./components/contact/contact";
+import Home from "./components/Home/Home";
+import Products from "./components/Products/Products";
+import contact from "./components/Contact/Contact";
 import Callback from "./Callback";
-import Admin from "./components/Admin/admin";
+import Admin from "./components/Admin/ProductsAdmin";
 import SecuredRoute from "./SecuredRoute/SecuredRoute";
 import AdminContact from "./components/Admin/AdminContact/AdminContact";
 

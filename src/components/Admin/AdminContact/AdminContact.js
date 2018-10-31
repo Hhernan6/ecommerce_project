@@ -5,17 +5,18 @@ import AdminContactCards from "../AdminContactCards/AdminContactCards";
 const contactAdmin = props => {
   return (
     <main>
-      <nav className="admin-Nav">
+      <h1 className="main-heading">Contact Admin</h1>
+      <nav className="admin-nav">
         <ul>
           <li>
             <Link to="/admin/products">Products</Link>
           </li>
-          <li className="mainNav__links--border">
+          <li className="main-nav__links--border">
             <Link to="/admin/Contact">Contact</Link>
           </li>
         </ul>
       </nav>
-      <div className="contactRow margin-auto">
+      <div className="contact-row margin-auto">
         {props.contactInfo.map(cardsList => {
           return (
             <AdminContactCards

@@ -15,11 +15,9 @@
 @mixin buttonStyling {
   text-transform: uppercase;
   font-size: 1.5rem;
-  width: 160px;
-  height: 60px;
+  padding: 18px 26px;
   cursor: pointer;
   border-radius: 4px;
-  outline: none;
   font-family: "Share", cursive;
   background-color: $mainRedColor;
   color: white;
@@ -52,3 +50,4 @@
   font-weight: 500;
   letter-spacing: 0.8px;
 }
+

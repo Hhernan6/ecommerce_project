@@ -13,7 +13,7 @@ footer {
   }
 }
 
-.footer__navs__socialMedia {
+.footer__navs__social-media {
   margin: 20px 0 40px 0;
   ul {
     @include flex(flex, center, center);
@@ -24,14 +24,14 @@ footer {
     margin-left: 16px;
   }
 }
-.footer__navs__socialMedia--facebook {
+.footer__navs__social-media--facebook {
   @include dimensions(50px, 50px);
   margin: 0;
   background-image: url("../images//facebook-icon.svg");
   background-size: cover;
   display: block;
 }
-.footer__navs__socialMedia--twitter {
+.footer__navs__social-media--twitter {
   @include dimensions(50px, 50px);
   margin: 0;
   background-image: url("../images/twitter-icon.svg");
@@ -39,7 +39,7 @@ footer {
   display: block;
 }
 
-.footer__navs__socialMedia--instagram {
+.footer__navs__social-media--instagram {
   @include dimensions(50px, 50px);
   margin: 0;
   background-image: url("../images/instagram-icon.svg");

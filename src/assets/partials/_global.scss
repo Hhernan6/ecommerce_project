@@ -1,10 +1,18 @@
-.margin-auto{
-    margin: 0 auto
+.margin-auto {
+  margin: 0 auto;
 }
-
+.main-heading {
+  font-size: 4rem;
+  font-family: $mainFont;
+  text-align: center;
+  margin-top: 60px;
+}
 .text-center {
-    text-align: center;
+  text-align: center;
 }
-.mainNav__links--border {
-    border-left: 2px solid #c5c6c7;
-  }
+.main-nav__links--border {
+  border-left: 2px solid #c5c6c7;
+}
+main {
+  padding-top: 100px;
+}

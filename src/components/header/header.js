@@ -11,7 +11,7 @@ const header = props => {
   };
 
   const toggleMobileNav = () => {
-    const mobileNav = document.querySelector(".mobileNav");
+    const mobileNav = document.querySelector(".mobile-nav");
     if (mobileNav.style.marginLeft === "-1000px" || mobileNav.style.marginLeft === '') mobileNav.style.marginLeft = '0';
     else {
       mobileNav.style.marginLeft = "-1000px";
@@ -19,7 +19,7 @@ const header = props => {
   };
   return (
     <header>
-      <nav className="mobileNav">
+      <nav className="mobile-nav">
         <div className="menu-icon--mobile" onClick={toggleMobileNav} />
         {!auth0Client.isAuthenticated() && (
           <button onClick={auth0Client.signIn}>Sign In</button>
@@ -36,7 +36,7 @@ const header = props => {
             </button>
           </div>
         )}
-        <ul className="mobileNav__links">
+        <ul className="mobile-nav__links">
           <li onClick={toggleMobileNav}>
             <Link to="/">Home</Link>
           </li>
@@ -62,21 +62,21 @@ const header = props => {
           ) : null}
         </ul>
       </nav>
-      <nav className="mainNav">
-        <p className="mainNav-logo">Groove</p>
+      <nav className="main-nav">
+        <p className="main-nav-logo">Groove</p>
 
-        <ul className="mainNav__links margin-auto">
+        <ul className="main-nav__links margin-auto">
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li className="mainNav__links--border">
+          <li className="main-nav__links--border">
             <Link to="/products">Products</Link>
           </li>
-          <li className="mainNav__links--border">
+          <li className="main-nav__links--border">
             <Link to="/contact">Contact</Link>
           </li>
           {auth0Client.isAuthenticated() ? (
-            <li className="mainNav__links--border">
+            <li className="main-nav__links--border">
               <Link to="/admin/products"> Admin</Link>
             </li>
           ) : null}

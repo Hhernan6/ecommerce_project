@@ -1,15 +1,33 @@
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
 .margin-auto {
   margin: 0 auto; }
+
+.main-heading {
+  font-size: 4rem;
+  font-family: "Share", cursive;
+  text-align: center;
+  margin-top: 60px; }
 
 .text-center {
   text-align: center; }
 
-.mainNav__links--border {
+.main-nav__links--border {
   border-left: 2px solid #c5c6c7; }
 
+main {
+  padding-top: 100px; }
+
 .hero {
-  height: 80vh;
   width: 100%;
+  height: 80vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -19,34 +37,15 @@
   display: flex;
   justify-content: center;
   align-items: center; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .hero {
       background-position: bottom; } }
   @media (max-width: 460px) {
     .hero {
       height: 65vh; } }
   .hero__text {
-    width: 600px;
-    padding: 14px;
+    width: 480px;
     text-align: center; }
-    .hero__text button {
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      width: 160px;
-      height: 60px;
-      cursor: pointer;
-      border-radius: 4px;
-      outline: none;
-      font-family: "Share", cursive;
-      background-color: #d70303;
-      color: white;
-      letter-spacing: 0.9px;
-      border: none;
-      box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
-      .hero__text button:hover {
-        background-color: #eb0404;
-        color: white;
-        opacity: 1; }
     .hero__text h1 {
       color: white;
       font-size: 3rem;
@@ -62,30 +61,64 @@
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 0.9px;
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 50px; }
       @media (max-width: 460px) {
         .hero__text p {
           font-size: 1.5rem; } }
+    .hero__text a {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      padding: 18px 26px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-family: "Share", cursive;
+      background-color: #d70303;
+      color: white;
+      letter-spacing: 0.9px;
+      border: none;
+      box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
+      .hero__text a:hover {
+        background-color: #eb0404;
+        color: white;
+        opacity: 1; }
 
-.Hero {
-  height: 300px;
+.page-hero {
   width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url("../images/introDrums2.jpg"); }
-  .Hero .Hero__text {
-    background-color: rgba(231, 230, 230, 0.729);
-    width: 400px;
-    height: 150px;
+  .page-hero .page-hero__text {
+    background-color: rgba(231, 230, 230, 0.556);
+    text-align: center;
+    padding: 12px 22px;
     text-align: center;
     font-size: 1.6rem;
-    text-transform: uppercase;
-    padding: 10px; }
+    text-transform: uppercase; }
+    .page-hero .page-hero__text h1 {
+      font-size: 4.5rem;
+      font-family: "Share", cursive;
+      text-transform: uppercase; }
+      @media (max-width: 460px) {
+        .page-hero .page-hero__text h1 {
+          font-size: 2.3rem; } }
+    .page-hero .page-hero__text p {
+      font-size: 1.8rem;
+      font-family: "Montserrat";
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.9px;
+      text-align: center;
+      margin-bottom: 50px; }
+      @media (max-width: 460px) {
+        .page-hero .page-hero__text p {
+          font-size: 1.5rem; } }
 
-.mainNav {
+.main-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +128,7 @@
   top: 0;
   background-color: #1f2833;
   z-index: 100; }
-  .mainNav__links {
+  .main-nav__links {
     padding: 0;
     width: 70%;
     height: 100%;
@@ -103,54 +136,52 @@
     justify-content: flex-end;
     align-items: center; }
     @media (max-width: 768px) {
-      .mainNav__links {
+      .main-nav__links {
         display: none; } }
-    .mainNav__links li {
+    .main-nav__links li {
       margin-right: 10px;
       padding-left: 12px; }
       @media (max-width: 768px) {
-        .mainNav__links li {
+        .main-nav__links li {
           margin-left: 30px; } }
-      .mainNav__links li a {
+      .main-nav__links li a {
         text-transform: uppercase;
         font-size: 1.5rem;
         font-family: "Share", cursive;
         color: white;
         font-weight: 500;
         letter-spacing: 0.8px; }
-        .mainNav__links li a::after {
+        .main-nav__links li a::after {
           content: "";
           display: block;
           width: 0;
           height: 2px;
           background: #d70303;
           transition: width 0.2s ease-out; }
-        .mainNav__links li a:hover::after {
+        .main-nav__links li a:hover::after {
           width: 100%; }
-  .mainNav button {
+  .main-nav button {
     text-transform: uppercase;
     font-size: 1.5rem;
-    width: 160px;
-    height: 60px;
+    padding: 18px 26px;
     cursor: pointer;
     border-radius: 4px;
-    outline: none;
     font-family: "Share", cursive;
     background-color: #d70303;
     color: white;
     letter-spacing: 0.9px;
     border: none;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-    margin-right: 10px; }
-    .mainNav button:hover {
+    margin-right: 16px; }
+    .main-nav button:hover {
       background-color: #eb0404;
       color: white;
       opacity: 1; }
     @media (max-width: 767px) {
-      .mainNav button {
+      .main-nav button {
         display: none; } }
 
-.mobileNav {
+.mobile-nav {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -158,16 +189,14 @@
   z-index: 1000;
   margin-left: -1000px; }
   @media (min-width: 768px) {
-    .mobileNav {
+    .mobile-nav {
       display: none; } }
-  .mobileNav button {
+  .mobile-nav button {
     text-transform: uppercase;
     font-size: 1.5rem;
-    width: 160px;
-    height: 60px;
+    padding: 18px 26px;
     cursor: pointer;
     border-radius: 4px;
-    outline: none;
     font-family: "Share", cursive;
     background-color: #d70303;
     color: white;
@@ -175,11 +204,11 @@
     border: none;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
     margin: 10px 0 0 10px; }
-    .mobileNav button:hover {
+    .mobile-nav button:hover {
       background-color: #eb0404;
       color: white;
       opacity: 1; }
-  .mobileNav .menu-icon--mobile {
+  .mobile-nav .menu-icon--mobile {
     position: absolute;
     top: 5px;
     right: 0;
@@ -189,7 +218,7 @@
     margin: 10px 12px 0 0;
     background-size: cover;
     cursor: pointer; }
-    .mobileNav .menu-icon--mobile::before {
+    .mobile-nav .menu-icon--mobile::before {
       content: "Menu";
       display: block;
       position: absolute;
@@ -198,18 +227,18 @@
       font-size: 1.8rem;
       font-family: "Share", cursive;
       color: white; }
-  .mobileNav__links {
+  .mobile-nav__links {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 80%; }
-    .mobileNav__links .main-nav__listItem--margin-top {
+    .mobile-nav__links .main-nav__listItem--margin-top {
       margin-top: 10px; }
-    .mobileNav__links li {
+    .mobile-nav__links li {
       font-size: 3rem; }
-      .mobileNav__links li a {
+      .mobile-nav__links li a {
         color: white;
         font-family: "Share", cursive;
         letter-spacing: 0.8px; }
@@ -534,43 +563,31 @@ template {
 [hidden] {
   display: none; }
 
-* {
-  box-sizing: border-box; }
-
-a {
-  text-decoration: none; }
-
-ul {
-  list-style: none; }
-
-main {
-  padding-top: 100px; }
-
-.availableProducts {
-  width: 95%;
+.available-products {
+  width: 98%;
   height: 100%;
   margin: 60px auto; }
-  .availableProducts h2 {
+  .available-products h2 {
     font-size: 4rem;
     font-family: "Share", cursive;
     margin-bottom: 16px; }
-  .availableProducts .availableProducts__container {
+  .available-products .available-products__container {
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .availableProducts .availableProducts__container figure {
+    .available-products .available-products__container figure {
       width: 750px;
       height: 400px;
       margin: 10px auto;
       position: relative;
       cursor: pointer; }
-      .availableProducts .availableProducts__container figure img {
+      .available-products .available-products__container figure img {
         width: 100%;
         height: 100%; }
-      .availableProducts .availableProducts__container figure figcaption {
+      .available-products .available-products__container figure figcaption {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.481);
         top: 0;
@@ -584,86 +601,84 @@ main {
         text-transform: uppercase;
         font-family: "Share", cursive;
         opacity: 0; }
-        .availableProducts .availableProducts__container figure figcaption:hover {
+        .available-products .available-products__container figure figcaption:hover {
           opacity: 1; }
 
-.small-card {
+.small-card__container {
   box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
   padding: 12px;
   width: 95%;
   height: 100%;
   margin: 50px auto; }
-  .small-card .small-card__container {
+  .small-card__container .small-card__container-content {
     width: 98%;
     height: 90%;
     display: flex;
     justify-content: space-between;
     align-items: none; }
     @media (max-width: 767px) {
-      .small-card .small-card__container {
+      .small-card__container .small-card__container-content {
         flex-direction: column-reverse; } }
-    .small-card .small-card__container img {
+    .small-card__container .small-card__container-content img {
       width: 45%;
       height: 350px; }
       @media (max-width: 767px) {
-        .small-card .small-card__container img {
+        .small-card__container .small-card__container-content img {
           width: 100%;
           height: 300px; } }
+    .small-card__container .small-card__container-content .small-card__container__content-side {
+      width: 50%;
+      height: "";
+      border-bottom: #d70303 solid 2px;
+      padding-bottom: 20px; }
+      @media (max-width: 767px) {
+        .small-card__container .small-card__container-content .small-card__container__content-side {
+          width: 100%;
+          height: ""; } }
+      .small-card__container .small-card__container-content .small-card__container__content-side p {
+        font-size: 2rem;
+        font-family: "Share", cursive;
+        line-height: 1.5;
+        width: 100%;
+        height: auto; }
+        @media (max-width: 460px) {
+          .small-card__container .small-card__container-content .small-card__container__content-side p {
+            font-size: 1.8rem; } }
+      .small-card__container .small-card__container-content .small-card__container__content-side button {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        padding: 18px 26px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-family: "Share", cursive;
+        background-color: #d70303;
+        color: white;
+        letter-spacing: 0.9px;
+        border: none;
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
+        .small-card__container .small-card__container-content .small-card__container__content-side button:hover {
+          background-color: #eb0404;
+          color: white;
+          opacity: 1; }
 
-.small-card__container__content {
-  width: 50%;
-  height: "";
-  border-bottom: #d70303 solid 2px;
-  padding-bottom: 20px; }
-  @media (max-width: 767px) {
-    .small-card__container__content {
-      width: 100%;
-      height: ""; } }
-  .small-card__container__content p {
-    font-size: 2rem;
-    font-family: "Share", cursive;
-    line-height: 1.5;
-    width: 100%;
-    height: auto; }
-    @media (max-width: 460px) {
-      .small-card__container__content p {
-        font-size: 1.8rem; } }
-  .small-card__container__content button {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    width: 160px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 4px;
-    outline: none;
-    font-family: "Share", cursive;
-    background-color: #d70303;
-    color: white;
-    letter-spacing: 0.9px;
-    border: none;
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
-    .small-card__container__content button:hover {
-      background-color: #eb0404;
-      color: white;
-      opacity: 1; }
-
-.customerCards-container {
-  margin-top: 50px;
+.customer-cards-wrapper {
+  margin-top: 80px;
   width: 98%;
   height: 100%; }
-  .customerCards-container h2 {
-    font-size: 2.9rem;
-    font-family: "Share", cursive; }
+  .customer-cards-wrapper h2 {
+    font-size: 3.2rem;
+    font-family: "Share", cursive;
+    margin-bottom: 50px; }
 
-.customerCards {
+.customer-cards {
   flex-wrap: wrap;
+  margin-top: 30px;
   width: 100%;
   height: 100%;
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .customerCards figcaption {
+  .customer-cards figcaption {
     border-bottom: 2px #d70303 solid;
     margin-top: 10px;
     font-size: 1.5rem;
@@ -672,10 +687,10 @@ main {
     padding-bottom: 12px;
     width: 100%; }
 
-.customerCards__card {
+.customer-cards__card {
   width: 400px;
   height: 100%; }
-  .customerCards__card .customerCards__content__rating {
+  .customer-cards__card .customer-cards__content__rating {
     display: flex;
     width: 100%;
     height: 100%;
@@ -683,24 +698,24 @@ main {
     display: flex;
     justify-content: "";
     align-items: center; }
-    .customerCards__card .customerCards__content__rating p {
+    .customer-cards__card .customer-cards__content__rating p {
       max-height: 30%;
       display: inline-block;
       font-size: 1.3rem;
       font-family: "Share", cursive; }
-    .customerCards__card .customerCards__content__rating span {
+    .customer-cards__card .customer-cards__content__rating span {
       width: 100px;
       height: 100px;
       background-size: cover;
       background-image: url("../images/ratingicon.png"); }
-  .customerCards__card img {
+  .customer-cards__card img {
     width: 70%;
     height: 240px;
     margin: 0 auto;
     display: block;
     border-radius: 50%; }
     @media (max-width: 768px) {
-      .customerCards__card img {
+      .customer-cards__card img {
         height: 200px;
         width: 60%; } }
 
@@ -722,19 +737,19 @@ footer {
     .footer__navs {
       flex-direction: column; } }
 
-.footer__navs__socialMedia {
+.footer__navs__social-media {
   margin: 20px 0 40px 0; }
-  .footer__navs__socialMedia ul {
+  .footer__navs__social-media ul {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 100%;
     padding: 0; }
-  .footer__navs__socialMedia .margin-left {
+  .footer__navs__social-media .margin-left {
     margin-left: 16px; }
 
-.footer__navs__socialMedia--facebook {
+.footer__navs__social-media--facebook {
   width: 50px;
   height: 50px;
   margin: 0;
@@ -742,7 +757,7 @@ footer {
   background-size: cover;
   display: block; }
 
-.footer__navs__socialMedia--twitter {
+.footer__navs__social-media--twitter {
   width: 50px;
   height: 50px;
   margin: 0;
@@ -750,7 +765,7 @@ footer {
   background-size: cover;
   display: block; }
 
-.footer__navs__socialMedia--instagram {
+.footer__navs__social-media--instagram {
   width: 50px;
   height: 50px;
   margin: 0;
@@ -808,57 +823,7 @@ footer {
   font-family: "Share", cursive;
   color: white; }
 
-.contactForm {
-  width: 50%;
-  height: 720px;
-  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15); }
-  @media (max-width: 767px) {
-    .contactForm {
-      width: 100%;
-      height: 710px; } }
-  .contactForm .contact__inputs {
-    margin: 18px auto;
-    width: 100%; }
-    .contactForm .contact__inputs input {
-      width: 90%;
-      height: 50px;
-      margin: 5px auto;
-      display: block;
-      font-family: "Share", cursive;
-      font-size: 1.7rem;
-      border: 1px solid #858484; }
-    .contactForm .contact__inputs label {
-      width: 90%;
-      display: block;
-      margin-top: 10px;
-      font-family: "Share", cursive;
-      font-size: 1.7rem; }
-  .contactForm textarea {
-    width: 90%;
-    height: 150px;
-    display: block; }
-
-.submitBtn {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  width: 160px;
-  height: 60px;
-  cursor: pointer;
-  border-radius: 4px;
-  outline: none;
-  font-family: "Share", cursive;
-  background-color: #d70303;
-  color: white;
-  letter-spacing: 0.9px;
-  border: none;
-  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-  display: block; }
-  .submitBtn:hover {
-    background-color: #eb0404;
-    color: white;
-    opacity: 1; }
-
-.companyInfo {
+.company-info {
   width: 100%;
   height: 100%;
   display: flex;
@@ -866,9 +831,9 @@ footer {
   align-items: none;
   padding: 20px; }
   @media (max-width: 767px) {
-    .companyInfo {
+    .company-info {
       flex-direction: column; } }
-  .companyInfo__content {
+  .company-info__content {
     width: 50%;
     height: 720px;
     display: flex;
@@ -877,10 +842,10 @@ footer {
     background: url("../images/concert.jpg");
     background-size: cover; }
     @media (max-width: 767px) {
-      .companyInfo__content {
+      .company-info__content {
         width: 100%;
         height: 300px; } }
-    .companyInfo__content__text {
+    .company-info__content__text {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -890,93 +855,145 @@ footer {
       padding: 20px;
       font-family: "Share", cursive; }
       @media (max-width: 768px) {
-        .companyInfo__content__text {
+        .company-info__content__text {
           width: 315px;
           font-size: 1.5rem; } }
+
+.contact-form {
+  width: 50%;
+  height: 720px;
+  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15); }
+  @media (max-width: 767px) {
+    .contact-form {
+      width: 100%;
+      height: 710px; } }
+  .contact-form .contact__inputs {
+    margin: 18px auto;
+    width: 100%; }
+    .contact-form .contact__inputs input {
+      width: 90%;
+      height: 50px;
+      margin: 5px auto;
+      display: block;
+      font-family: "Share", cursive;
+      font-size: 1.7rem;
+      border: 1px solid #858484; }
+    .contact-form .contact__inputs label {
+      width: 90%;
+      display: block;
+      margin-top: 10px;
+      font-family: "Share", cursive;
+      font-size: 1.7rem; }
+  .contact-form .contact-form__submit-btn {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 18px 26px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: "Share", cursive;
+    background-color: #d70303;
+    color: white;
+    letter-spacing: 0.9px;
+    border: none;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    display: block; }
+    .contact-form .contact-form__submit-btn:hover {
+      background-color: #eb0404;
+      color: white;
+      opacity: 1; }
+  .contact-form textarea {
+    width: 90%;
+    height: 150px;
+    display: block; }
 
 .filters {
   width: 100%;
   height: 100%;
-  font-family: "Share", cursive;
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
+  font-family: "Share", cursive;
   margin: 50px auto;
   flex-wrap: wrap; }
   .filters select {
+    width: 400px;
+    height: 50px;
     color: white;
     background: #191930;
-    height: 50px;
-    width: 400px;
     font-size: 1.2rem;
-    outline: none;
     font-family: "Share", cursive; }
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: none;
   width: 98%;
   height: 100%;
-  margin: 0 auto;
-  justify-content: space-around;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  margin: 80px auto;
   font-family: "Share", cursive; }
-  .row .row__productCard {
-    padding: 10px;
+  .row__product-card {
     width: 450px;
     height: 830px;
-    box-shadow: 0 0 10px 0 rgba(95, 93, 93, 0.15);
+    padding: 10px;
+    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
     margin-bottom: 50px; }
     @media (max-width: 460px) {
-      .row .row__productCard {
-        width: 400px; } }
-    .row .row__productCard__bottom {
+      .row__product-card {
+        width: 350px;
+        height: 790px; } }
+    .row__product-card__bottom {
       display: flex;
       justify-content: space-around;
-      max-width: 190px;
-      height: auto;
-      align-items: center; }
-      .row .row__productCard__bottom p {
+      align-items: center;
+      max-width: 240px;
+      height: auto; }
+      .row__product-card__bottom p {
         text-transform: uppercase;
         letter-spacing: 0.9px;
-        font-size: 1.4rem; }
-      .row .row__productCard__bottom button {
+        font-size: 1.4rem;
+        margin-left: 8px; }
+      .row__product-card__bottom button {
         font-size: 1.2rem;
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         border-radius: 20px;
         background-color: #eb0909;
         color: white;
-        outline: none;
         cursor: pointer; }
-    .row .row__productCard img {
+    .row__product-card img {
       width: 100%;
       height: 390px;
       display: block;
       margin-bottom: 20px;
       padding: 12px; }
+      @media (max-width: 460px) {
+        .row__product-card img {
+          height: 300px; } }
 
-.productCard__description {
-  max-height: 100%;
+.product-card__description {
   width: 100%;
+  height: 100%;
   margin: 10px auto;
   padding: 12px;
   border-top: 2px solid red; }
-  .productCard__description h1 {
+  .product-card__description h2 {
     font-size: 1.8rem;
     max-width: 100%;
     height: 60px;
     text-align: center; }
-  .productCard__description .productCard__description--height {
-    min-height: 130px; }
-  .productCard__description p {
-    font-size: 1.3rem;
-    font-family: "Share", cursive;
-    line-height: 1.3; }
-  .productCard__description .productCard__description--bold {
+  .product-card__description--height {
+    min-height: 130px;
+    text-align: center; }
+  .product-card__description p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: 'Montserrat';
+    line-height: 1.5; }
+  .product-card__description--bold {
     font-weight: bold; }
 
-.mainNav-logo {
+.main-nav-logo {
   color: white;
   letter-spacing: 1.2px;
   margin-left: auto;
@@ -985,7 +1002,7 @@ footer {
   border-bottom: solid 3px #f20808;
   text-transform: uppercase; }
   @media (max-width: 767px) {
-    .mainNav-logo {
+    .main-nav-logo {
       margin: 0 auto 0 10px; } }
 
 .footer-logo {
@@ -1009,11 +1026,9 @@ footer {
   .admin-nav button {
     text-transform: uppercase;
     font-size: 1.5rem;
-    width: 160px;
-    height: 60px;
+    padding: 18px 26px;
     cursor: pointer;
     border-radius: 4px;
-    outline: none;
     font-family: "Share", cursive;
     background-color: #d70303;
     color: white;
@@ -1094,11 +1109,11 @@ footer {
     margin-left: auto; }
     @media (max-width: 767px) {
       .admin-cards-wrapper__btns {
-        margin: 0 auto;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: none;
+        margin: 0 auto;
+        width: 100%;
         padding-top: 16px; } }
     .admin-cards-wrapper__btns button {
       font-size: 1.4rem;
@@ -1118,14 +1133,14 @@ footer {
         .admin-cards-wrapper__btns button {
           margin: 0 auto; } }
 
-.contactRow {
+.contact-row {
   width: 98%;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: none;
   flex-wrap: wrap; }
-  .contactRow__content {
+  .contact-row__content {
     width: 510px;
     height: 300px;
     display: flex;
@@ -1135,62 +1150,59 @@ footer {
     margin-top: 20px;
     box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15); }
     @media (max-width: 460px) {
-      .contactRow__content {
+      .contact-row__content {
         width: 380px;
         height: 430px;
         flex-direction: column; } }
-  .contactRow__info {
+  .contact-row__info {
     width: 210px;
     height: auto;
     font-family: "Share", cursive; }
     @media (max-width: 460px) {
-      .contactRow__info {
+      .contact-row__info {
         width: 100%; } }
-    .contactRow__info h2 {
+    .contact-row__info h2 {
       font-size: 2.7rem; }
-    .contactRow__info p {
+    .contact-row__info p {
       font-size: 1.3rem;
       min-width: 200px; }
-    .contactRow__info__comments {
+    .contact-row__info__comments {
       width: 260px;
       height: auto;
       border-left: 2px solid red;
       padding: 12px; }
       @media (max-width: 460px) {
-        .contactRow__info__comments {
+        .contact-row__info__comments {
           width: 100%;
           border-top: 2px red solid;
           border-left: none; } }
-      .contactRow__info__comments p {
+      .contact-row__info__comments p {
         font-size: 1.3rem;
         font-family: "Share", cursive; }
 
 .delete-modal,
 .edit-form-modal,
 .add-product-modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(26, 24, 24, 0.832);
   z-index: 100;
-  height: 100%;
-  width: 100%;
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   display: none;
   top: 0;
-  left: 0;
-  right: 0; }
+  left: 0; }
 
 .delete-modal__content {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #d9dfdf;
-  opacity: 1;
-  height: 300px;
   width: 610px;
-  z-index: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d9dfdf;
   font-family: "Share", cursive; }
   @media (max-width: 460px) {
     .delete-modal__content {
@@ -1199,15 +1211,15 @@ footer {
     font-size: 1.8rem;
     padding: 12px; }
   .delete-modal__content__buttons {
-    height: 50px;
     width: 290px;
+    height: 50px;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: none; }
     .delete-modal__content__buttons button {
-      padding: 16px;
-      width: 120px;
+      padding: 16px 40px;
+      font-size: 1.3rem;
       cursor: pointer;
-      outline: none;
       text-transform: uppercase;
       border-radius: 4px; }
     .delete-modal__content__buttons--red:hover {
@@ -1218,20 +1230,21 @@ footer {
       color: white; }
 
 .modal-form {
-  background: #949494;
   width: 500px;
-  height: 750px; }
+  height: 750px;
+  background: #949494; }
   @media (max-width: 460px) {
     .modal-form {
       width: 400px; } }
   .modal-form .contact__inputs {
-    margin: 18px auto;
-    width: 100%; }
+    width: 100%;
+    height: auto;
+    margin: 18px auto; }
     .modal-form .contact__inputs input {
-      margin: 5px auto;
-      height: 50px;
-      display: block;
       width: 90%;
+      height: 50px;
+      margin: 5px auto;
+      display: block;
       font-family: "Share", cursive;
       font-size: 1.7rem;
       background-color: #e2dede;
@@ -1246,23 +1259,21 @@ footer {
       font-size: 1.7rem; }
   .modal-form .modal-form__buttons {
     display: flex;
-    margin-top: 50px;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: auto; }
+    height: auto;
+    margin-top: 50px; }
     .modal-form .modal-form__buttons button, .modal-form .modal-form__buttons input {
-      text-transform: uppercase;
-      font-size: 1.5rem;
       width: 160px;
       height: 60px;
+      text-transform: uppercase;
+      font-size: 1.5rem;
       cursor: pointer;
       border-radius: 4px;
-      outline: none;
       font-family: "Share", cursive;
       background-color: black;
       color: white;
-      letter-spacing: 0.9px;
       border: none;
       box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); }
     .modal-form .modal-form__buttons--green:hover {

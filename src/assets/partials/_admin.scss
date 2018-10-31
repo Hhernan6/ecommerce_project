@@ -76,14 +76,14 @@
     width: 300px;
     margin-left: auto;
     @media (max-width: 767px) {
+      @include flex(flex, center, none);
       margin: 0 auto;
       width: 100%;
-      @include flex(flex, center, none);
       padding-top: 16px;
     }
     button {
       font-size: 1.4rem;
-      font-family: "Share", cursive;
+      font-family: $mainFont;
       border-radius: 4px;
       width: 110px;
       padding: 12px;

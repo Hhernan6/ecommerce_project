@@ -1,14 +1,14 @@
 import React from "react";
-import Hero from "./hero/hero";
+import Hero from "./Hero/Hero";
 
 const Home = () => {
   return (
     <main>
       <Hero />
-      <section className="small-card">
-        <div className="small-card__container">
+      <section className="small-card__container">
+        <div className="small-card__container-content">
           <img src={require("../../assets/images/introDrums.jpg")} alt="" />
-          <div className="small-card__container__content text-center">
+          <div className="small-card__container__content-side text-center">
             <p>
               Welcome to Groove! We have new products available now! Start
               exploring our vast selection of products and start grooving!
@@ -16,9 +16,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="availableProducts">
+      <section className="available-products">
         <h2 className="text-center">Available Products</h2>
-        <div className="availableProducts__container margin-auto">
+        <div className="available-products__container margin-auto">
           <figure>
             <img src={require("../../assets/images/dwdrumset.jpeg")} alt="Drum set" />
             <figcaption >Drum Kits</figcaption>
@@ -38,9 +38,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="small-card ">
-        <div className="small-card__container margin-auto">
-          <div className="small-card__container__content text-center">
+      <section className="small-card__container">
+        <div className="small-card__container-content">
+          <div className="small-card__container__content-side text-center">
             <p>
               Shop now! Browse our products page and find the best prices on saxophones,
               drum kits, guitars and more!{" "}
@@ -51,44 +51,44 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="customerCards-container text-center ">
+      <section className="customer-cards-wrapper margin-auto text-center ">
         <h2>Customer Reviews</h2>
-        <section className="customerCards ">
-          <figure className="customerCards__card margin-auto ">
+        <div className="customer-cards ">
+          <figure className="customer-cards__card margin-auto ">
             <img src={require("../../assets/images/derik.jpg")} alt="" />
             <figcaption>
               Groove has provided me with the best customer service of any other
               music store. I felt genuily cared for.
             </figcaption>
-            <div className="customerCards__content__rating">
+            <div className="customer-cards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
           </figure>
-          <figure className="customerCards__card margin-auto ">
+          <figure className="customer-cards__card margin-auto ">
             <img src={require("../../assets/images/luis.jpg")} alt="" />
             <figcaption>
               Groove has provided me with the best prices and quality equipment.
               I am really glad I discovered Groove.
             </figcaption>
-            <div className="customerCards__content__rating">
+            <div className="customer-cards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
           </figure>
-          <figure className="customerCards__card margin-auto ">
+          <figure className="customer-cards__card margin-auto ">
             <img src={require("../../assets/images/seyfat.jpg")} alt="" />
             <figcaption>
               Groove has way better customer service, products, and prices on drum kits 
               than any other store.
             </figcaption>
-            <div className="customerCards__content__rating">
+            <div className="customer-cards__content__rating">
               <p>Rating: </p>
               <span />
             </div>
           </figure>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   );
 };

@@ -33,25 +33,25 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-      <nav className="footer__navs__socialMedia">
+      <nav className="footer__navs__social-media">
         <ul className="margin-auto">
           <li>
             <a
-              className="footer__navs__socialMedia--facebook"
+              className="footer__navs__social-media--facebook"
               href="http://facebook.com"
               title="facebook"
             />
           </li>
           <li className="margin-left">
             <a
-              className="footer__navs__socialMedia--twitter"
+              className="footer__navs__social-media--twitter"
               href="http://twitter.com"
               title="twitter"
             />
           </li>
           <li className="margin-left">
             <a
-              className="footer__navs__socialMedia--instagram"
+              className="footer__navs__social-media--instagram"
               href="https://instagram.com"
               title="instagram"
             />

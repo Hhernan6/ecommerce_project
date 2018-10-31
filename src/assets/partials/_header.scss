@@ -1,4 +1,4 @@
-.mainNav {
+.main-nav {
   @include flex(flex, center, center);
   @include dimensions(100%, 100px);
   position: fixed;
@@ -27,14 +27,14 @@
   }
   button {
     @include buttonStyling;
-    margin-right: 10px;
+    margin-right: 16px;
     @media (max-width: 767px) {
       display: none;
     }
   }
 }
 
-.mobileNav {
+.mobile-nav {
   position: fixed;
   @include dimensions(100%, 100%);
   background-color: #1f2833;

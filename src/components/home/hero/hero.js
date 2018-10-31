@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-
+import {Link} from "react-router-dom";
 let i = 0;
 let images = [];
 
@@ -31,7 +31,7 @@ class Hero extends Component {
         <div className="hero__text">
           <h1>Add more to your groove!</h1>
           <p>Drum kits, Saxophones, Guitars, and Keyboards!</p>
-          <button>Shop Now</button>
+          <Link to="/products">Shop Now</Link>
         </div>
       </div>
     );
