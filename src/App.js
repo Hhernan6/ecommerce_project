@@ -55,32 +55,22 @@ class App extends Component {
 
   brandFilter = e => {
     e.preventDefault();
-    let priceValue = document.getElementById("priceSelect").value;
-    let brandValue = document.getElementById("brandSelect").value;
+    const priceValue = document.getElementById("priceSelect").value;
+    const brandValue = document.getElementById("brandSelect").value;
     let productTypeValue = document.getElementById("productTypeSelect").value;
-    console.log(priceValue);
-    console.log(brandValue);
-    console.log(productTypeValue);
 
-    // let drumProducts = [];
 
     let allFilters = this.state.data;
     if (brandValue !== "Brand") {
-      console.log("in brand filter");
       allFilters = allFilters.filter(product => product.brand === brandValue);
-      console.log(allFilters);
     }
     if (priceValue !== "Price") {
-      console.log("in price filter");
       allFilters = allFilters.filter(product => product.price <= priceValue);
-      console.log(allFilters);
     }
     if (productTypeValue !== "Product Type") {
-      console.log("in product type filter");
       allFilters = allFilters.filter(
         product => product.productType === productTypeValue
       );
-      console.log(allFilters);
     }
 
     this.setState({

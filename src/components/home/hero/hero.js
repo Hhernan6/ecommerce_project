@@ -10,7 +10,7 @@ images[2] = `url(${"https://www.maxpixel.net/static/photo/2x/Saxophone-Musician-
 images[3] = `url(${"https://images.unsplash.com/photo-1421217336522-861978fdf33a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a94d8eeeab21910577f3aa06616c2a3&auto=format&fit=crop&w=1650&q=80"})`
 class Hero extends Component {
   changeImg = () => {
-    let hero = document.querySelector(".hero");
+    const hero = document.querySelector(".hero");
     if (hero) {
     hero.style.backgroundImage = images[i];
     if (i < images.length - 1) {
