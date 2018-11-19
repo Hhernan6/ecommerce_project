@@ -28,7 +28,7 @@ class AdminCards extends React.Component {
       brand,
       price
     } = this.state;
-    let newProduct = {title, brand, description, price, productType, productImage};
+    const newProduct = {title, brand, description, price, productType, productImage};
   
     fetch(`http://localhost:3007/products/${id}`, {
       method: "PUT",

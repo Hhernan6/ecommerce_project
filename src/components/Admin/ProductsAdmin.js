@@ -14,7 +14,7 @@ const Admin = props => {
   };
 
   const toggleModal = ID => {
-    let modal = document.getElementById(`${ID}`);
+    const modal = document.getElementById(`${ID}`);
     if (modal.style.display === "none" || modal.style.display === '') {
       modal.style.display = "flex";
     } else {
