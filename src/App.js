@@ -22,7 +22,7 @@ class App extends Component {
       checkboxArr: null
     };
   }
-
+//Small comment to open PR
   componentDidMount() {
     fetch("http://localhost:3007/products/")
       .then(response => response.json())
